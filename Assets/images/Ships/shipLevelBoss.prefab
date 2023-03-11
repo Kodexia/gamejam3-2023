@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3529079375646293120}
   - component: {fileID: 3529079375646293135}
-  - component: {fileID: 3529079375646293121}
-  m_Layer: 0
+  - component: {fileID: 5256532653244341960}
+  m_Layer: 5
   m_Name: shipLevelBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &3529079375646293121
+--- !u!114 &5256532653244341960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3529079375646293134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27c213695ce45214ab048109597dee44, type: 3}
+  m_Script: {fileID: 11500000, guid: ba33d300baa8dab47a496a6941293671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whereToGo: {x: 1, y: -10}
+  whereToGo: {x: 0, y: 0}

@@ -6,6 +6,7 @@ using System;
 
 public class Planet : MonoBehaviour
 {
+    public bool isTargeted = false;
     public string name { get; set; }
     private List<Resource> resources = new List<Resource>();
     public Resource ore;
@@ -22,7 +23,7 @@ public class Planet : MonoBehaviour
         name = $"E-{rnd.Next(100,500)}";
         
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         //MinePlanet();
