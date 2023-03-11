@@ -26,11 +26,7 @@ public class SpawnPlanet : MonoBehaviour
     public GameObject bg;
 
 
-<<<<<<< HEAD
-    float minDistance = 4f; // minimum distance between positions
-=======
     public List<Vector2> positions;
->>>>>>> b8dc4c0267148c84981ed1e772feac41a2326fcb
 
     // Start is called before the first frame update
     void Start()
