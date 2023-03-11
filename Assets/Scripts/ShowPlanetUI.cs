@@ -21,6 +21,7 @@ public class ShowPlanetUI : MonoBehaviour
 
     private void Start()
     {
+        planetText = new TextMeshProUGUI();
         planetText.text = "";
         planetText.fontSize = 0.3f;
         planetText.alignment = TextAlignmentOptions.Center;
