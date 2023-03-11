@@ -9,6 +9,8 @@ public class Flying : MonoBehaviour
 
     [SerializeField]
     public Vector2 whereToGo = new Vector2(10, 10);
+    [SerializeField]
+    public float speed = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +35,7 @@ public class Flying : MonoBehaviour
         Vector3 direction = (toGo - (Vector2)transform.position).normalized;
 
         // Move the object towards the target position
-        transform.Translate(direction * Time.deltaTime, Space.World);
+        transform.Translate(direction * speed * Time.deltaTime, Space.World);
 
         // Calculate the angle to the target position
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
