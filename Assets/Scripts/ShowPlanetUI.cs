@@ -33,17 +33,31 @@ public class ShowPlanetUI : MonoBehaviour
             planetUIGroup = tempObject.GetComponent<CanvasGroup>();
             if (planetUI == null)
             {
-                Debug.Log("Could not locate Canvas component on " + tempObject.name);
+                //Debug.Log("Could not locate Canvas component on " + tempObject.name);
             }
         }
 
-        GameObject textObject = new GameObject("TextMeshPro", typeof(TextMeshProUGUI));
-        textObject.transform.SetParent(planetUI.transform,false);
-        planetText = textObject.GetComponent<TextMeshProUGUI>();
+        if (GameObject.Find("TextMeshPro") == null)
+        {
+            GameObject textObject = new GameObject("TextMeshPro", typeof(TextMeshProUGUI));
+            textObject.transform.SetParent(planetUI.transform, false);
+            planetText = textObject.GetComponent<TextMeshProUGUI>();
+
+            planetText.fontSize = 0.3f;
+            planetText.alignment = TextAlignmentOptions.Center;
+            planetText.horizontalAlignment = HorizontalAlignmentOptions.Center;
+        }
+        else
+        {
+            GameObject textObject = GameObject.Find("TextMeshPro");
+            textObject.transform.SetParent(planetUI.transform, false);
+            planetText = textObject.GetComponent<TextMeshProUGUI>();
+
+            planetText.fontSize = 0.3f;
+            planetText.alignment = TextAlignmentOptions.Center;
+            planetText.horizontalAlignment = HorizontalAlignmentOptions.Center;
+        }
         
-        planetText.fontSize = 0.3f;
-        planetText.alignment = TextAlignmentOptions.Center;
-        planetText.horizontalAlignment = HorizontalAlignmentOptions.Center;
         
         
         
@@ -92,6 +106,7 @@ public class ShowPlanetUI : MonoBehaviour
                     fadeOut = false;
                     elapsedTime = 0.0f;
                     planetUI.enabled = false;
+                  
                 }
             }
         }
@@ -101,7 +116,7 @@ public class ShowPlanetUI : MonoBehaviour
     {
         float height = rend.sprite.bounds.size.y;
         float width = rend.sprite.bounds.size.x;
-        Debug.Log(planetUI.enabled + " - " + fadeIn);
+        //Debug.Log(planetUI.enabled + " - " + fadeIn);
         
         if (planetUI.enabled == false && fadeIn == false)
         {
@@ -127,7 +142,8 @@ public class ShowPlanetUI : MonoBehaviour
         {
             fadeOut = true;
         }
-   
+       
+       
 
     }
 }

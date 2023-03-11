@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8749135344535049023}
   - component: {fileID: -7469263364200177863}
   - component: {fileID: -7254370733240954921}
+  - component: {fileID: 7459988537954775008}
   m_Layer: 0
   m_Name: Asteroid
-  m_TagString: Untagged
+  m_TagString: planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,3 +125,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5d0b78472507f45b62736d98a358fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTargeted: 0
+--- !u!114 &7459988537954775008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758447520651698160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be76a510e8b3aa43ab2305f3c9be7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 0.2
