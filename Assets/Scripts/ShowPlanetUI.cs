@@ -7,8 +7,9 @@ public class ShowPlanetUI : MonoBehaviour
 {
     Transform tr;
 
-    [SerializeField]
+    
     Canvas planetUI;
+    TextMeshProUGUI planetText;
     CanvasGroup planetUIGroup;
     [SerializeField]
     float fadeDuration = 1.0f;
@@ -20,8 +21,30 @@ public class ShowPlanetUI : MonoBehaviour
 
     private void Start()
     {
+        planetText.text = "";
+        planetText.fontSize = 0.3f;
+        planetText.alignment = TextAlignmentOptions.Center;
+        planetText.horizontalAlignment = HorizontalAlignmentOptions.Center;
+        planetText.transform.SetParent(planetUI.transform);
+        
+        GameObject tempObject = GameObject.Find("PlanetUICanvas");
+        if (tempObject != null)
+        {
+            //If we found the object , get the Canvas component from it.
+            planetUI = tempObject.GetComponent<Canvas>();
+            if (planetUI == null)
+            {
+                Debug.Log("Could not locate Canvas component on " + tempObject.name);
+            }
+        }
+
+
+
+
         tr = GetComponent<Transform>();
+        
         planetUIGroup = planetUI.GetComponent<CanvasGroup>();
+
         planetUI.enabled = false;
         planetUIGroup.alpha = 0f;
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
@@ -66,10 +89,12 @@ public class ShowPlanetUI : MonoBehaviour
     private void OnMouseOver()
     {
         Debug.Log(planetUI.enabled + " - " + fadeIn);
+        
         if (planetUI.enabled == false && fadeIn == false)
         {
             fadeIn = true;
             planetUI.enabled = true;
+            planetText.text = "gbas";
 
             planetUI.transform.position = new Vector2(tr.position.x + 1.5f, tr.position.y);
             if (planetUI.transform.position.x + 1 > screenBounds.x)
