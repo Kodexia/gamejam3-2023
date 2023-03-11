@@ -5,8 +5,8 @@ using UnityEngine;
 public class Player
 {
     Planet homePlanet;
-    List<Resource> resources = new List<Resource>();
-    Upgrades playerUpgrades = new Upgrades();
+    public List<Resource> resources = new List<Resource>();
+    public Upgrades playerUpgrades = new Upgrades();
     List<Spaceship> spaceships = new List<Spaceship>();
     public Player(Planet homePlanet)
     {

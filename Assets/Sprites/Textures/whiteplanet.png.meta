@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 13811546901ad41459cbfd524b41e8ca
+guid: a6865556c45bf574fa0811ac22a4e3ca
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,11 +101,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: islands_0
+      name: white2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba435ba527c2f3748a07d3dc1c42a55c
-      internalID: -347714276
+      spriteID: 1acdb4d32f64f9c47ab7c88a5610090c
+      internalID: -1408768511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_1
+      name: white2_1
       rect:
         serializedVersion: 2
         x: 210
@@ -140,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e81bad715e94f394997e884793c54f71
-      internalID: -1443012113
+      spriteID: 637f103b03a6a36478ec0bde9291296a
+      internalID: -1757474476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_2
+      name: white2_2
       rect:
         serializedVersion: 2
         x: 420
@@ -161,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98a5659891f1f1a42986476ebf3983ad
-      internalID: -2004429075
+      spriteID: bb108cbe2eb510944a1f48dce26e4302
+      internalID: -1713018345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_3
+      name: white2_3
       rect:
         serializedVersion: 2
         x: 630
@@ -182,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc51f98b6c8035d44a6975c9e3b03b8f
-      internalID: 859307171
+      spriteID: d9add4a329ad44d458bfe932980ba9ff
+      internalID: -2103382421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_4
+      name: white2_4
       rect:
         serializedVersion: 2
         x: 840
@@ -203,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0356bd1ea4f7a1409d3a52f9f725b82
-      internalID: -1401555652
+      spriteID: 7e7f606515223f5449ab5ccd1dee85a3
+      internalID: -2056682321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_5
+      name: white2_5
       rect:
         serializedVersion: 2
         x: 1050
@@ -224,14 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30c2ae401fb684c4aa3cf0186e758c18
-      internalID: -1399401854
+      spriteID: e4b058c667649584e9cbc43e93a005dd
+      internalID: 1640668095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_6
+      name: white2_6
       rect:
         serializedVersion: 2
         x: 1260
@@ -245,14 +257,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d4e4dbd511ab19468dda9b651db6caf
-      internalID: -925754251
+      spriteID: 0db135d90a8e33d4ab7f0f9fb21084ba
+      internalID: -450256791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_7
+      name: white2_7
       rect:
         serializedVersion: 2
         x: 1470
@@ -266,14 +278,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c1a84ff89a85254c9fd9b39de51e691
-      internalID: 1330086546
+      spriteID: d83054e72debda64a8c3de71ceb0e2ae
+      internalID: -303189795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_8
+      name: white2_8
       rect:
         serializedVersion: 2
         x: 1680
@@ -287,14 +299,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1c7c33803391684899254cd8c9513be
-      internalID: -255784521
+      spriteID: c229396c9e7e33942869537a26b4f8db
+      internalID: 1029232469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_9
+      name: white2_9
       rect:
         serializedVersion: 2
         x: 1890
@@ -308,14 +320,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64121366b985d6a479f370baf502ae82
-      internalID: 351015697
+      spriteID: 6c9fffa14b42bc5479eb55361f906de1
+      internalID: -816053040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_10
+      name: white2_10
       rect:
         serializedVersion: 2
         x: 2100
@@ -329,14 +341,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74e0f8565bf956e4ebd64f25ed54b559
-      internalID: 250432406
+      spriteID: 1839050239ca612419bbc2099e9b32eb
+      internalID: -2108560190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_11
+      name: white2_11
       rect:
         serializedVersion: 2
         x: 2310
@@ -350,14 +362,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40192f61bab184e4a8d174600f52ee63
-      internalID: -1105315787
+      spriteID: 8099cd844a40c424384b29816ec224fc
+      internalID: 1448481333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_12
+      name: white2_12
       rect:
         serializedVersion: 2
         x: 2520
@@ -371,14 +383,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd812434be6bf134188cc545022d56b8
-      internalID: 767984257
+      spriteID: 2b1a99c45eaa8b243948a250d6323005
+      internalID: 577259549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_13
+      name: white2_13
       rect:
         serializedVersion: 2
         x: 2730
@@ -392,14 +404,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3d8dab14720fd143b1e676db9d7cbbc
-      internalID: 1389759337
+      spriteID: e3f65929e122c7647886ec09a79a6e7e
+      internalID: 402467625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_14
+      name: white2_14
       rect:
         serializedVersion: 2
         x: 2940
@@ -413,14 +425,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 305260fad17a8dc40ba84f55a0b371c8
-      internalID: -1383733296
+      spriteID: 4ae92456e1af61e4fa6960ce5a56ade9
+      internalID: 1629256364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_15
+      name: white2_15
       rect:
         serializedVersion: 2
         x: 3150
@@ -434,14 +446,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3547bc8aa53416d4d96e798d8f1342fe
-      internalID: -493450500
+      spriteID: b48fab7e3aa305445b972d2803093c4b
+      internalID: -1103754491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_16
+      name: white2_16
       rect:
         serializedVersion: 2
         x: 3360
@@ -455,14 +467,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89501757e312c7c47bbedd7989b3eaaf
-      internalID: -1259108035
+      spriteID: 4f3b12bc6ebdc7d43b98c9605ec2b052
+      internalID: -1577781904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_17
+      name: white2_17
       rect:
         serializedVersion: 2
         x: 3570
@@ -476,14 +488,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b903ab1eb7d7e04468c23785f3e64a48
-      internalID: -2125298411
+      spriteID: 8f139df0910f4814ca689988aec26a15
+      internalID: 403527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_18
+      name: white2_18
       rect:
         serializedVersion: 2
         x: 3780
@@ -497,14 +509,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a4e8c87960fe88469de68ab1ae739c6
-      internalID: -553243725
+      spriteID: 09c555d84d285e645ab4c86a4bd3d1d3
+      internalID: 857743849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_19
+      name: white2_19
       rect:
         serializedVersion: 2
         x: 3990
@@ -518,14 +530,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2337a7598874fb41a53092d568f4164
-      internalID: -2020724653
+      spriteID: 39dea4dbfd7386a449d6987aadd58b5d
+      internalID: -1118749642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_20
+      name: white2_20
       rect:
         serializedVersion: 2
         x: 4200
@@ -539,14 +551,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c588f06c6f43b045bbd10e1c1cb7025
-      internalID: 541406828
+      spriteID: 9c057f8fc6f6807449f2d27a439b34ac
+      internalID: -362734487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_21
+      name: white2_21
       rect:
         serializedVersion: 2
         x: 4410
@@ -560,14 +572,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1365b59fb6addc4cad8685b1acaef2b
-      internalID: 987910910
+      spriteID: fc49e8eeede877548a144d2aac8c690c
+      internalID: 1623680663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_22
+      name: white2_22
       rect:
         serializedVersion: 2
         x: 4620
@@ -581,14 +593,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f38a23c2b8e9e44cb5ec32e29f91cb5
-      internalID: -1173517383
+      spriteID: 95906bcbdac5d1c43ab104c26fc39ba8
+      internalID: -1212584359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_23
+      name: white2_23
       rect:
         serializedVersion: 2
         x: 4830
@@ -602,14 +614,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7985735859a15e4d926dd66824ca5d2
-      internalID: -1972653865
+      spriteID: f1799eb629fa39c469c25733e050ca61
+      internalID: 720827729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_24
+      name: white2_24
       rect:
         serializedVersion: 2
         x: 5040
@@ -623,14 +635,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39a9875c981820a4dad53bae17106c4e
-      internalID: 315502014
+      spriteID: 7a414ceb19aa08d4283034248b50fe6c
+      internalID: -786831400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_25
+      name: white2_25
       rect:
         serializedVersion: 2
         x: 5250
@@ -644,14 +656,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2cac6ce02986254998f657093c8bd0c
-      internalID: -1736878165
+      spriteID: a27b6c12a6544a44fb3358b381d05ec4
+      internalID: -817806413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_26
+      name: white2_26
       rect:
         serializedVersion: 2
         x: 5460
@@ -665,14 +677,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffef0750c88e5054d908d58423254a5a
-      internalID: 639030052
+      spriteID: e5e460bff8aba4c4c8d985c27b084ac8
+      internalID: 1331677522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_27
+      name: white2_27
       rect:
         serializedVersion: 2
         x: 5670
@@ -686,14 +698,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a40142f4c45fa264ea0ab413120ec24c
-      internalID: 855320217
+      spriteID: a505973d2a4bfe547ab95c7ac90db624
+      internalID: -1842979849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_28
+      name: white2_28
       rect:
         serializedVersion: 2
         x: 5880
@@ -707,14 +719,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7477e20095d4c148a85e011b5541f3a
-      internalID: 1908748216
+      spriteID: 07a4009e620ac764492fbb175d117062
+      internalID: 1641989463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_29
+      name: white2_29
       rect:
         serializedVersion: 2
         x: 6090
@@ -728,14 +740,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c75522e21f828b4fa56fabeb45209c7
-      internalID: -1385235185
+      spriteID: 9661b6d4d05d2b64297742cd3b5a5037
+      internalID: -1251702319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_30
+      name: white2_30
       rect:
         serializedVersion: 2
         x: 6300
@@ -749,14 +761,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1d6c3b00c46e254a93a5456a9a6c766
-      internalID: 115078558
+      spriteID: d063407c4b1c1834cb1235f13fc73cbe
+      internalID: -1511261070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_31
+      name: white2_31
       rect:
         serializedVersion: 2
         x: 6510
@@ -770,14 +782,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c71299d00c73014ea434e4faf0692bd
-      internalID: -619709369
+      spriteID: 3ae9e13eb3fb4c54cbe81ef66fb37571
+      internalID: 1610166598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_32
+      name: white2_32
       rect:
         serializedVersion: 2
         x: 6720
@@ -791,14 +803,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f99c280d9b7dc04caed139914f6c3c4
-      internalID: 283074013
+      spriteID: d2ed6fd1da3b1a640b4c6a23cf69249b
+      internalID: 2094161832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_33
+      name: white2_33
       rect:
         serializedVersion: 2
         x: 6930
@@ -812,14 +824,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38aff7a3658c8a04699d3e4d44e9cc11
-      internalID: 397308011
+      spriteID: 09750140ac8146f408e371b6d93941b2
+      internalID: 735542967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_34
+      name: white2_34
       rect:
         serializedVersion: 2
         x: 7140
@@ -833,14 +845,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 817349417e9747b45ac2cbf49fb9ba51
-      internalID: 1116154631
+      spriteID: 07af5a3d1663c1c428e5fbcaa79536fb
+      internalID: -1500624663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_35
+      name: white2_35
       rect:
         serializedVersion: 2
         x: 7350
@@ -854,14 +866,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2f3d30ae4e0bce44b9c2d0ec963d8ee
-      internalID: -674746496
+      spriteID: d0d5d47c9d077b842bb136cf31bd7845
+      internalID: 164904073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_36
+      name: white2_36
       rect:
         serializedVersion: 2
         x: 7560
@@ -875,14 +887,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02c4bbbb3b6b1ec44a6b6e781682c142
-      internalID: -2007711402
+      spriteID: c11722ccfdddb4d49b570c6dc31fa8eb
+      internalID: 1460023146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_37
+      name: white2_37
       rect:
         serializedVersion: 2
         x: 7770
@@ -896,14 +908,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3cc7749f0323994dac11161ad8585db
-      internalID: -908588712
+      spriteID: 1e6d4a3c7de4fd946a1e5fec8f0eb5d8
+      internalID: -979153220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_38
+      name: white2_38
       rect:
         serializedVersion: 2
         x: 7980
@@ -917,14 +929,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcbf21e8d652f364491d2d8f000d921d
-      internalID: 1828381088
+      spriteID: 0f0ebc8f54c3cdd498152fecdb2d2544
+      internalID: -1828688347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_39
+      name: white2_39
       rect:
         serializedVersion: 2
         x: 8190
@@ -938,14 +950,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2608a6b641e6de478dbbe6a7415c43a
-      internalID: -1578193232
+      spriteID: d46ed1e35f535964e9c0f3e7e5513dd7
+      internalID: -1652913004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_40
+      name: white2_40
       rect:
         serializedVersion: 2
         x: 8400
@@ -959,14 +971,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52969b2fae2eca44da49f8d877752844
-      internalID: 1171593421
+      spriteID: 6fab5fe202a49ab49987555812248cf2
+      internalID: 1970952050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_41
+      name: white2_41
       rect:
         serializedVersion: 2
         x: 8610
@@ -980,14 +992,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02f46cc37a04c73478a24e7bf780cb86
-      internalID: 1658850003
+      spriteID: 2c27f9c0cfc1e23409db0204810357f2
+      internalID: -822722434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_42
+      name: white2_42
       rect:
         serializedVersion: 2
         x: 8820
@@ -1001,14 +1013,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98d92afbeca5d9b42bdaccef8a781ad3
-      internalID: 427844545
+      spriteID: 13b8cd044f7a2c64cbc7a445a0d57a3a
+      internalID: -1849418177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_43
+      name: white2_43
       rect:
         serializedVersion: 2
         x: 9030
@@ -1022,14 +1034,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45a0eecae0c0b0e4789216e389558edf
-      internalID: -1619716199
+      spriteID: bea573baed4a8b64ca387b065e1d4b9b
+      internalID: 1791061752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_44
+      name: white2_44
       rect:
         serializedVersion: 2
         x: 9240
@@ -1043,14 +1055,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6596cda76206f964a881f61396a2f19c
-      internalID: 1774595075
+      spriteID: 003a364485e20324aa52923f4b1e8de5
+      internalID: 533609502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_45
+      name: white2_45
       rect:
         serializedVersion: 2
         x: 9450
@@ -1064,14 +1076,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9946d498b399d9c4d9e79525d9f01116
-      internalID: 913525154
+      spriteID: d54068ec560f74f43a522f5e76e2d7e1
+      internalID: 1508437028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_46
+      name: white2_46
       rect:
         serializedVersion: 2
         x: 9660
@@ -1085,14 +1097,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aeb567e9175180a47ade75839611c075
-      internalID: -2097272967
+      spriteID: 69c64571ac86d73488820b3859c79f33
+      internalID: 1735231177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_47
+      name: white2_47
       rect:
         serializedVersion: 2
         x: 9870
@@ -1106,14 +1118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acfdfc3757f9fb64182ab8c94d1c4695
-      internalID: 274763414
+      spriteID: c310b27e086c6ed4f8e7c467bf443c5b
+      internalID: 797611532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_48
+      name: white2_48
       rect:
         serializedVersion: 2
         x: 10080
@@ -1127,14 +1139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7727c1381a700cc428ce3d7d73f365b9
-      internalID: 12169495
+      spriteID: 0ebdf00da7fc5bf48a2df592fad04017
+      internalID: -141287651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_49
+      name: white2_49
       rect:
         serializedVersion: 2
         x: 10290
@@ -1148,8 +1160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8d77ba475b337c4089a236c356dc4b1
-      internalID: 263751118
+      spriteID: 35aea172be7687c4a8735072cd7f28fb
+      internalID: -1605065422
       vertices: []
       indices: 
       edges: []
@@ -1165,56 +1177,109 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      islands_0: -347714276
-      islands_1: -1443012113
-      islands_10: 250432406
-      islands_11: -1105315787
-      islands_12: 767984257
-      islands_13: 1389759337
-      islands_14: -1383733296
-      islands_15: -493450500
-      islands_16: -1259108035
-      islands_17: -2125298411
-      islands_18: -553243725
-      islands_19: -2020724653
-      islands_2: -2004429075
-      islands_20: 541406828
-      islands_21: 987910910
-      islands_22: -1173517383
-      islands_23: -1972653865
-      islands_24: 315502014
-      islands_25: -1736878165
-      islands_26: 639030052
-      islands_27: 855320217
-      islands_28: 1908748216
-      islands_29: -1385235185
-      islands_3: 859307171
-      islands_30: 115078558
-      islands_31: -619709369
-      islands_32: 283074013
-      islands_33: 397308011
-      islands_34: 1116154631
-      islands_35: -674746496
-      islands_36: -2007711402
-      islands_37: -908588712
-      islands_38: 1828381088
-      islands_39: -1578193232
-      islands_4: -1401555652
-      islands_40: 1171593421
-      islands_41: 1658850003
-      islands_42: 427844545
-      islands_43: -1619716199
-      islands_44: 1774595075
-      islands_45: 913525154
-      islands_46: -2097272967
-      islands_47: 274763414
-      islands_48: 12169495
-      islands_49: 263751118
-      islands_5: -1399401854
-      islands_6: -925754251
-      islands_7: 1330086546
-      islands_8: -255784521
-      islands_9: 351015697
+<<<<<<< HEAD
+      3539545312_14: -2042565130
+      3539545312_35: 308179387
+      3539545312_44: -1396485640
+      3539545312_32: 1211451998
+      3539545312_4: 613501023
+      3539545312_45: -700101994
+      3539545312_25: 984414933
+      3539545312_17: -963864794
+      3539545312_49: 7891991
+      3539545312_16: 1062776172
+      3539545312_46: -1441557279
+      3539545312_48: -136064519
+      3539545312_9: -940431250
+      3539545312_19: 938363760
+      3539545312_38: 427673640
+      3539545312_18: 666860858
+      3539545312_21: 885265183
+      3539545312_43: 273816456
+      3539545312_33: -341191674
+      3539545312_22: 78036241
+      3539545312_28: 1680338723
+      3539545312_12: -1163091562
+      3539545312_0: 1744770065
+      3539545312_30: -624641033
+      3539545312_26: 1379520157
+      3539545312_47: 1710916105
+      3539545312_27: -13720725
+      3539545312_10: -1593062776
+      3539545312_39: 1279939949
+      3539545312_6: -940644992
+      3539545312_24: 2074300164
+      3539545312_34: 656484620
+      3539545312_29: 1121752115
+      3539545312_15: -2026675712
+      3539545312_1: 681727836
+      3539545312_3: 1250637995
+      3539545312_11: -226969467
+      3539545312_7: 447148922
+      3539545312_36: 2123696074
+      3539545312_23: -233277528
+      3539545312_8: 1069317357
+      3539545312_42: -1280475348
+      3539545312_41: 1861296311
+      3539545312_2: 1742085116
+      3539545312_31: -554087590
+      3539545312_13: 2062594150
+      3539545312_5: 521377788
+      3539545312_40: -1219283452
+      3539545312_37: 530170116
+      3539545312_20: 164056928
+=======
+      white2_0: -1408768511
+      white2_1: -1757474476
+      white2_10: -2108560190
+      white2_11: 1448481333
+      white2_12: 577259549
+      white2_13: 402467625
+      white2_14: 1629256364
+      white2_15: -1103754491
+      white2_16: -1577781904
+      white2_17: 403527
+      white2_18: 857743849
+      white2_19: -1118749642
+      white2_2: -1713018345
+      white2_20: -362734487
+      white2_21: 1623680663
+      white2_22: -1212584359
+      white2_23: 720827729
+      white2_24: -786831400
+      white2_25: -817806413
+      white2_26: 1331677522
+      white2_27: -1842979849
+      white2_28: 1641989463
+      white2_29: -1251702319
+      white2_3: -2103382421
+      white2_30: -1511261070
+      white2_31: 1610166598
+      white2_32: 2094161832
+      white2_33: 735542967
+      white2_34: -1500624663
+      white2_35: 164904073
+      white2_36: 1460023146
+      white2_37: -979153220
+      white2_38: -1828688347
+      white2_39: -1652913004
+      white2_4: -2056682321
+      white2_40: 1970952050
+      white2_41: -822722434
+      white2_42: -1849418177
+      white2_43: 1791061752
+      white2_44: 533609502
+      white2_45: 1508437028
+      white2_46: 1735231177
+      white2_47: 797611532
+      white2_48: -141287651
+      white2_49: -1605065422
+      white2_5: 1640668095
+      white2_6: -450256791
+      white2_7: -303189795
+      white2_8: 1029232469
+      white2_9: -816053040
+>>>>>>> 428ce45e451851a27e75fd3e33c43cd9b2724fbc
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
