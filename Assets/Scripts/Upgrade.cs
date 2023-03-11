@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Upgrades
 {
-    public int attackUpgrades { get; private set; }
-    public int speedUpgrades { get; private set; }
+    public int attackAndSpeedUpgrades { get; private set; }
+    public int defenceUpgrades { get; private set; }
     public int miningSpeedUpgrades {get; private set;}
     public Upgrades()
     {
-        attackUpgrades = 1;
-        speedUpgrades = 1;
+        attackAndSpeedUpgrades = 1;
+        defenceUpgrades = 1;
         miningSpeedUpgrades = 1;
     }
     public void upgradeAttack(List<Resource> useableOres)
     {
         foreach(Resource ore in useableOres)
         {
-            if(ore.name == "naseore" && ore.amm >= 10 * attackUpgrades)
+            if(ore.name == "naseore" && ore.amm >= 10 * attackAndSpeedUpgrades)
             {
-                attackUpgrades++;
+                attackAndSpeedUpgrades++;
             }
         }
     }
@@ -27,9 +27,9 @@ public class Upgrades
     {
         foreach (Resource ore in useableOres)
         {
-            if (ore.name == "naseore" && ore.amm >= 10 * speedUpgrades)
+            if (ore.name == "naseore" && ore.amm >= 10 * defenceUpgrades)
             {
-                speedUpgrades++;
+                defenceUpgrades++;
             }
         }
     }
