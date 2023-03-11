@@ -63,22 +63,6 @@ public class ShowPlanetUI : MonoBehaviour
         }
     }
 
-    public IEnumerator FadeCanvas(CanvasGroup canvasGroup, float startAlpha, float endAlpha)
-    {
-        canvasGroup.alpha = startAlpha;
-        float elapsedTime = 0.0f;
-
-        while (elapsedTime < fadeDuration)
-        {
-            float t = elapsedTime / fadeDuration;
-            canvasGroup.alpha = Mathf.Lerp(startAlpha, endAlpha, t);
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        canvasGroup.alpha = endAlpha;
-    }
-
     private void OnMouseOver()
     {
         Debug.Log(planetUI.enabled + " - " + fadeIn);
