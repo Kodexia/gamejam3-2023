@@ -23,13 +23,27 @@ public class Planet : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        //MinePlanet();
+    }
     void MinePlanet(Player player)
     {
         foreach(var playerOre in player.resources)
         {
-            if(playerOre.name == ore.name) {
-                playerOre.amm += 2 * player.playerUpgrades.miningSpeedUpgrades;
-                ore.amm -= 2 * player.playerUpgrades.miningSpeedUpgrades;
+            if(playerOre.name == ore.name && ore.amm > 0) {
+                if(ore.amm < 2*player.playerUpgrades.miningSpeedUpgrades)
+                {
+                    playerOre.amm += ore.amm;
+                    ore.amm = 0;
+                }
+                else
+                {
+                    playerOre.amm += 2 * player.playerUpgrades.miningSpeedUpgrades;
+
+                    ore.amm -= 2 * player.playerUpgrades.miningSpeedUpgrades;
+                }
+
             }
         }
     }

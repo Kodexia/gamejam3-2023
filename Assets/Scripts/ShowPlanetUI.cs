@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.XR.WSA;
 
 public class ShowPlanetUI : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ShowPlanetUI : MonoBehaviour
 
     Planet planet;
     Canvas planetUI;
+    SpriteRenderer rend;
     TextMeshProUGUI planetText;
     CanvasGroup planetUIGroup;
     [SerializeField]
@@ -21,6 +23,7 @@ public class ShowPlanetUI : MonoBehaviour
 
     private void Start()
     {
+        rend = GetComponent<SpriteRenderer>();
         planet = GetComponent<Planet>();
         GameObject tempObject = GameObject.Find("PlanetUICanvas");
         if (tempObject != null)
@@ -96,6 +99,8 @@ public class ShowPlanetUI : MonoBehaviour
 
     private void OnMouseOver()
     {
+        float height = rend.sprite.bounds.size.y;
+        float width = rend.sprite.bounds.size.x;
         Debug.Log(planetUI.enabled + " - " + fadeIn);
         
         if (planetUI.enabled == false && fadeIn == false)
@@ -104,12 +109,14 @@ public class ShowPlanetUI : MonoBehaviour
             planetUI.enabled = true;
             planetText.text = $"Planet: {planet.name}\r\nMaterial: {planet.ore.name}\r\nAmmout: {planet.ore.amm}";
 
-            planetUI.transform.position = new Vector2(tr.position.x + 1.5f, tr.position.y);
+            planetUI.transform.position = new Vector2(tr.position.x + height + 1, tr.position.y);
             if (planetUI.transform.position.x + 1 > screenBounds.x)
             {
-                planetUI.transform.position = new Vector2(tr.position.x - 1.5f, tr.position.y);
+                planetUI.transform.position = new Vector2(tr.position.x - height - 1, tr.position.y);
 
             }
+
+            
 
         }
     }
