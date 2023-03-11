@@ -16,10 +16,12 @@ public class SpawnPlanet : MonoBehaviour
     public int randomPlanet = 0;
     [SerializeField]
     public GameObject bg;
-
+    
     public List<Vector2> positions;
 
     float minDistance = 3f; // minimum distance between positions
+
+    public Planet planetClass;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,8 @@ public class SpawnPlanet : MonoBehaviour
 
         for (int i = 0; i < planets; i++)
         {
+            planetClass = new Planet("E-" + Random.Range(100, 400).ToString());
+
             randomPlanet = Random.Range(0, sprite.Count - 1);
 
             GameObject planet = sprite[randomPlanet];

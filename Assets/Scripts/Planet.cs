@@ -10,7 +10,7 @@ public class Planet
     Sprite sprite;
 
 
-    public Planet(string name, Dictionary<Resource,int> layers, Sprite sprite)
+    public Planet(string name)
     {
         resources.Add(new Resource("Azurite", Random.Range(10, 50)));
         resources.Add(new Resource("Crimtain", Random.Range(10, 50)));
@@ -18,7 +18,7 @@ public class Planet
 
         ore = resources[Random.Range(0, resources.Count)];
         this.name = name;
-        this.sprite = sprite;
+        
     }
 
     void MinePlanet(Player player)
