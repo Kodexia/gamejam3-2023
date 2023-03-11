@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1165,56 +1177,56 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      gasgigant2_20: -1778570659
+      gasgigant2_39: 168226501
+      gasgigant2_29: -392316200
+      gasgigant2_48: -1703521755
+      gasgigant2_9: 279412869
+      gasgigant2_35: 1094362772
+      gasgigant2_21: -666012463
       gasgigant2_0: 763465240
-      gasgigant2_1: -1650255498
-      gasgigant2_10: 2102811053
+      gasgigant2_25: 405696752
       gasgigant2_11: 206332383
-      gasgigant2_12: -1975210738
-      gasgigant2_13: -1556232431
-      gasgigant2_14: 1692893883
-      gasgigant2_15: -1716214736
-      gasgigant2_16: -119814641
+      gasgigant2_32: -1911004591
+      gasgigant2_26: -2075897623
+      gasgigant2_41: 352667054
       gasgigant2_17: 187937520
+      gasgigant2_24: -1855613599
       gasgigant2_18: 124670818
+      gasgigant2_23: -505416984
+      gasgigant2_4: 1404608015
+      gasgigant2_7: -1122857056
+      gasgigant2_40: -1369454671
+      gasgigant2_12: -1975210738
+      gasgigant2_44: -351803754
+      gasgigant2_37: -1273295890
+      gasgigant2_13: -1556232431
+      gasgigant2_34: -1060709852
+      gasgigant2_15: -1716214736
+      gasgigant2_14: 1692893883
+      gasgigant2_16: -119814641
+      gasgigant2_28: -1464604907
+      gasgigant2_10: 2102811053
+      gasgigant2_31: -1371132311
+      gasgigant2_43: -1964881577
+      gasgigant2_27: -1197226332
+      gasgigant2_5: -632641566
+      gasgigant2_22: 1330345912
+      gasgigant2_38: 491210576
+      gasgigant2_6: -78571171
+      gasgigant2_47: 1387151550
+      gasgigant2_49: 1066200237
+      gasgigant2_46: -1112092967
+      gasgigant2_3: -2105735453
+      gasgigant2_36: 807436776
+      gasgigant2_42: 1691102772
+      gasgigant2_45: 1488403952
+      gasgigant2_1: -1650255498
+      gasgigant2_30: -844752677
+      gasgigant2_33: 2062491957
       gasgigant2_19: 724918895
       gasgigant2_2: 227522125
-      gasgigant2_20: -1778570659
-      gasgigant2_21: -666012463
-      gasgigant2_22: 1330345912
-      gasgigant2_23: -505416984
-      gasgigant2_24: -1855613599
-      gasgigant2_25: 405696752
-      gasgigant2_26: -2075897623
-      gasgigant2_27: -1197226332
-      gasgigant2_28: -1464604907
-      gasgigant2_29: -392316200
-      gasgigant2_3: -2105735453
-      gasgigant2_30: -844752677
-      gasgigant2_31: -1371132311
-      gasgigant2_32: -1911004591
-      gasgigant2_33: 2062491957
-      gasgigant2_34: -1060709852
-      gasgigant2_35: 1094362772
-      gasgigant2_36: 807436776
-      gasgigant2_37: -1273295890
-      gasgigant2_38: 491210576
-      gasgigant2_39: 168226501
-      gasgigant2_4: 1404608015
-      gasgigant2_40: -1369454671
-      gasgigant2_41: 352667054
-      gasgigant2_42: 1691102772
-      gasgigant2_43: -1964881577
-      gasgigant2_44: -351803754
-      gasgigant2_45: 1488403952
-      gasgigant2_46: -1112092967
-      gasgigant2_47: 1387151550
-      gasgigant2_48: -1703521755
-      gasgigant2_49: 1066200237
-      gasgigant2_5: -632641566
-      gasgigant2_6: -78571171
-      gasgigant2_7: -1122857056
       gasgigant2_8: -465501897
-      gasgigant2_9: 279412869
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
