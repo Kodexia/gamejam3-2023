@@ -77,30 +77,13 @@ public class SpawnPlanet : MonoBehaviour
                 newPosition = new Vector2(planetX, planetY);
 
                 validPosition = true;
-                int xCellPosition = (int)(Math.Abs(planetX) / cellSize);
-                int yCellPosition = (int)(Math.Abs(planetY) / cellSize);
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(newPosition, distanceBetweenPoints);
+                Debug.Log("colliders: " + colliders.Length);
 
-                Debug.Log("X: " + xCellPosition + ", Y: " + yCellPosition);
-
-                if (xCellPosition >= dim || yCellPosition >= dim)
+                if (colliders.Length != 0)
                 {
                     validPosition = false;
-                    continue;
-                }
-
-                if (array[xCellPosition, yCellPosition] != 0 ||
-                    (xCellPosition + 1 < dim && array[xCellPosition + 1, yCellPosition] != 0) ||
-                    (xCellPosition - 1 >= 0 && array[xCellPosition - 1, yCellPosition] != 0) ||
-                    (yCellPosition + 1 < dim && array[xCellPosition, yCellPosition + 1] != 0) ||
-                    (yCellPosition - 1 >= 0 && array[xCellPosition, yCellPosition - 1] != 0))
-                {
-                    validPosition = false;
-                    Debug.Log($"Check failed at cell {xCellPosition}, {yCellPosition}");
                     timesFailed++;
-                }
-                else
-                {
-                    array[xCellPosition, yCellPosition] = 1;
                 }
             }
             if (timesFailed >= maxFailedChecks) continue;
