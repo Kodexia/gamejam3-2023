@@ -220,7 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e95f26ea38ac84b9c5d70a18d7db14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   background: {fileID: 975913986}
   planetCamera: {fileID: 0}
   backgroundCamera: {fileID: 0}
@@ -228,13 +227,6 @@ MonoBehaviour:
   minZoom: 1
   maxZoom: 5
 --- !u!1 &975913985
-=======
-  background: {fileID: 563422505}
-  zoomSpeed: 0.1
-  minZoom: 1
-  maxZoom: 5
---- !u!1 &563422504
->>>>>>> 411bcaef76d04a9c076a2a1ba8039c669b41caf1
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,8 +281,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2085810091
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e0e29069d522bf64296e55f12149fdae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -387,7 +379,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 519420031}
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -449,8 +441,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite:
+  - {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
   - {fileID: 3532459095212715135, guid: 6cb8b25dba4513f47858af679b889d38, type: 3}
   - {fileID: 8974538288100947998, guid: 47d2a528fd9080e4abe4af3cd0b8e58f, type: 3}
+  - {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
   - {fileID: 5624786038006281123, guid: 10f4ccd2a6ffbe143a41dc86b54ba0e7, type: 3}
   - {fileID: 3763847190033552507, guid: 83f66ce0980586c4db923b14363094e7, type: 3}
   - {fileID: 1526442387449076733, guid: b1d85534ac89a5f4e8195605378e580c, type: 3}
@@ -463,12 +457,7 @@ MonoBehaviour:
   randomPlanet: 0
   distanceBetweenPoints: 10
   maxFailedChecks: 15
-<<<<<<< HEAD
   bg: {fileID: 975913985}
-=======
-  bg: {fileID: 563422504}
-  homePlanet: {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
->>>>>>> 411bcaef76d04a9c076a2a1ba8039c669b41caf1
   positions: []
 --- !u!4 &1668659977
 Transform:
