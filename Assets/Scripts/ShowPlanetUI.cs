@@ -7,7 +7,7 @@ public class ShowPlanetUI : MonoBehaviour
 {
     Transform tr;
 
-    
+    Planet planet;
     Canvas planetUI;
     TextMeshProUGUI planetText;
     CanvasGroup planetUIGroup;
@@ -21,30 +21,37 @@ public class ShowPlanetUI : MonoBehaviour
 
     private void Start()
     {
-        planetText = new TextMeshProUGUI();
-        planetText.text = "";
-        planetText.fontSize = 0.3f;
-        planetText.alignment = TextAlignmentOptions.Center;
-        planetText.horizontalAlignment = HorizontalAlignmentOptions.Center;
-        planetText.transform.SetParent(planetUI.transform);
-        
+        planet = GetComponent<Planet>();
         GameObject tempObject = GameObject.Find("PlanetUICanvas");
         if (tempObject != null)
         {
             //If we found the object , get the Canvas component from it.
             planetUI = tempObject.GetComponent<Canvas>();
+            planetUIGroup = tempObject.GetComponent<CanvasGroup>();
             if (planetUI == null)
             {
                 Debug.Log("Could not locate Canvas component on " + tempObject.name);
             }
         }
 
+        GameObject textObject = new GameObject("TextMeshPro", typeof(TextMeshProUGUI));
+        textObject.transform.SetParent(planetUI.transform,false);
+        planetText = textObject.GetComponent<TextMeshProUGUI>();
+        
+        planetText.fontSize = 0.3f;
+        planetText.alignment = TextAlignmentOptions.Center;
+        planetText.horizontalAlignment = HorizontalAlignmentOptions.Center;
+        
+        
+        
 
+
+        
 
 
         tr = GetComponent<Transform>();
         
-        planetUIGroup = planetUI.GetComponent<CanvasGroup>();
+        
 
         planetUI.enabled = false;
         planetUIGroup.alpha = 0f;
@@ -95,7 +102,7 @@ public class ShowPlanetUI : MonoBehaviour
         {
             fadeIn = true;
             planetUI.enabled = true;
-            planetText.text = "gbas";
+            planetText.text = $"Planet: {planet.name}\r\nMaterial: {planet.ore.name}\r\nAmmout: {planet.ore.amm}";
 
             planetUI.transform.position = new Vector2(tr.position.x + 1.5f, tr.position.y);
             if (planetUI.transform.position.x + 1 > screenBounds.x)

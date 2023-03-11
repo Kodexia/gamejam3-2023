@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 
 public class SpawnPlanet : MonoBehaviour
 {
+    
 
     [SerializeField]
     public List<GameObject> sprite;
@@ -24,20 +25,10 @@ public class SpawnPlanet : MonoBehaviour
 
     [SerializeField]
     public GameObject bg;
-<<<<<<< HEAD
-    
-    public List<Vector2> positions;
-=======
 
->>>>>>> a76b20202347b4bd40ab28156d1d61aedf690181
 
-<<<<<<< HEAD
     float minDistance = 4f; // minimum distance between positions
-=======
     public List<Vector2> positions;
->>>>>>> b8dc4c0267148c84981ed1e772feac41a2326fcb
-
-    public Planet planetClass;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +44,7 @@ public class SpawnPlanet : MonoBehaviour
         float sqrt2 = Mathf.Sqrt(2);
         float cellSize = distanceBetweenPoints / sqrt2;
         int dim = (int)Mathf.Ceil(width / cellSize);
-        float[,] array = new float[dim,dim];
+        float[,] array = new float[dim, dim];
         //    X, Y
         Debug.Log("Dim: " + dim);
         Debug.Log("Cellsize: " + cellSize);
@@ -66,13 +57,7 @@ public class SpawnPlanet : MonoBehaviour
 
         for (int i = 0; i < planets; i++)
         {
-<<<<<<< HEAD
-            planetClass = new Planet("E-" + Random.Range(100, 400).ToString());
-
-            randomPlanet = Random.Range(0, sprite.Count - 1);
-=======
             randomPlanet = UnityEngine.Random.Range(0, sprite.Count - 1);
->>>>>>> a76b20202347b4bd40ab28156d1d61aedf690181
 
             GameObject planet = sprite[randomPlanet];
 
@@ -101,7 +86,7 @@ public class SpawnPlanet : MonoBehaviour
                     continue;
                 }
 
-                if (array[xCellPosition,yCellPosition] != 0 ||
+                if (array[xCellPosition, yCellPosition] != 0 ||
                     (xCellPosition + 1 < dim && array[xCellPosition + 1, yCellPosition] != 0) ||
                     (xCellPosition - 1 >= 0 && array[xCellPosition - 1, yCellPosition] != 0) ||
                     (yCellPosition + 1 < dim && array[xCellPosition, yCellPosition + 1] != 0) ||
