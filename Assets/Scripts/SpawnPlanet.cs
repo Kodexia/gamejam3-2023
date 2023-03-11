@@ -26,6 +26,8 @@ public class SpawnPlanet : MonoBehaviour
     [SerializeField]
     public GameObject bg;
 
+    [SerializeField]
+    public GameObject homePlanet;
 
     float minDistance = 4f; // minimum distance between positions
     public List<Vector2> positions;
@@ -109,6 +111,10 @@ public class SpawnPlanet : MonoBehaviour
 
             sprite.RemoveAt(randomPlanet);
         }
+
+        Instantiate(homePlanet);
+        homePlanet.transform.position = new Vector2(0, 0);
+        positions.Add(new Vector2(0, 0));
     }
 
     // Update is called once per frame

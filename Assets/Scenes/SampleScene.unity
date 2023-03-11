@@ -220,6 +220,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e95f26ea38ac84b9c5d70a18d7db14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  background: {fileID: 563422505}
+  zoomSpeed: 0.1
+  minZoom: 1
+  maxZoom: 5
 --- !u!1 &563422504
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,8 +279,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2085810091
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fb05b2f85ef79174fbbb694bdf8273bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -435,10 +439,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite:
-  - {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
   - {fileID: 3532459095212715135, guid: 6cb8b25dba4513f47858af679b889d38, type: 3}
   - {fileID: 8974538288100947998, guid: 47d2a528fd9080e4abe4af3cd0b8e58f, type: 3}
-  - {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
   - {fileID: 5624786038006281123, guid: 10f4ccd2a6ffbe143a41dc86b54ba0e7, type: 3}
   - {fileID: 3763847190033552507, guid: 83f66ce0980586c4db923b14363094e7, type: 3}
   - {fileID: 1526442387449076733, guid: b1d85534ac89a5f4e8195605378e580c, type: 3}
@@ -451,7 +453,8 @@ MonoBehaviour:
   randomPlanet: 0
   distanceBetweenPoints: 10
   maxFailedChecks: 15
-  bg: {fileID: 0}
+  bg: {fileID: 563422504}
+  homePlanet: {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
   positions: []
 --- !u!4 &1668659977
 Transform:
@@ -544,90 +547,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688812630}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
---- !u!1 &1880831303
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1880831305}
-  - component: {fileID: 1880831304}
-  m_Layer: 0
-  m_Name: Space Background (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1880831304
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880831303}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6580bcc1dadee1e46a74e9c507b65fe5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 30.007326, y: 20}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1880831305
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880831303}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> a76b20202347b4bd40ab28156d1d61aedf690181
