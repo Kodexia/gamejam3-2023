@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1165,7 +1177,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-<<<<<<< HEAD
       white2_0: -8305298952973714011
       white2_1: 7157031220765646328
       white2_10: -2824297706955173013
@@ -1216,58 +1227,6 @@ TextureImporter:
       white2_7: -531456150417271813
       white2_8: 3422387504940217723
       white2_9: -6520213778411162458
-=======
-      white2_0: -1408768511
-      white2_1: -1757474476
-      white2_10: -2108560190
-      white2_11: 1448481333
-      white2_12: 577259549
-      white2_13: 402467625
-      white2_14: 1629256364
-      white2_15: -1103754491
-      white2_16: -1577781904
-      white2_17: 403527
-      white2_18: 857743849
-      white2_19: -1118749642
-      white2_2: -1713018345
-      white2_20: -362734487
-      white2_21: 1623680663
-      white2_22: -1212584359
-      white2_23: 720827729
-      white2_24: -786831400
-      white2_25: -817806413
-      white2_26: 1331677522
-      white2_27: -1842979849
-      white2_28: 1641989463
-      white2_29: -1251702319
-      white2_3: -2103382421
-      white2_30: -1511261070
-      white2_31: 1610166598
-      white2_32: 2094161832
-      white2_33: 735542967
-      white2_34: -1500624663
-      white2_35: 164904073
-      white2_36: 1460023146
-      white2_37: -979153220
-      white2_38: -1828688347
-      white2_39: -1652913004
-      white2_4: -2056682321
-      white2_40: 1970952050
-      white2_41: -822722434
-      white2_42: -1849418177
-      white2_43: 1791061752
-      white2_44: 533609502
-      white2_45: 1508437028
-      white2_46: 1735231177
-      white2_47: 797611532
-      white2_48: -141287651
-      white2_49: -1605065422
-      white2_5: 1640668095
-      white2_6: -450256791
-      white2_7: -303189795
-      white2_8: 1029232469
-      white2_9: -816053040
->>>>>>> 615e6ad38d57f0ebe2d1b22cd342d4ba50586c92
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
