@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 120787449058407561}
   - component: {fileID: 443015607732650981}
   - component: {fileID: -4899623841115572628}
+  - component: {fileID: 6611010899648293695}
   m_Layer: 0
   m_Name: Greenplanet
   m_TagString: Untagged
@@ -95,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -111,3 +112,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1, y: 2.1}
   m_EdgeRadius: 0
+--- !u!114 &6611010899648293695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162665380754052019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc5d0b78472507f45b62736d98a358fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
