@@ -13,4 +13,5 @@ public class Resource
         this.name = name;
         this.sprite = sprite;
     }
+
 }
