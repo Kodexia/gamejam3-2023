@@ -22,11 +22,12 @@ public class SpawnPlanet : MonoBehaviour
     float minDistance = 3f; // minimum distance between positions
 
     // Start is called before the first frame update
-    void Start() {
+    void Start()
+    {
         // Get the position (X,Y) of the sprite
         SpriteRenderer spriteRenderer = bg.GetComponent<SpriteRenderer>();
-        float height = spriteRenderer.sprite.bounds.size.y/2;
-        float width = spriteRenderer.sprite.bounds.size.x/2;
+        float height = spriteRenderer.sprite.bounds.size.y / 2;
+        float width = spriteRenderer.sprite.bounds.size.x / 2;
 
         float posX = bg.transform.position.x - width;
         float posY = bg.transform.position.y - height;
@@ -38,18 +39,32 @@ public class SpawnPlanet : MonoBehaviour
 
         for (int i = 0; i < planets; i++)
         {
-            randomPlanet = Random.Range(0, sprite.Count-1);
+            randomPlanet = Random.Range(0, sprite.Count - 1);
 
             GameObject planet = sprite[randomPlanet];
 
             Instantiate(planet);
-            Vector2 newPosition;
 
-            do
+            bool validPosition = false;
+            Vector2 newPosition = Vector2.zero;
+            while (!validPosition)
             {
-                // generate a random Vector2 position within a certain range
-                newPosition = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-            } while (IsTooCloseToExistingPositions(newPosition, positions, minDistance));
+                float planetX = Random.Range(posX + 3f, width - 3f);
+                float planetY = Random.Range(posY + 3f, height - 3f);
+
+                newPosition = new Vector2(planetX, planetY);
+
+                validPosition = true;
+                foreach (Vector2 existingPosition in positions)
+                {
+                    if (Vector2.Distance(existingPosition, newPosition) < minDistance)
+                    {
+                        Debug.Log($"{Vector2.Distance(existingPosition, newPosition)} | {minDistance}");
+                        validPosition = false;
+                        break;
+                    }
+                }
+            }
 
             planet.transform.position = newPosition;
 
@@ -62,18 +77,6 @@ public class SpawnPlanet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
 
-    bool IsTooCloseToExistingPositions(Vector2 position, List<Vector2> existingPositions, float minDistance)
-    {
-        foreach (Vector2 existingPosition in existingPositions)
-        {
-            if (Vector2.Distance(existingPosition, position) < minDistance)
-            {
-                return true;
-            }
-        }
-        return false;
     }
 }
