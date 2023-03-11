@@ -220,21 +220,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e95f26ea38ac84b9c5d70a18d7db14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  background: {fileID: 975913986}
-  planetCamera: {fileID: 0}
-  backgroundCamera: {fileID: 0}
-  zoomSpeed: 0.1
-  minZoom: 1
-  maxZoom: 5
---- !u!1 &975913985
-=======
   background: {fileID: 563422505}
   zoomSpeed: 0.1
   minZoom: 1
   maxZoom: 5
 --- !u!1 &563422504
->>>>>>> 411bcaef76d04a9c076a2a1ba8039c669b41caf1
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -463,12 +453,8 @@ MonoBehaviour:
   randomPlanet: 0
   distanceBetweenPoints: 10
   maxFailedChecks: 15
-<<<<<<< HEAD
-  bg: {fileID: 975913985}
-=======
   bg: {fileID: 563422504}
   homePlanet: {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
->>>>>>> 411bcaef76d04a9c076a2a1ba8039c669b41caf1
   positions: []
 --- !u!4 &1668659977
 Transform:
