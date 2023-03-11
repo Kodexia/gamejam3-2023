@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 13811546901ad41459cbfd524b41e8ca
+guid: 911545ad79c8ff841b603eb10c1edd61
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: islands_0
+      name: lavaplanet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba435ba527c2f3748a07d3dc1c42a55c
-      internalID: -347714276
+      spriteID: 4c543e4a5a3f79e44823a5a61c9e6f78
+      internalID: -722277116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_1
+      name: lavaplanet_1
       rect:
         serializedVersion: 2
         x: 210
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e81bad715e94f394997e884793c54f71
-      internalID: -1443012113
+      spriteID: 092183157cbee874aa35df32fb25dd67
+      internalID: -1131642446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_2
+      name: lavaplanet_2
       rect:
         serializedVersion: 2
         x: 420
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98a5659891f1f1a42986476ebf3983ad
-      internalID: -2004429075
+      spriteID: 725c07948d91171429ec664b0873596c
+      internalID: -803226031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_3
+      name: lavaplanet_3
       rect:
         serializedVersion: 2
         x: 630
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc51f98b6c8035d44a6975c9e3b03b8f
-      internalID: 859307171
+      spriteID: 732bdf7a47948db488959687bf335a8d
+      internalID: 2131262084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_4
+      name: lavaplanet_4
       rect:
         serializedVersion: 2
         x: 840
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0356bd1ea4f7a1409d3a52f9f725b82
-      internalID: -1401555652
+      spriteID: 0aee254c1203f0f4d9e8bd91bdc2146f
+      internalID: -94174965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_5
+      name: lavaplanet_5
       rect:
         serializedVersion: 2
         x: 1050
@@ -224,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30c2ae401fb684c4aa3cf0186e758c18
-      internalID: -1399401854
+      spriteID: 580a175bf89d38d46ab6d62a5f1bfc0a
+      internalID: 1196203621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_6
+      name: lavaplanet_6
       rect:
         serializedVersion: 2
         x: 1260
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d4e4dbd511ab19468dda9b651db6caf
-      internalID: -925754251
+      spriteID: f403f5c872d25b14ba667d723fad534e
+      internalID: -765778816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_7
+      name: lavaplanet_7
       rect:
         serializedVersion: 2
         x: 1470
@@ -266,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c1a84ff89a85254c9fd9b39de51e691
-      internalID: 1330086546
+      spriteID: 915c4f4fd21b79845b2f10aae9bdb1ce
+      internalID: -35743929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_8
+      name: lavaplanet_8
       rect:
         serializedVersion: 2
         x: 1680
@@ -287,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1c7c33803391684899254cd8c9513be
-      internalID: -255784521
+      spriteID: f4151aaf27cfbce48b15726fa03fb91b
+      internalID: -1168028725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_9
+      name: lavaplanet_9
       rect:
         serializedVersion: 2
         x: 1890
@@ -308,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64121366b985d6a479f370baf502ae82
-      internalID: 351015697
+      spriteID: 2f07c825429772e43817ed5bad0c011d
+      internalID: -1493078709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_10
+      name: lavaplanet_10
       rect:
         serializedVersion: 2
         x: 2100
@@ -329,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74e0f8565bf956e4ebd64f25ed54b559
-      internalID: 250432406
+      spriteID: 95765efc672e1f447b2d95a233c1a94d
+      internalID: -260943277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_11
+      name: lavaplanet_11
       rect:
         serializedVersion: 2
         x: 2310
@@ -350,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40192f61bab184e4a8d174600f52ee63
-      internalID: -1105315787
+      spriteID: bd57c9972c547da49a2fad16b9fb0eb6
+      internalID: 2102705611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_12
+      name: lavaplanet_12
       rect:
         serializedVersion: 2
         x: 2520
@@ -371,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd812434be6bf134188cc545022d56b8
-      internalID: 767984257
+      spriteID: 128ab872f9cd9fc4ab01a557b4bbca3e
+      internalID: -1853990725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_13
+      name: lavaplanet_13
       rect:
         serializedVersion: 2
         x: 2730
@@ -392,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3d8dab14720fd143b1e676db9d7cbbc
-      internalID: 1389759337
+      spriteID: cae495c7825c808478516aa540225eb3
+      internalID: 1886681507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_14
+      name: lavaplanet_14
       rect:
         serializedVersion: 2
         x: 2940
@@ -413,14 +413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 305260fad17a8dc40ba84f55a0b371c8
-      internalID: -1383733296
+      spriteID: edb167602723b3041af87b7d953f10a4
+      internalID: 1895300760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_15
+      name: lavaplanet_15
       rect:
         serializedVersion: 2
         x: 3150
@@ -434,14 +434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3547bc8aa53416d4d96e798d8f1342fe
-      internalID: -493450500
+      spriteID: 5396533f9115f6f43b00587cdbbb997d
+      internalID: -1377003966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_16
+      name: lavaplanet_16
       rect:
         serializedVersion: 2
         x: 3360
@@ -455,14 +455,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89501757e312c7c47bbedd7989b3eaaf
-      internalID: -1259108035
+      spriteID: 1397796c200e7104e99ce267cac2caee
+      internalID: 1822749989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_17
+      name: lavaplanet_17
       rect:
         serializedVersion: 2
         x: 3570
@@ -476,14 +476,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b903ab1eb7d7e04468c23785f3e64a48
-      internalID: -2125298411
+      spriteID: b0089b1e0401d974ba3f8bf212f1b748
+      internalID: -123650775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_18
+      name: lavaplanet_18
       rect:
         serializedVersion: 2
         x: 3780
@@ -497,14 +497,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a4e8c87960fe88469de68ab1ae739c6
-      internalID: -553243725
+      spriteID: 1a34ff795bc5d3f4ca24fdd5fda6a9c5
+      internalID: -558508453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_19
+      name: lavaplanet_19
       rect:
         serializedVersion: 2
         x: 3990
@@ -518,14 +518,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2337a7598874fb41a53092d568f4164
-      internalID: -2020724653
+      spriteID: 375cbcb9c7f9ad94780ac517d016e95b
+      internalID: -1977785083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_20
+      name: lavaplanet_20
       rect:
         serializedVersion: 2
         x: 4200
@@ -539,14 +539,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c588f06c6f43b045bbd10e1c1cb7025
-      internalID: 541406828
+      spriteID: a0b639655d1e95a45833e1a1885b5a32
+      internalID: 349108510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_21
+      name: lavaplanet_21
       rect:
         serializedVersion: 2
         x: 4410
@@ -560,14 +560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1365b59fb6addc4cad8685b1acaef2b
-      internalID: 987910910
+      spriteID: 20cba15bbef2ef1419ca1079ad833c18
+      internalID: 1963889126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_22
+      name: lavaplanet_22
       rect:
         serializedVersion: 2
         x: 4620
@@ -581,14 +581,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f38a23c2b8e9e44cb5ec32e29f91cb5
-      internalID: -1173517383
+      spriteID: 4ec550d6a06b1c74bb6caa5630f439b0
+      internalID: 1708515354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_23
+      name: lavaplanet_23
       rect:
         serializedVersion: 2
         x: 4830
@@ -602,14 +602,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7985735859a15e4d926dd66824ca5d2
-      internalID: -1972653865
+      spriteID: 75c3711db2625bd45a3d9044a2d3c80d
+      internalID: -180248693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_24
+      name: lavaplanet_24
       rect:
         serializedVersion: 2
         x: 5040
@@ -623,14 +623,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39a9875c981820a4dad53bae17106c4e
-      internalID: 315502014
+      spriteID: b661424801f52fc43a08740d0a038017
+      internalID: 828931376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_25
+      name: lavaplanet_25
       rect:
         serializedVersion: 2
         x: 5250
@@ -644,14 +644,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2cac6ce02986254998f657093c8bd0c
-      internalID: -1736878165
+      spriteID: ab3b9e695bb1f58408eafa77847d2ad2
+      internalID: -2093795177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_26
+      name: lavaplanet_26
       rect:
         serializedVersion: 2
         x: 5460
@@ -665,14 +665,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffef0750c88e5054d908d58423254a5a
-      internalID: 639030052
+      spriteID: 3e17b95d4cd18d643876c6787da669ea
+      internalID: -43418557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_27
+      name: lavaplanet_27
       rect:
         serializedVersion: 2
         x: 5670
@@ -686,14 +686,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a40142f4c45fa264ea0ab413120ec24c
-      internalID: 855320217
+      spriteID: 2fcc44170b367b042bedab3e7bc3ac68
+      internalID: 1205106103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_28
+      name: lavaplanet_28
       rect:
         serializedVersion: 2
         x: 5880
@@ -707,14 +707,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7477e20095d4c148a85e011b5541f3a
-      internalID: 1908748216
+      spriteID: e2796a1fd3520b34fbc0e4072be98549
+      internalID: -500697438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_29
+      name: lavaplanet_29
       rect:
         serializedVersion: 2
         x: 6090
@@ -728,14 +728,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c75522e21f828b4fa56fabeb45209c7
-      internalID: -1385235185
+      spriteID: f628ebc428e807e4f8bd06aaee47af00
+      internalID: 1217696340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_30
+      name: lavaplanet_30
       rect:
         serializedVersion: 2
         x: 6300
@@ -749,14 +749,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1d6c3b00c46e254a93a5456a9a6c766
-      internalID: 115078558
+      spriteID: 5e856f639d620e84d99e8d1975e6a04b
+      internalID: -1984161386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_31
+      name: lavaplanet_31
       rect:
         serializedVersion: 2
         x: 6510
@@ -770,14 +770,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c71299d00c73014ea434e4faf0692bd
-      internalID: -619709369
+      spriteID: 82e7a3c9f7d5c044d9c9f798708502be
+      internalID: 1471985433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_32
+      name: lavaplanet_32
       rect:
         serializedVersion: 2
         x: 6720
@@ -791,14 +791,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f99c280d9b7dc04caed139914f6c3c4
-      internalID: 283074013
+      spriteID: 5e67b92ac4de5874495a99838e2a384f
+      internalID: -115052143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_33
+      name: lavaplanet_33
       rect:
         serializedVersion: 2
         x: 6930
@@ -812,14 +812,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38aff7a3658c8a04699d3e4d44e9cc11
-      internalID: 397308011
+      spriteID: 52fded654afdbd04eb740b919820d0ca
+      internalID: 1780041274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_34
+      name: lavaplanet_34
       rect:
         serializedVersion: 2
         x: 7140
@@ -833,14 +833,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 817349417e9747b45ac2cbf49fb9ba51
-      internalID: 1116154631
+      spriteID: ebaa3a5ad72e3b549a0a9b8b61a4d7c9
+      internalID: -840372568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_35
+      name: lavaplanet_35
       rect:
         serializedVersion: 2
         x: 7350
@@ -854,14 +854,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2f3d30ae4e0bce44b9c2d0ec963d8ee
-      internalID: -674746496
+      spriteID: c0a8f781c5c76224882fcdb6278a01a5
+      internalID: -1929363750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_36
+      name: lavaplanet_36
       rect:
         serializedVersion: 2
         x: 7560
@@ -875,14 +875,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02c4bbbb3b6b1ec44a6b6e781682c142
-      internalID: -2007711402
+      spriteID: 4c651159c93c354479e5ae56f4a60d32
+      internalID: 1253074076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_37
+      name: lavaplanet_37
       rect:
         serializedVersion: 2
         x: 7770
@@ -896,14 +896,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3cc7749f0323994dac11161ad8585db
-      internalID: -908588712
+      spriteID: 5125a41fc174a884d86e54c0a80911e2
+      internalID: -285095842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_38
+      name: lavaplanet_38
       rect:
         serializedVersion: 2
         x: 7980
@@ -917,14 +917,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcbf21e8d652f364491d2d8f000d921d
-      internalID: 1828381088
+      spriteID: 1aa80e2d0d24c4344b4bd9ecd732fdbb
+      internalID: -1029197708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_39
+      name: lavaplanet_39
       rect:
         serializedVersion: 2
         x: 8190
@@ -938,14 +938,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2608a6b641e6de478dbbe6a7415c43a
-      internalID: -1578193232
+      spriteID: f9e92d482f94f6d4cbe64c73627d864e
+      internalID: -2122248645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_40
+      name: lavaplanet_40
       rect:
         serializedVersion: 2
         x: 8400
@@ -959,14 +959,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52969b2fae2eca44da49f8d877752844
-      internalID: 1171593421
+      spriteID: eadc68236d6eae540926d6b89e17debf
+      internalID: -1934714695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_41
+      name: lavaplanet_41
       rect:
         serializedVersion: 2
         x: 8610
@@ -980,14 +980,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02f46cc37a04c73478a24e7bf780cb86
-      internalID: 1658850003
+      spriteID: a91a1dc9ae5c0d3418b10ae64ff36af4
+      internalID: -133014799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_42
+      name: lavaplanet_42
       rect:
         serializedVersion: 2
         x: 8820
@@ -1001,14 +1001,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98d92afbeca5d9b42bdaccef8a781ad3
-      internalID: 427844545
+      spriteID: 8918a66f71fd75c4dbd81220bc17c62c
+      internalID: 1379615373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_43
+      name: lavaplanet_43
       rect:
         serializedVersion: 2
         x: 9030
@@ -1022,14 +1022,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45a0eecae0c0b0e4789216e389558edf
-      internalID: -1619716199
+      spriteID: cc5d99c7f8ca7ba4c8c3de0ca88b5fc9
+      internalID: 1044345205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_44
+      name: lavaplanet_44
       rect:
         serializedVersion: 2
         x: 9240
@@ -1043,14 +1043,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6596cda76206f964a881f61396a2f19c
-      internalID: 1774595075
+      spriteID: e6f2e9593613d5e42a15c49823ab08d8
+      internalID: -907254651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_45
+      name: lavaplanet_45
       rect:
         serializedVersion: 2
         x: 9450
@@ -1064,14 +1064,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9946d498b399d9c4d9e79525d9f01116
-      internalID: 913525154
+      spriteID: b2a40a629f2a5a341bc43b529efb3dcb
+      internalID: 1595284042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_46
+      name: lavaplanet_46
       rect:
         serializedVersion: 2
         x: 9660
@@ -1085,14 +1085,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aeb567e9175180a47ade75839611c075
-      internalID: -2097272967
+      spriteID: b4407feac79a11f478728a3def92bcac
+      internalID: -565168210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_47
+      name: lavaplanet_47
       rect:
         serializedVersion: 2
         x: 9870
@@ -1106,14 +1106,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acfdfc3757f9fb64182ab8c94d1c4695
-      internalID: 274763414
+      spriteID: bbaa828f62ca56f4bb2ad80280d9ce1a
+      internalID: 2060967982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_48
+      name: lavaplanet_48
       rect:
         serializedVersion: 2
         x: 10080
@@ -1127,14 +1127,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7727c1381a700cc428ce3d7d73f365b9
-      internalID: 12169495
+      spriteID: f89f120f1f2da1b4da1d0d90ef37f78f
+      internalID: 852077445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: islands_49
+      name: lavaplanet_49
       rect:
         serializedVersion: 2
         x: 10290
@@ -1148,8 +1148,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8d77ba475b337c4089a236c356dc4b1
-      internalID: 263751118
+      spriteID: a2844d4b5c7f9784f9d68fd7724ae188
+      internalID: 1822470003
       vertices: []
       indices: 
       edges: []
@@ -1165,56 +1165,56 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      islands_0: -347714276
-      islands_1: -1443012113
-      islands_10: 250432406
-      islands_11: -1105315787
-      islands_12: 767984257
-      islands_13: 1389759337
-      islands_14: -1383733296
-      islands_15: -493450500
-      islands_16: -1259108035
-      islands_17: -2125298411
-      islands_18: -553243725
-      islands_19: -2020724653
-      islands_2: -2004429075
-      islands_20: 541406828
-      islands_21: 987910910
-      islands_22: -1173517383
-      islands_23: -1972653865
-      islands_24: 315502014
-      islands_25: -1736878165
-      islands_26: 639030052
-      islands_27: 855320217
-      islands_28: 1908748216
-      islands_29: -1385235185
-      islands_3: 859307171
-      islands_30: 115078558
-      islands_31: -619709369
-      islands_32: 283074013
-      islands_33: 397308011
-      islands_34: 1116154631
-      islands_35: -674746496
-      islands_36: -2007711402
-      islands_37: -908588712
-      islands_38: 1828381088
-      islands_39: -1578193232
-      islands_4: -1401555652
-      islands_40: 1171593421
-      islands_41: 1658850003
-      islands_42: 427844545
-      islands_43: -1619716199
-      islands_44: 1774595075
-      islands_45: 913525154
-      islands_46: -2097272967
-      islands_47: 274763414
-      islands_48: 12169495
-      islands_49: 263751118
-      islands_5: -1399401854
-      islands_6: -925754251
-      islands_7: 1330086546
-      islands_8: -255784521
-      islands_9: 351015697
+      lavaplanet_0: -722277116
+      lavaplanet_1: -1131642446
+      lavaplanet_10: -260943277
+      lavaplanet_11: 2102705611
+      lavaplanet_12: -1853990725
+      lavaplanet_13: 1886681507
+      lavaplanet_14: 1895300760
+      lavaplanet_15: -1377003966
+      lavaplanet_16: 1822749989
+      lavaplanet_17: -123650775
+      lavaplanet_18: -558508453
+      lavaplanet_19: -1977785083
+      lavaplanet_2: -803226031
+      lavaplanet_20: 349108510
+      lavaplanet_21: 1963889126
+      lavaplanet_22: 1708515354
+      lavaplanet_23: -180248693
+      lavaplanet_24: 828931376
+      lavaplanet_25: -2093795177
+      lavaplanet_26: -43418557
+      lavaplanet_27: 1205106103
+      lavaplanet_28: -500697438
+      lavaplanet_29: 1217696340
+      lavaplanet_3: 2131262084
+      lavaplanet_30: -1984161386
+      lavaplanet_31: 1471985433
+      lavaplanet_32: -115052143
+      lavaplanet_33: 1780041274
+      lavaplanet_34: -840372568
+      lavaplanet_35: -1929363750
+      lavaplanet_36: 1253074076
+      lavaplanet_37: -285095842
+      lavaplanet_38: -1029197708
+      lavaplanet_39: -2122248645
+      lavaplanet_4: -94174965
+      lavaplanet_40: -1934714695
+      lavaplanet_41: -133014799
+      lavaplanet_42: 1379615373
+      lavaplanet_43: 1044345205
+      lavaplanet_44: -907254651
+      lavaplanet_45: 1595284042
+      lavaplanet_46: -565168210
+      lavaplanet_47: 2060967982
+      lavaplanet_48: 852077445
+      lavaplanet_49: 1822470003
+      lavaplanet_5: 1196203621
+      lavaplanet_6: -765778816
+      lavaplanet_7: -35743929
+      lavaplanet_8: -1168028725
+      lavaplanet_9: -1493078709
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
