@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1165,56 +1177,56 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      asteroid_0: 484858152
-      asteroid_1: -1063174448
-      asteroid_10: 1885969475
-      asteroid_11: -548756118
-      asteroid_12: 1692975201
-      asteroid_13: 1516891099
-      asteroid_14: -190113066
-      asteroid_15: 1842011910
-      asteroid_16: -600502850
-      asteroid_17: -556937960
-      asteroid_18: 1932101733
-      asteroid_19: -1748060937
-      asteroid_2: 210676281
-      asteroid_20: -1011017545
-      asteroid_21: -14699445
-      asteroid_22: 1399806598
-      asteroid_23: -924100172
-      asteroid_24: -1494671406
-      asteroid_25: -1436999831
-      asteroid_26: 1955523932
-      asteroid_27: -422502510
-      asteroid_28: -1506638830
-      asteroid_29: -1416892113
       asteroid_3: -661281903
-      asteroid_30: -1850813409
-      asteroid_31: -501762968
-      asteroid_32: 1302423884
-      asteroid_33: 2139486123
-      asteroid_34: 1788302586
-      asteroid_35: -620172040
-      asteroid_36: -1585503206
-      asteroid_37: 1601966783
-      asteroid_38: -1704643673
-      asteroid_39: 460780635
       asteroid_4: 1042765524
-      asteroid_40: -1527360652
-      asteroid_41: 1779270604
-      asteroid_42: 905012147
-      asteroid_43: -606213024
-      asteroid_44: 1457601585
+      asteroid_23: -924100172
+      asteroid_31: -501762968
+      asteroid_15: 1842011910
+      asteroid_20: -1011017545
+      asteroid_13: 1516891099
       asteroid_45: -1370204445
-      asteroid_46: -712305436
-      asteroid_47: 1263113387
-      asteroid_48: 1382492953
       asteroid_49: 381040554
+      asteroid_27: -422502510
+      asteroid_46: -712305436
       asteroid_5: -1241311609
-      asteroid_6: 12869005
+      asteroid_34: 1788302586
+      asteroid_0: 484858152
+      asteroid_25: -1436999831
+      asteroid_47: 1263113387
+      asteroid_2: 210676281
+      asteroid_17: -556937960
+      asteroid_33: 2139486123
+      asteroid_16: -600502850
+      asteroid_19: -1748060937
+      asteroid_28: -1506638830
+      asteroid_48: 1382492953
+      asteroid_22: 1399806598
+      asteroid_30: -1850813409
+      asteroid_11: -548756118
+      asteroid_44: 1457601585
+      asteroid_12: 1692975201
+      asteroid_35: -620172040
+      asteroid_24: -1494671406
+      asteroid_32: 1302423884
+      asteroid_26: 1955523932
+      asteroid_38: -1704643673
+      asteroid_14: -190113066
+      asteroid_43: -606213024
+      asteroid_18: 1932101733
       asteroid_7: -1540862935
+      asteroid_1: -1063174448
+      asteroid_41: 1779270604
+      asteroid_21: -14699445
+      asteroid_6: 12869005
+      asteroid_39: 460780635
+      asteroid_36: -1585503206
       asteroid_8: -1007282920
+      asteroid_37: 1601966783
+      asteroid_10: 1885969475
+      asteroid_40: -1527360652
       asteroid_9: -1000067595
+      asteroid_42: 905012147
+      asteroid_29: -1416892113
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

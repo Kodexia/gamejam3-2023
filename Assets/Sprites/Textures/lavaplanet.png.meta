@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1165,56 +1177,56 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      lavaplanet_0: -722277116
-      lavaplanet_1: -1131642446
-      lavaplanet_10: -260943277
-      lavaplanet_11: 2102705611
-      lavaplanet_12: -1853990725
-      lavaplanet_13: 1886681507
-      lavaplanet_14: 1895300760
-      lavaplanet_15: -1377003966
-      lavaplanet_16: 1822749989
-      lavaplanet_17: -123650775
-      lavaplanet_18: -558508453
-      lavaplanet_19: -1977785083
+      lavaplanet_6: -765778816
+      lavaplanet_8: -1168028725
+      lavaplanet_49: 1822470003
       lavaplanet_2: -803226031
-      lavaplanet_20: 349108510
-      lavaplanet_21: 1963889126
-      lavaplanet_22: 1708515354
-      lavaplanet_23: -180248693
-      lavaplanet_24: 828931376
-      lavaplanet_25: -2093795177
-      lavaplanet_26: -43418557
-      lavaplanet_27: 1205106103
-      lavaplanet_28: -500697438
-      lavaplanet_29: 1217696340
-      lavaplanet_3: 2131262084
-      lavaplanet_30: -1984161386
-      lavaplanet_31: 1471985433
       lavaplanet_32: -115052143
-      lavaplanet_33: 1780041274
       lavaplanet_34: -840372568
-      lavaplanet_35: -1929363750
-      lavaplanet_36: 1253074076
-      lavaplanet_37: -285095842
-      lavaplanet_38: -1029197708
-      lavaplanet_39: -2122248645
       lavaplanet_4: -94174965
       lavaplanet_40: -1934714695
-      lavaplanet_41: -133014799
-      lavaplanet_42: 1379615373
-      lavaplanet_43: 1044345205
-      lavaplanet_44: -907254651
-      lavaplanet_45: 1595284042
-      lavaplanet_46: -565168210
-      lavaplanet_47: 2060967982
+      lavaplanet_33: 1780041274
+      lavaplanet_36: 1253074076
+      lavaplanet_13: 1886681507
       lavaplanet_48: 852077445
-      lavaplanet_49: 1822470003
+      lavaplanet_42: 1379615373
+      lavaplanet_23: -180248693
+      lavaplanet_30: -1984161386
+      lavaplanet_3: 2131262084
+      lavaplanet_35: -1929363750
+      lavaplanet_20: 349108510
+      lavaplanet_46: -565168210
+      lavaplanet_17: -123650775
       lavaplanet_5: 1196203621
-      lavaplanet_6: -765778816
-      lavaplanet_7: -35743929
-      lavaplanet_8: -1168028725
       lavaplanet_9: -1493078709
+      lavaplanet_45: 1595284042
+      lavaplanet_16: 1822749989
+      lavaplanet_43: 1044345205
+      lavaplanet_27: 1205106103
+      lavaplanet_14: 1895300760
+      lavaplanet_11: 2102705611
+      lavaplanet_31: 1471985433
+      lavaplanet_29: 1217696340
+      lavaplanet_44: -907254651
+      lavaplanet_24: 828931376
+      lavaplanet_26: -43418557
+      lavaplanet_10: -260943277
+      lavaplanet_25: -2093795177
+      lavaplanet_47: 2060967982
+      lavaplanet_7: -35743929
+      lavaplanet_1: -1131642446
+      lavaplanet_12: -1853990725
+      lavaplanet_19: -1977785083
+      lavaplanet_21: 1963889126
+      lavaplanet_41: -133014799
+      lavaplanet_38: -1029197708
+      lavaplanet_0: -722277116
+      lavaplanet_15: -1377003966
+      lavaplanet_18: -558508453
+      lavaplanet_39: -2122248645
+      lavaplanet_28: -500697438
+      lavaplanet_22: 1708515354
+      lavaplanet_37: -285095842
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
