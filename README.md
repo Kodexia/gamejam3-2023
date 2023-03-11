@@ -1,2 +1,3 @@
-# gamejam
-Unity game created in Game Jam.
+# Planet Mayhem
+
+A game where you have to conquer your whole solar system
