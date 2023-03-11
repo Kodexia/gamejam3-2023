@@ -5,12 +5,15 @@ using UnityEngine;
 public class Resource
 {
     public string name { get; private set; }
-    Sprite sprite { get; set; }
+    public int amm;
+    
+  
     
 
-    public Resource(string name, Sprite sprite)
+    public Resource(string name, int amm)
     {
         this.name = name;
-        this.sprite = sprite;
+        this.amm = amm;
     }
+
 }
