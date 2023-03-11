@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 
 public class SpawnPlanet : MonoBehaviour
 {
+    
 
     [SerializeField]
     public List<GameObject> sprite;
@@ -25,9 +26,9 @@ public class SpawnPlanet : MonoBehaviour
     [SerializeField]
     public GameObject bg;
 
-    public List<Vector2> positions;
 
-    public Planet planetClass;
+    float minDistance = 4f; // minimum distance between positions
+    public List<Vector2> positions;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +44,7 @@ public class SpawnPlanet : MonoBehaviour
         float sqrt2 = Mathf.Sqrt(2);
         float cellSize = distanceBetweenPoints / sqrt2;
         int dim = (int)Mathf.Ceil(width / cellSize);
-        float[,] array = new float[dim,dim];
+        float[,] array = new float[dim, dim];
         //    X, Y
         Debug.Log("Dim: " + dim);
         Debug.Log("Cellsize: " + cellSize);
@@ -85,7 +86,7 @@ public class SpawnPlanet : MonoBehaviour
                     continue;
                 }
 
-                if (array[xCellPosition,yCellPosition] != 0 ||
+                if (array[xCellPosition, yCellPosition] != 0 ||
                     (xCellPosition + 1 < dim && array[xCellPosition + 1, yCellPosition] != 0) ||
                     (xCellPosition - 1 >= 0 && array[xCellPosition - 1, yCellPosition] != 0) ||
                     (yCellPosition + 1 < dim && array[xCellPosition, yCellPosition + 1] != 0) ||
