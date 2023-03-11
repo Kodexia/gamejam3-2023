@@ -12,7 +12,7 @@ public class Spaceship
     {
         this.isEnemy = isEnemy;
         this.sprite = sprite;
-        attack = 10 * upgrades.attackUpgrades;
-        speed = 5 * upgrades.speedUpgrades;
+        attack = 10 * upgrades.attackAndSpeedUpgrades;
+        speed = 5 * upgrades.defenceUpgrades;
     }
 }
