@@ -24,18 +24,8 @@ public class SpawnPlanet : MonoBehaviour
 
     [SerializeField]
     public GameObject bg;
-<<<<<<< HEAD
-    
-    public List<Vector2> positions;
-=======
 
->>>>>>> a76b20202347b4bd40ab28156d1d61aedf690181
-
-<<<<<<< HEAD
-    float minDistance = 4f; // minimum distance between positions
-=======
     public List<Vector2> positions;
->>>>>>> b8dc4c0267148c84981ed1e772feac41a2326fcb
 
     public Planet planetClass;
 
@@ -66,13 +56,7 @@ public class SpawnPlanet : MonoBehaviour
 
         for (int i = 0; i < planets; i++)
         {
-<<<<<<< HEAD
-            planetClass = new Planet("E-" + Random.Range(100, 400).ToString());
-
-            randomPlanet = Random.Range(0, sprite.Count - 1);
-=======
             randomPlanet = UnityEngine.Random.Range(0, sprite.Count - 1);
->>>>>>> a76b20202347b4bd40ab28156d1d61aedf690181
 
             GameObject planet = sprite[randomPlanet];
 
