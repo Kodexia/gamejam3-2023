@@ -19,7 +19,7 @@ public class SpawnPlanet : MonoBehaviour
 
     public List<Vector2> positions;
 
-    float minDistance = 3f; // minimum distance between positions
+    float minDistance = 4f; // minimum distance between positions
 
     // Start is called before the first frame update
     void Start()
