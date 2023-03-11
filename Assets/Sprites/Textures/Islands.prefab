@@ -10,13 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6085365176889885798}
   - component: {fileID: 5969258787767434651}
-<<<<<<< HEAD
-  m_Layer: 8
-=======
   - component: {fileID: -5918581325562755093}
   - component: {fileID: 3136730475311604968}
   m_Layer: 0
->>>>>>> 411bcaef76d04a9c076a2a1ba8039c669b41caf1
   m_Name: Islands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,11 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218342611919350575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -2.9820461, y: -2.305042, z: 0}
-=======
   m_LocalPosition: {x: -25.849535, y: -5.7067165, z: 0}
->>>>>>> 411bcaef76d04a9c076a2a1ba8039c669b41caf1
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
