@@ -821,6 +821,17 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7459988537954775008, guid: b34bd90c695282041869e312710fdde4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b34bd90c695282041869e312710fdde4, type: 3}
+--- !u!114 &667374327 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 612175337562027005, guid: ef5ecf790b5598c43a556ca9b7438341, type: 3}
+  m_PrefabInstance: {fileID: 1809309191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1188416100
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +1007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be76a510e8b3aa43ab2305f3c9be7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oreResourceImage: {fileID: 1534615188}
+  oreResourceImage: {fileID: 667374327}
   Uranium: {fileID: 21300000, guid: 262f5caabb13145429d47b94b617d4ff, type: 3}
   Azurite: {fileID: 21300000, guid: a8808198fb4404f4ba6c29a3fda8d392, type: 3}
   Crimtain: {fileID: 21300000, guid: 5968e1362717e664dbe7e0eef7b44f44, type: 3}
