@@ -226,6 +226,8 @@ MonoBehaviour:
   zoomSpeed: 0.1
   minZoom: 1
   maxZoom: 5
+  planetsSpeed: 1
+  backgroundSpeed: 0.5
 --- !u!1 &975913985
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +325,7 @@ GameObject:
   - component: {fileID: 1539365729}
   - component: {fileID: 1539365728}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: PlanetUICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -455,9 +457,10 @@ MonoBehaviour:
   - {fileID: 6819484326165767468, guid: 4c834f2b1535a2945864b8afb89463a3, type: 3}
   planets: 12
   randomPlanet: 0
-  distanceBetweenPoints: 10
-  maxFailedChecks: 15
+  distanceBetweenPoints: 20
+  maxFailedChecks: 20
   bg: {fileID: 975913985}
+  homePlanet: {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
   positions: []
 --- !u!4 &1668659977
 Transform:
@@ -587,6 +590,8 @@ MonoBehaviour:
   zoomSpeed: 0.1
   minZoom: 1
   maxZoom: 5
+  planetsSpeed: 1
+  backgroundSpeed: 0.5
 --- !u!81 &1967866735
 AudioListener:
   m_ObjectHideFlags: 0

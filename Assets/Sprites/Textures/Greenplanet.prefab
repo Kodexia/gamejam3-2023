@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -4899623841115572628}
   - component: {fileID: 6611010899648293695}
   - component: {fileID: -4233610878835251677}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Greenplanet
   m_TagString: planet
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162665380754052019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7344036, y: -0.66889954, z: 0}
+  m_LocalPosition: {x: -9.560662, y: -3.2935774, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
