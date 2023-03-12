@@ -9,15 +9,9 @@ using System;
 public class Player : MonoBehaviour
 {
     public bool isDead = false;
-<<<<<<< HEAD
-    public bool isWon = false;
-    public int attack = 10;
-    public int defence = 50;
-=======
     public bool isWon= false;
     public int attack = 10;
     public int defence = 10;
->>>>>>> 765ba3508dd2fe90588e7910a2ae61e360779752
     public int raidsSurvived = 0;
 
 
