@@ -49,10 +49,32 @@ public class Player : MonoBehaviour
                 pointOfTargetedPlanet = new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y) ;
                 Debug.Log(pointOfTargetedPlanet);
                 mainSpaceship.whereToGo = pointOfTargetedPlanet;
+                Planet planet = hit.collider.GetComponent<Planet>();
+                planet.isTargeted = true;
                 Instantiate(spaceshipSprites[0]);
 
             }
         }
         
-    }   
+    }
+    void CheckForEndGame()
+    {
+        if (this.isDead || this.isWon)
+        {
+            if (isDead)
+                PlayerStats.isDead = true;
+
+
+            PlayerStats.NumberOfAzurite = this.resources[0].amm;
+            PlayerStats.NumberOfCrimtain = this.resources[1].amm;
+            PlayerStats.NumberOfUranium = this.resources[2].amm;
+            PlayerStats.attack = this.attack;
+            PlayerStats.defense = this.defence;
+            PlayerStats.raidSurvived = raidsSurvived;
+            PlayerStats.endTime = DateTime.Now;
+
+
+
+        }
+    }
 }

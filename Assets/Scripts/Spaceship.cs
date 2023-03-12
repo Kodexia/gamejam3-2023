@@ -10,6 +10,8 @@ public class Spaceship : MonoBehaviour
     float speed;
     [SerializeField]
     public Vector2 whereToGo = new Vector2(0, 0);
+    [SerializeField]
+    public int type = 0;
     public Spaceship(Upgrades upgrades, bool isEnemy)
     {
         this.isEnemy = isEnemy;
@@ -43,8 +45,9 @@ public class Spaceship : MonoBehaviour
         }
     }
 
-    public void moveOnTo(Vector2 toGo)
+    public void moveOnTo(Vector2 toGo, int type)
     {
         whereToGo = toGo;
+        this.type = type;
     }
 }

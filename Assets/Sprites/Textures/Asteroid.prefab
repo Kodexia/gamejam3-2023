@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: -7469263364200177863}
   - component: {fileID: -7254370733240954921}
   - component: {fileID: 7459988537954775008}
-  m_Layer: 8
+  - component: {fileID: -9055038405091369996}
+  m_Layer: 0
   m_Name: Asteroid
   m_TagString: homeplanet
   m_Icon: {fileID: 0}
@@ -126,6 +127,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTargeted: 0
+  spaceshipSprites:
+  - {fileID: 7279026761454459694, guid: b975e94583634a0449236baa41201fac, type: 3}
+  - {fileID: 920990135505060969, guid: f96dc9a1998fbcf43a9fa8d6de55adc0, type: 3}
+  - {fileID: 7916721302183686682, guid: 15bac39f5505944408292401cf5a9324, type: 3}
+  homePlanet: {fileID: 6758447520651698160}
 --- !u!114 &7459988537954775008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,3 +145,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.2
+--- !u!50 &-9055038405091369996
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758447520651698160}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
