@@ -7,8 +7,8 @@ using UnityEngine.UI;
 [ExecuteInEditMode()]
 public class ProgressBar : MonoBehaviour
 {
-    public int maximum;
-    public int progress;
+    public float maximum;
+    public float progress;
     public Image mask;
     public Image fill;
     public Color color;
