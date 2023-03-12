@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8425774163418198175}
   - component: {fileID: 7256829800684263977}
   - component: {fileID: -3011033283714339801}
-  - component: {fileID: 4075931069488763745}
   m_Layer: 0
   m_Name: Earthplanet 1
   m_TagString: planet
@@ -126,16 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTargeted: 0
---- !u!114 &4075931069488763745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3763847190033552507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9be76a510e8b3aa43ab2305f3c9be7fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeDuration: 0.2
+  spaceshipSprites: []
+  homePlanet: {fileID: 0}
