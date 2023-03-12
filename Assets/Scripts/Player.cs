@@ -32,11 +32,7 @@ public class Player : MonoBehaviour
         resources.Add(new Resource("Uranium", 0));
     }
     private void Start()
-    { 
-
-        PlayerStats.startTime = DateTime.Now;
-
-        Instantiate(spaceshipSprites[0]);
+    {
         mainSpaceship = spaceshipSprites[0].GetComponent<Spaceship>();
     }
     private void Update()
@@ -50,68 +46,13 @@ public class Player : MonoBehaviour
             //If something was hit, the RaycastHit2D.collider will not be null.
             if (hit.collider != null && hit.collider.tag == "planet" && !isAttacking)
             {
-                AttackPlanet(1);
-                isAttacking = true;
                 pointOfTargetedPlanet = new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y) ;
-                Planet planet = hit.collider.GetComponent<Planet>();
-                planet.isTargeted = true;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            buySpaceship();
+                Debug.Log(pointOfTargetedPlanet);
+                mainSpaceship.whereToGo = pointOfTargetedPlanet;
+                Instantiate(spaceshipSprites[0]);
 
-        }
-        if (isAttacking)
-        {
-            mainSpaceship.moveOnTo(pointOfTargetedPlanet);
-        }
-
-        
-    }
-    public void buySpaceship()
-    {
-        foreach(Resource ore in resources)
-        {
-            if(ore.name == "Azurite" && ore.amm > 1)
-            {
-                Spaceship spaceship = new Spaceship(playerUpgrades, false);
-                spaceshipsOnPlanet.Add(spaceship);
-                
-                Debug.Log("koupil si lod");
-                
             }
         }
         
-    }
-    public void AttackPlanet(int ammOfSentUnits)
-    {
-        for (int i = 0; i < ammOfSentUnits; i++)
-        {
-            spaceshipsOffPlanet.Add(spaceshipsOnPlanet[i]);
-            spaceshipsOnPlanet.RemoveAt(i);
-
-        }
-    }
-    void CheckForEndGame()
-    {
-        if (this.isDead || this.isWon)
-        {
-            if (isDead)
-            PlayerStats.isDead = true;
-            
-
-            PlayerStats.NumberOfAzurite = this.resources[0].amm;
-            PlayerStats.NumberOfCrimtain = this.resources[1].amm;
-            PlayerStats.NumberOfUranium = this.resources[2].amm;
-            PlayerStats.attack = this.attack;
-            PlayerStats.defense = this.defence;
-            PlayerStats.raidSurvived = raidsSurvived;
-            PlayerStats.endTime = DateTime.Now;
-
-
-
-        }
-    }
-    
+    }   
 }

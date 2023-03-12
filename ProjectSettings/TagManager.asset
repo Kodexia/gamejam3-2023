@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Undefined
+  - homeplanet
   - planet
   layers:
   - Default
@@ -16,7 +17,7 @@ TagManager:
   - 
   - Background
   - Planets
-  - 
+  - PlanetUI
   - 
   - 
   - 

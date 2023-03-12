@@ -11,6 +11,7 @@ public class Planet : MonoBehaviour
     private List<Resource> resources = new List<Resource>();
     public Resource ore;
     Sprite sprite;
+    
     System.Random rnd = new System.Random();
 
     public Planet()
@@ -26,7 +27,10 @@ public class Planet : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        //MinePlanet();
+        if (isTargeted)
+        {
+            MinePlanet(GameObject.Find("Main Camera Planets").GetComponent<Player>());
+        }
     }
     void MinePlanet(Player player)
     {

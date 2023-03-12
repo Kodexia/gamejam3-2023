@@ -123,111 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &519420028
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 519420032}
-  - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
-  - component: {fileID: 519420033}
-  m_Layer: 0
-  m_Name: Main Camera Background
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
---- !u!20 &519420031
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 128
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 0
-  m_HDR: 1
-  m_AllowMSAA: 0
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 0
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &519420032
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0.043619405, z: 0, w: 0.9990483}
-  m_LocalPosition: {x: 0, y: 0, z: -21.07}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 5, z: 0}
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84e95f26ea38ac84b9c5d70a18d7db14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  background: {fileID: 975913986}
-  planetCamera: {fileID: 0}
-  backgroundCamera: {fileID: 0}
-  zoomSpeed: 0.1
-  minZoom: 1
-  maxZoom: 5
-  planetsSpeed: 1
-  backgroundSpeed: 0.5
 --- !u!1 &975913985
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +205,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1539365727
 GameObject:
@@ -324,6 +219,7 @@ GameObject:
   - component: {fileID: 1539365730}
   - component: {fileID: 1539365729}
   - component: {fileID: 1539365728}
+  - component: {fileID: 1539365732}
   m_Layer: 5
   m_Name: PlanetUICanvas
   m_TagString: Untagged
@@ -406,13 +302,25 @@ RectTransform:
   m_Children:
   - {fileID: 1688812631}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -80.08, y: 20.33}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1539365732
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539365727}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1668659975
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,10 +351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite:
-  - {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
   - {fileID: 3532459095212715135, guid: 6cb8b25dba4513f47858af679b889d38, type: 3}
   - {fileID: 8974538288100947998, guid: 47d2a528fd9080e4abe4af3cd0b8e58f, type: 3}
-  - {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
   - {fileID: 5624786038006281123, guid: 10f4ccd2a6ffbe143a41dc86b54ba0e7, type: 3}
   - {fileID: 3763847190033552507, guid: 83f66ce0980586c4db923b14363094e7, type: 3}
   - {fileID: 1526442387449076733, guid: b1d85534ac89a5f4e8195605378e580c, type: 3}
@@ -457,7 +363,7 @@ MonoBehaviour:
   - {fileID: 6819484326165767468, guid: 4c834f2b1535a2945864b8afb89463a3, type: 3}
   planets: 12
   randomPlanet: 0
-  distanceBetweenPoints: 20
+  distanceBetweenPoints: 5
   maxFailedChecks: 20
   bg: {fileID: 975913985}
   homePlanet: {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
@@ -475,7 +381,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1688812630
 GameObject:
@@ -565,6 +471,7 @@ GameObject:
   - component: {fileID: 1967866736}
   - component: {fileID: 1967866735}
   - component: {fileID: 1967866734}
+  - component: {fileID: 1967866738}
   m_Layer: 0
   m_Name: Main Camera Planets
   m_TagString: MainCamera
@@ -585,13 +492,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 975913986}
-  planetCamera: {fileID: 1967866736}
-  backgroundCamera: {fileID: 519420031}
   zoomSpeed: 0.1
   minZoom: 1
   maxZoom: 5
-  planetsSpeed: 1
-  backgroundSpeed: 0.5
 --- !u!81 &1967866735
 AudioListener:
   m_ObjectHideFlags: 0
@@ -609,7 +512,7 @@ Camera:
   m_GameObject: {fileID: 1967866733}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -631,7 +534,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 2147483647
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -656,5 +559,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1967866738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967866733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4d17e80de54be40b98c30aa79c173f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spaceshipSprites:
+  - {fileID: 7279026761454459694, guid: b975e94583634a0449236baa41201fac, type: 3}
+  - {fileID: 920990135505060969, guid: f96dc9a1998fbcf43a9fa8d6de55adc0, type: 3}
+  - {fileID: 7916721302183686682, guid: 15bac39f5505944408292401cf5a9324, type: 3}
+  isAttacking: 0
