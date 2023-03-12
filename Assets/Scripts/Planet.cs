@@ -34,7 +34,6 @@ public class Planet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-<<<<<<< HEAD
         //Debug.Log("COLIDED WITH PLANET");
         //Debug.Log(isTargeted);
         //Debug.Log(tag) ;
@@ -57,15 +56,12 @@ public class Planet : MonoBehaviour
         }
 
         if (isTargeted == true && tag != "homeplanet")
-=======
-        if (isTargeted && tag != "homeplanet")
->>>>>>> 765ba3508dd2fe90588e7910a2ae61e360779752
         {
             int type = other.GetComponent<Spaceship>().type;
             Debug.Log(tag + "");
             Debug.Log("Destroyed");
             Destroy(other.gameObject);
-<<<<<<< HEAD
+            
             if (MinePlanet(GameObject.Find("Main Camera Planets").GetComponent<Player>()))
 =======
             MinePlanet(GameObject.Find("Main Camera Planets").GetComponent<Player>());
@@ -84,15 +80,10 @@ public class Planet : MonoBehaviour
     {
         foreach (var playerOre in player.resources)
         {
-<<<<<<< HEAD
             Debug.Log("Started mining");
             if (playerOre.name == ore.name && ore.amm > 0)
             {
                 if (ore.amm < 2 * player.playerUpgrades.miningSpeedAndSpeedUpgrades)
-=======
-            if(playerOre.name == ore.name && ore.amm > 0) {
-                if(ore.amm < 2*player.playerUpgrades.miningSpeedAndSpeedUpgrades)
->>>>>>> 765ba3508dd2fe90588e7910a2ae61e360779752
                 {
                     playerOre.amm += ore.amm;
                     ore.amm = 0;

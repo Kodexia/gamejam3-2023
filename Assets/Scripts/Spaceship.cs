@@ -11,17 +11,10 @@ public class Spaceship : MonoBehaviour
     public int type;
     [SerializeField]
     public Vector2 whereToGo = new Vector2(0, 0);
-<<<<<<< HEAD
     Upgrades upgrades = new Upgrades();
 
     public int enemyAttack = 1;
     public Spaceship(bool isEnemy)
-=======
-    [SerializeField]
-    public int type = 0;
-    
-    public Spaceship(Upgrades upgrades, bool isEnemy)
->>>>>>> 765ba3508dd2fe90588e7910a2ae61e360779752
     {
         this.isEnemy = isEnemy;
         //sprite = 
