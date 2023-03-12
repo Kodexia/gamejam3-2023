@@ -23,7 +23,7 @@ public class Upgrades
             }
         }
     }
-    public void upgradeSpeed(List<Resource> useableOres)
+    public void upgradeDefence(List<Resource> useableOres)
     {
         foreach (Resource ore in useableOres)
         {

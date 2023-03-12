@@ -1221,12 +1221,15 @@ TextureImporter:
       white2_29: -5296090192379520560
       white2_11: -8996423993547210072
       white2_9: -6520213778411162458
+<<<<<<< HEAD
+=======
       white2_20: -5916394655426614210
       white2_41: 5277693248551861761
       white2_30: 3172929670895933843
       white2_16: 7251896166279229128
       white2_31: -3007334795881259210
       white2_45: 5486022002862213798
+>>>>>>> fdcfd25805c6b6922b7461fbb0a4a79fd96fde5f
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

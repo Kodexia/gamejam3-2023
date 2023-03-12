@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1345783362130294819}
   - component: {fileID: 5492185801059598639}
   - component: {fileID: -7988004152248878552}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gasgigant2
   m_TagString: planet
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526442387449076733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.8426895, y: 16.329247, z: 0}
+  m_LocalPosition: {x: 11.0873575, y: -2.2016602, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
