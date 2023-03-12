@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.XR.WSA;
+using UnityEngine.UI;
 
 public class ShowPlanetUI : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ShowPlanetUI : MonoBehaviour
     Planet planet;
     Canvas planetUI;
     SpriteRenderer rend;
+    TextMeshProUGUI img;
     TextMeshProUGUI planetText;
     CanvasGroup planetUIGroup;
     [SerializeField]
@@ -20,12 +22,20 @@ public class ShowPlanetUI : MonoBehaviour
     Vector2 screenBounds;
     bool fadeIn = false;
     bool fadeOut = false;
-
+  
     private void Start()
     {
-        rend = GetComponent<SpriteRenderer>();
-        planet = GetComponent<Planet>();
+        
         GameObject tempObject = GameObject.Find("PlanetUICanvas");
+        GameObject imgTempObject = GameObject.Find("Image (1)");
+        if(imgTempObject != null)
+        {
+            
+            img = imgTempObject.GetComponent<TextMeshProUGUI>();
+            if(img == null) {
+                Debug.Log("didnt find img");
+            }
+        }
         if (tempObject != null)
         {
             //If we found the object , get the Canvas component from it.
@@ -66,7 +76,7 @@ public class ShowPlanetUI : MonoBehaviour
         
 
 
-        tr = GetComponent<Transform>();
+        
         
         
 
@@ -77,7 +87,27 @@ public class ShowPlanetUI : MonoBehaviour
 
     void Update()
     {
-        if(fadeIn)
+        if (Input.GetMouseButtonDown(1))
+        {
+          
+            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
+            
+
+            if (hit.collider != null && hit.collider.tag == "planet")
+            {
+                rend = hit.collider.GetComponent<SpriteRenderer>();
+               
+                planet = hit.collider.GetComponent<Planet>();
+                tr = hit.collider.GetComponent<Transform>();
+                ShowPlanetInfo();
+            }
+            else
+            {
+                HidePlanetInfo();
+            }
+        }
+        if (fadeIn)
         {
             if(planetUIGroup.alpha < 1)
             {
@@ -112,7 +142,7 @@ public class ShowPlanetUI : MonoBehaviour
         }
     }
 
-    private void OnMouseOver()
+    public void ShowPlanetInfo()
     {
         float height = rend.sprite.bounds.size.y;
         float width = rend.sprite.bounds.size.x;
@@ -123,7 +153,7 @@ public class ShowPlanetUI : MonoBehaviour
             fadeIn = true;
             planetUI.enabled = true;
             planetText.text = $"Planet: {planet.name}\r\nMaterial: {planet.ore.name}\r\nAmmout: {planet.ore.amm}";
-
+            
             planetUI.transform.position = new Vector2(tr.position.x + height + 1, tr.position.y);
             if (planetUI.transform.position.x + 1 > screenBounds.x)
             {
@@ -136,7 +166,7 @@ public class ShowPlanetUI : MonoBehaviour
         }
     }
 
-    private void OnMouseExit()
+    public void HidePlanetInfo()
     {
         if(fadeOut == false && planetUI.enabled == true)
         {
@@ -146,4 +176,5 @@ public class ShowPlanetUI : MonoBehaviour
        
 
     }
+    
 }
