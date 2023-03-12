@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.XR.WSA;
 
 public class ShowPlanetUI : MonoBehaviour
 {
     Transform tr;
 
-    
+    Planet planet;
     Canvas planetUI;
+    SpriteRenderer rend;
     TextMeshProUGUI planetText;
     CanvasGroup planetUIGroup;
     [SerializeField]
@@ -21,30 +23,52 @@ public class ShowPlanetUI : MonoBehaviour
 
     private void Start()
     {
-        planetText = new TextMeshProUGUI();
-        planetText.text = "";
-        planetText.fontSize = 0.3f;
-        planetText.alignment = TextAlignmentOptions.Center;
-        planetText.horizontalAlignment = HorizontalAlignmentOptions.Center;
-        planetText.transform.SetParent(planetUI.transform);
-        
+        rend = GetComponent<SpriteRenderer>();
+        planet = GetComponent<Planet>();
         GameObject tempObject = GameObject.Find("PlanetUICanvas");
         if (tempObject != null)
         {
             //If we found the object , get the Canvas component from it.
             planetUI = tempObject.GetComponent<Canvas>();
+            planetUIGroup = tempObject.GetComponent<CanvasGroup>();
             if (planetUI == null)
             {
-                Debug.Log("Could not locate Canvas component on " + tempObject.name);
+                //Debug.Log("Could not locate Canvas component on " + tempObject.name);
             }
         }
 
+        if (GameObject.Find("TextMeshPro") == null)
+        {
+            GameObject textObject = new GameObject("TextMeshPro", typeof(TextMeshProUGUI));
+            textObject.transform.SetParent(planetUI.transform, false);
+            planetText = textObject.GetComponent<TextMeshProUGUI>();
 
+            planetText.fontSize = 0.3f;
+            planetText.alignment = TextAlignmentOptions.Center;
+            planetText.horizontalAlignment = HorizontalAlignmentOptions.Center;
+        }
+        else
+        {
+            GameObject textObject = GameObject.Find("TextMeshPro");
+            textObject.transform.SetParent(planetUI.transform, false);
+            planetText = textObject.GetComponent<TextMeshProUGUI>();
+
+            planetText.fontSize = 0.3f;
+            planetText.alignment = TextAlignmentOptions.Center;
+            planetText.horizontalAlignment = HorizontalAlignmentOptions.Center;
+        }
+        
+        
+        
+        
+
+
+        
 
 
         tr = GetComponent<Transform>();
         
-        planetUIGroup = planetUI.GetComponent<CanvasGroup>();
+        
 
         planetUI.enabled = false;
         planetUIGroup.alpha = 0f;
@@ -82,6 +106,7 @@ public class ShowPlanetUI : MonoBehaviour
                     fadeOut = false;
                     elapsedTime = 0.0f;
                     planetUI.enabled = false;
+                  
                 }
             }
         }
@@ -89,20 +114,24 @@ public class ShowPlanetUI : MonoBehaviour
 
     private void OnMouseOver()
     {
-        Debug.Log(planetUI.enabled + " - " + fadeIn);
+        float height = rend.sprite.bounds.size.y;
+        float width = rend.sprite.bounds.size.x;
+        //Debug.Log(planetUI.enabled + " - " + fadeIn);
         
         if (planetUI.enabled == false && fadeIn == false)
         {
             fadeIn = true;
             planetUI.enabled = true;
-            planetText.text = "gbas";
+            planetText.text = $"Planet: {planet.name}\r\nMaterial: {planet.ore.name}\r\nAmmout: {planet.ore.amm}";
 
-            planetUI.transform.position = new Vector2(tr.position.x + 1.5f, tr.position.y);
+            planetUI.transform.position = new Vector2(tr.position.x + height + 1, tr.position.y);
             if (planetUI.transform.position.x + 1 > screenBounds.x)
             {
-                planetUI.transform.position = new Vector2(tr.position.x - 1.5f, tr.position.y);
+                planetUI.transform.position = new Vector2(tr.position.x - height - 1, tr.position.y);
 
             }
+
+            
 
         }
     }
@@ -113,7 +142,8 @@ public class ShowPlanetUI : MonoBehaviour
         {
             fadeOut = true;
         }
-   
+       
+       
 
     }
 }

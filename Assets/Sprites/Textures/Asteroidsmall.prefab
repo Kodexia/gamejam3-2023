@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1953565027249305400}
   - component: {fileID: 1532021170529417565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Asteroidsmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8974538288100947998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.244712, y: -6.387821, z: 0}
+  m_LocalPosition: {x: -11.893966, y: 6.652315, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

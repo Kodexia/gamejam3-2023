@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 
 public class SpawnPlanet : MonoBehaviour
 {
+    
 
     [SerializeField]
     public List<GameObject> sprite;
@@ -25,9 +26,11 @@ public class SpawnPlanet : MonoBehaviour
     [SerializeField]
     public GameObject bg;
 
-    public List<Vector2> positions;
+    [SerializeField]
+    public GameObject homePlanet;
 
-    public Planet planetClass;
+    float minDistance = 4f; // minimum distance between positions
+    public List<Vector2> positions;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +46,7 @@ public class SpawnPlanet : MonoBehaviour
         float sqrt2 = Mathf.Sqrt(2);
         float cellSize = distanceBetweenPoints / sqrt2;
         int dim = (int)Mathf.Ceil(width / cellSize);
-        float[,] array = new float[dim,dim];
+        float[,] array = new float[dim, dim];
         //    X, Y
         Debug.Log("Dim: " + dim);
         Debug.Log("Cellsize: " + cellSize);
@@ -74,30 +77,13 @@ public class SpawnPlanet : MonoBehaviour
                 newPosition = new Vector2(planetX, planetY);
 
                 validPosition = true;
-                int xCellPosition = (int)(Math.Abs(planetX) / cellSize);
-                int yCellPosition = (int)(Math.Abs(planetY) / cellSize);
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(newPosition, distanceBetweenPoints);
+                Debug.Log("colliders: " + colliders.Length);
 
-                Debug.Log("X: " + xCellPosition + ", Y: " + yCellPosition);
-
-                if (xCellPosition >= dim || yCellPosition >= dim)
+                if (colliders.Length != 0)
                 {
                     validPosition = false;
-                    continue;
-                }
-
-                if (array[xCellPosition,yCellPosition] != 0 ||
-                    (xCellPosition + 1 < dim && array[xCellPosition + 1, yCellPosition] != 0) ||
-                    (xCellPosition - 1 >= 0 && array[xCellPosition - 1, yCellPosition] != 0) ||
-                    (yCellPosition + 1 < dim && array[xCellPosition, yCellPosition + 1] != 0) ||
-                    (yCellPosition - 1 >= 0 && array[xCellPosition, yCellPosition - 1] != 0))
-                {
-                    validPosition = false;
-                    Debug.Log($"Check failed at cell {xCellPosition}, {yCellPosition}");
                     timesFailed++;
-                }
-                else
-                {
-                    array[xCellPosition, yCellPosition] = 1;
                 }
             }
             if (timesFailed >= maxFailedChecks) continue;
@@ -108,6 +94,10 @@ public class SpawnPlanet : MonoBehaviour
 
             sprite.RemoveAt(randomPlanet);
         }
+
+        Instantiate(homePlanet);
+        homePlanet.transform.position = new Vector2(0, 0);
+        positions.Add(new Vector2(0, 0));
     }
 
     // Update is called once per frame
