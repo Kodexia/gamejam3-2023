@@ -220,7 +220,11 @@ GameObject:
   - component: {fileID: 1539365729}
   - component: {fileID: 1539365728}
   - component: {fileID: 1539365732}
+<<<<<<< HEAD
   m_Layer: 8
+=======
+  m_Layer: 5
+>>>>>>> 9e48bb44c49d30f7e9212a4a492badc7d611c2f1
   m_Name: PlanetUICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,10 +355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite:
-  - {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
   - {fileID: 3532459095212715135, guid: 6cb8b25dba4513f47858af679b889d38, type: 3}
   - {fileID: 8974538288100947998, guid: 47d2a528fd9080e4abe4af3cd0b8e58f, type: 3}
-  - {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
   - {fileID: 5624786038006281123, guid: 10f4ccd2a6ffbe143a41dc86b54ba0e7, type: 3}
   - {fileID: 3763847190033552507, guid: 83f66ce0980586c4db923b14363094e7, type: 3}
   - {fileID: 1526442387449076733, guid: b1d85534ac89a5f4e8195605378e580c, type: 3}
@@ -365,7 +367,7 @@ MonoBehaviour:
   - {fileID: 6819484326165767468, guid: 4c834f2b1535a2945864b8afb89463a3, type: 3}
   planets: 12
   randomPlanet: 0
-  distanceBetweenPoints: 20
+  distanceBetweenPoints: 5
   maxFailedChecks: 20
   bg: {fileID: 975913985}
   homePlanet: {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
@@ -384,6 +386,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1685773908
 GameObject:
@@ -452,6 +455,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+=======
+>>>>>>> 9e48bb44c49d30f7e9212a4a492badc7d611c2f1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1688812630
 GameObject:
@@ -564,6 +569,17 @@ MonoBehaviour:
   zoomSpeed: 0.1
   minZoom: 1
   maxZoom: 5
+<<<<<<< HEAD
+=======
+--- !u!81 &1967866735
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967866733}
+  m_Enabled: 1
+>>>>>>> 9e48bb44c49d30f7e9212a4a492badc7d611c2f1
 --- !u!20 &1967866736
 Camera:
   m_ObjectHideFlags: 0
@@ -635,5 +651,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spaceshipSprites:
+<<<<<<< HEAD
+=======
+  - {fileID: 7279026761454459694, guid: b975e94583634a0449236baa41201fac, type: 3}
+  - {fileID: 920990135505060969, guid: f96dc9a1998fbcf43a9fa8d6de55adc0, type: 3}
+>>>>>>> 9e48bb44c49d30f7e9212a4a492badc7d611c2f1
   - {fileID: 7916721302183686682, guid: 15bac39f5505944408292401cf5a9324, type: 3}
   isAttacking: 0
