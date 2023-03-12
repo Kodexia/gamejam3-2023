@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngineInternal;
+using System;
+
 
 public class Player : MonoBehaviour
 {
-    Planet homePlanet;
+    public bool isDead = false;
+    public bool isWon= false;
+    public int attack = 0;
+    public int defence = 0;
+    public int raidsSurvived = 0;
+
+
     public List<GameObject> spaceshipSprites = new List<GameObject>();
     public List<Resource> resources = new List<Resource>();
     public Upgrades playerUpgrades = new Upgrades();
@@ -14,11 +22,11 @@ public class Player : MonoBehaviour
     List<Spaceship> spaceshipsOffPlanet = new List<Spaceship>();
     Spaceship mainSpaceship;
     public bool isAttacking = false;
-    
+
     Vector2 pointOfTargetedPlanet;
     public Player()
     {
-       
+
         resources.Add(new Resource("Azurite", 100));
         resources.Add(new Resource("Crimtain", 0));
         resources.Add(new Resource("Uranium", 0));
@@ -41,10 +49,32 @@ public class Player : MonoBehaviour
                 pointOfTargetedPlanet = new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y) ;
                 Debug.Log(pointOfTargetedPlanet);
                 mainSpaceship.whereToGo = pointOfTargetedPlanet;
+                Planet planet = hit.collider.GetComponent<Planet>();
+                planet.isTargeted = true;
                 Instantiate(spaceshipSprites[0]);
 
             }
         }
         
-    }   
+    }
+    void CheckForEndGame()
+    {
+        if (this.isDead || this.isWon)
+        {
+            if (isDead)
+                PlayerStats.isDead = true;
+
+
+            PlayerStats.NumberOfAzurite = this.resources[0].amm;
+            PlayerStats.NumberOfCrimtain = this.resources[1].amm;
+            PlayerStats.NumberOfUranium = this.resources[2].amm;
+            PlayerStats.attack = this.attack;
+            PlayerStats.defense = this.defence;
+            PlayerStats.raidSurvived = raidsSurvived;
+            PlayerStats.endTime = DateTime.Now;
+
+
+
+        }
+    }
 }

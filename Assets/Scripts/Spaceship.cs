@@ -44,8 +44,9 @@ public class Spaceship : MonoBehaviour
         }
     }
 
-    public void moveOnTo(Vector2 toGo)
+    public void moveOnTo(Vector2 toGo, int type)
     {
         whereToGo = toGo;
+        this.type = type;
     }
 }
