@@ -25,7 +25,6 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
-        Instantiate(spaceshipSprites[0]);
         mainSpaceship = spaceshipSprites[0].GetComponent<Spaceship>();
     }
     private void Update()
@@ -39,48 +38,13 @@ public class Player : MonoBehaviour
             //If something was hit, the RaycastHit2D.collider will not be null.
             if (hit.collider != null && hit.collider.tag == "planet" && !isAttacking)
             {
-                AttackPlanet(1);
-                isAttacking = true;
                 pointOfTargetedPlanet = new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y) ;
-                Planet planet = hit.collider.GetComponent<Planet>();
-                planet.isTargeted = true;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            buySpaceship();
+                Debug.Log(pointOfTargetedPlanet);
+                mainSpaceship.whereToGo = pointOfTargetedPlanet;
+                Instantiate(spaceshipSprites[0]);
 
-        }
-        if (isAttacking)
-        {
-            mainSpaceship.moveOnTo(pointOfTargetedPlanet);
-        }
-
-        
-    }
-    public void buySpaceship()
-    {
-        foreach(Resource ore in resources)
-        {
-            if(ore.name == "Azurite" && ore.amm > 1)
-            {
-                Spaceship spaceship = new Spaceship(playerUpgrades, false);
-                spaceshipsOnPlanet.Add(spaceship);
-                
-                Debug.Log("koupil si lod");
-                
             }
         }
         
-    }
-    public void AttackPlanet(int ammOfSentUnits)
-    {
-        for (int i = 0; i < ammOfSentUnits; i++)
-        {
-            spaceshipsOffPlanet.Add(spaceshipsOnPlanet[i]);
-            spaceshipsOnPlanet.RemoveAt(i);
-
-        }
-    }
-    
+    }   
 }
