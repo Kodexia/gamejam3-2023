@@ -131,7 +131,8 @@ public class Player : MonoBehaviour
         }else if (attackCount == maxAttackRepeats)
         {
             this.isUnderAttack = false;
-            Destroy(enemyShip);  
+            Destroy(enemyShip);
+            raidsSurvived++;
         }
     }
 }
