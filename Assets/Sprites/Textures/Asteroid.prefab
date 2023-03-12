@@ -10,14 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4411211032317082942}
   - component: {fileID: 8749135344535049023}
-<<<<<<< HEAD
-  m_Layer: 8
-=======
   - component: {fileID: -7469263364200177863}
   - component: {fileID: -7254370733240954921}
   - component: {fileID: 7459988537954775008}
   m_Layer: 0
->>>>>>> 411bcaef76d04a9c076a2a1ba8039c669b41caf1
   m_Name: Asteroid
   m_TagString: planet
   m_Icon: {fileID: 0}
@@ -32,11 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6758447520651698160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -9.087281, y: -2.66981, z: 0}
-=======
   m_LocalPosition: {x: 0, y: 0, z: 0}
->>>>>>> 411bcaef76d04a9c076a2a1ba8039c669b41caf1
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

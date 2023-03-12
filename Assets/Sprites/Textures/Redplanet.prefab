@@ -10,14 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4394220094741312325}
   - component: {fileID: 4681195642159411861}
-<<<<<<< HEAD
-  m_Layer: 8
-=======
   - component: {fileID: 152259159038596827}
   - component: {fileID: 2589797749534143376}
   - component: {fileID: 4779296214927860597}
   m_Layer: 0
->>>>>>> 411bcaef76d04a9c076a2a1ba8039c669b41caf1
   m_Name: Redplanet
   m_TagString: planet
   m_Icon: {fileID: 0}
@@ -32,11 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6819484326165767468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: 11.384139, y: 0.5446429, z: 0}
-=======
   m_LocalPosition: {x: -3.9898796, y: 0.1759777, z: 0}
->>>>>>> 411bcaef76d04a9c076a2a1ba8039c669b41caf1
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
