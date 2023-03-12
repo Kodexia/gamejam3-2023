@@ -14,6 +14,14 @@ public class ShowPlanetUI : MonoBehaviour
     SpriteRenderer rend;
     TextMeshProUGUI img;
     TextMeshProUGUI planetText;
+    [SerializeField]
+    Image oreResourceImage;
+    [SerializeField]
+    Sprite Uranium;
+    [SerializeField]
+    Sprite Azurite;
+    [SerializeField]
+    Sprite Crimtain;
     CanvasGroup planetUIGroup;
     [SerializeField]
     float fadeDuration = 1.0f;
@@ -25,6 +33,7 @@ public class ShowPlanetUI : MonoBehaviour
   
     private void Start()
     {
+
         
         GameObject tempObject = GameObject.Find("PlanetUICanvas");
         GameObject imgTempObject = GameObject.Find("Image (1)");
@@ -155,7 +164,22 @@ public class ShowPlanetUI : MonoBehaviour
             fadeIn = true;
             planetUI.enabled = true;
             planetText.text = $"Planet: {planet.name}\r\nMaterial: {planet.ore.name}\r\nAmmout: {planet.ore.amm}";
-            
+
+            //Vykreslovani obrazku orecek
+
+            if (planet.ore.name == "Uranium")
+            {
+                oreResourceImage.sprite = Uranium;
+            }
+            if (planet.ore.name == "Azurite")
+            {
+                oreResourceImage.sprite = Azurite;
+            }
+            if (planet.ore.name == "Crimtain")
+            {
+                oreResourceImage.sprite = Crimtain;
+            }
+
             planetUI.transform.position = new Vector2(tr.position.x + height + 1, tr.position.y);
             if (planetUI.transform.position.x + 1 > screenBounds.x)
             {
