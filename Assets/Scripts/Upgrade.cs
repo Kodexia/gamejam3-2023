@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class Upgrades
 {
-    public int attackAndSpeedUpgrades { get; private set; }
+    public int miningSpeedAndSpeedUpgrades { get; private set; }
     public int defenceUpgrades { get; private set; }
-    public int miningSpeedUpgrades {get; private set;}
+    public int attackUpgrades { get; private set;}
     public Upgrades()
     {
-        attackAndSpeedUpgrades = 1;
+        miningSpeedAndSpeedUpgrades = 1;
         defenceUpgrades = 1;
-        miningSpeedUpgrades = 1;
+        attackUpgrades = 1;
     }
-    public void upgradeAttack(List<Resource> useableOres)
+    public void upgradeSpeeds(List<Resource> useableOres)
     {
         foreach(Resource ore in useableOres)
         {
-            if(ore.name == "naseore" && ore.amm >= 10 * attackAndSpeedUpgrades)
+            if(ore.name == "Azurite" && ore.amm >= 10 * miningSpeedAndSpeedUpgrades)
             {
-                attackAndSpeedUpgrades++;
+                ore.amm -= 10 * miningSpeedAndSpeedUpgrades;
+                miningSpeedAndSpeedUpgrades++;
+                Debug.Log("speed");
+
             }
         }
     }
@@ -27,19 +30,24 @@ public class Upgrades
     {
         foreach (Resource ore in useableOres)
         {
-            if (ore.name == "naseore" && ore.amm >= 10 * defenceUpgrades)
+            if (ore.name == "Uranium" && ore.amm >= 10 * defenceUpgrades)
             {
+                ore.amm -= 10 * defenceUpgrades;
                 defenceUpgrades++;
+                Debug.Log("def");
             }
         }
     }
-    public void upgradeMiningSpeed(List<Resource> useableOres)
+    public void upgradeAttack(List<Resource> useableOres)
     {
         foreach (Resource ore in useableOres)
         {
-            if (ore.name == "naseore" && ore.amm >= 10 * miningSpeedUpgrades)
+            if (ore.name == "Crimtain" && ore.amm >= 10 * attackUpgrades)
             {
-                miningSpeedUpgrades++;
+                ore.amm -= 10 * attackUpgrades;
+                attackUpgrades++;
+                Debug.Log("attack");
+
             }
         }
     }

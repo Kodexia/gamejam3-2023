@@ -14,7 +14,7 @@ public class Spaceship : MonoBehaviour
     {
         this.isEnemy = isEnemy;
         //sprite = 
-        attack = 10 * upgrades.attackAndSpeedUpgrades;
+        attack = 10 * upgrades.attackUpgrades;
         speed = 5 * upgrades.defenceUpgrades;
     }
 
