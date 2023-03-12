@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
-        mainSpaceship = spaceshipSprites[(int)this.playerUpgrades.miningSpeedAndSpeedUpgrades/3].GetComponent<Spaceship>();
+        mainSpaceship = spaceshipSprites[(int)this.playerUpgrades.miningSpeedAndSpeedUpgrades / 3].GetComponent<Spaceship>();
     }
     private void Update()
     {
@@ -125,7 +125,10 @@ public class Player : MonoBehaviour
 
             this.defence -= enemyAttack * 2;
             this.attack -= enemyAttack;
-
+            if (defence <= 0)
+            {
+                this.isDead = true;
+            }
             this.CheckForEndGame();
 
             // Increase the attack count
@@ -139,7 +142,9 @@ public class Player : MonoBehaviour
             this.isUnderAttack = false;
             attackCount = 0;
             Debug.Log("GG");
-            Destroy(enemyShip);  
+            Destroy(enemyShip);
+            raidsSurvived++;
+
         }
     }
 }
