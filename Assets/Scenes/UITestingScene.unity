@@ -583,7 +583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7373666018252020585, guid: 83f66ce0980586c4db923b14363094e7, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7373666018252020585, guid: 83f66ce0980586c4db923b14363094e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -996,6 +996,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be76a510e8b3aa43ab2305f3c9be7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oreResourceImage: {fileID: 1534615188}
+  Uranium: {fileID: 21300000, guid: 262f5caabb13145429d47b94b617d4ff, type: 3}
+  Azurite: {fileID: 21300000, guid: a8808198fb4404f4ba6c29a3fda8d392, type: 3}
+  Crimtain: {fileID: 21300000, guid: 5968e1362717e664dbe7e0eef7b44f44, type: 3}
   fadeDuration: 1
 --- !u!1001 &1392246379
 PrefabInstance:
@@ -1010,7 +1014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2663873620520426978, guid: b1d85534ac89a5f4e8195605378e580c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2663873620520426978, guid: b1d85534ac89a5f4e8195605378e580c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1131,6 +1135,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436287517}
   m_CullTransparentMesh: 1
+--- !u!114 &1534615188 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 612175337562027005, guid: ef5ecf790b5598c43a556ca9b7438341, type: 3}
+  m_PrefabInstance: {fileID: 1809309191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1809309191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1138,6 +1153,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1733430700325153249, guid: ef5ecf790b5598c43a556ca9b7438341, type: 3}
+      propertyPath: m_Name
+      value: ResourceImage
+      objectReference: {fileID: 0}
     - target: {fileID: 7683892992816839600, guid: ef5ecf790b5598c43a556ca9b7438341, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
@@ -1318,7 +1337,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2024179273
 GameObject:

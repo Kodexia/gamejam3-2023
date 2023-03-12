@@ -54,5 +54,25 @@ public class Player : MonoBehaviour
             }
         }
         
-    }   
+    }
+    void CheckForEndGame()
+    {
+        if (this.isDead || this.isWon)
+        {
+            if (isDead)
+                PlayerStats.isDead = true;
+
+
+            PlayerStats.NumberOfAzurite = this.resources[0].amm;
+            PlayerStats.NumberOfCrimtain = this.resources[1].amm;
+            PlayerStats.NumberOfUranium = this.resources[2].amm;
+            PlayerStats.attack = this.attack;
+            PlayerStats.defense = this.defence;
+            PlayerStats.raidSurvived = raidsSurvived;
+            PlayerStats.endTime = DateTime.Now;
+
+
+
+        }
+    }
 }
