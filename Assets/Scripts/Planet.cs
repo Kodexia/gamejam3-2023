@@ -12,6 +12,7 @@ public class Planet : MonoBehaviour
     private List<Resource> resources = new List<Resource>();
     public Resource ore;
     Sprite sprite;
+    
     System.Random rnd = new System.Random();
 
     [SerializeField]
