@@ -24,4 +24,12 @@ public class LevelLoad : MonoBehaviour
         SceneManager.LoadScene(SceneId);
     }
 
+
+
+    public void exit()
+    {
+        Debug.Log("konec");
+        Application.Quit();
+    }
+
 }
