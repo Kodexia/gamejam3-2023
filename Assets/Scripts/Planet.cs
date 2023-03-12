@@ -114,11 +114,9 @@ public class Planet : MonoBehaviour
             {
                 if (playerOre.name == ore.name && ore.amm > 0)
                 {
-                    if (ore.amm < 2 * player.GetComponent<Player>().playerUpgrades.miningSpeedAndSpeedUpgrades)
-                    {
                         playerOre.amm += ore.amm;
                         ore.amm = 0;
-                    }
+                   
 
 
                 }
