@@ -81,6 +81,6 @@ public class EnemySpawner : MonoBehaviour
 
 
         enemySpaceship.moveOnTo(new Vector2(homePlanet.position.x + 0.001f, homePlanet.position.y + 0.001f), 0); // ofset beacuse tomasek
-        Instantiate(enemy);
+        //Instantiate(enemy);
     }
 }

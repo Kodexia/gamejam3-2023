@@ -128,9 +128,11 @@ public class Player : MonoBehaviour
             // Set the time for the next attack
             nextAttackTime = Time.time + (UnityEngine.Random.Range(attackIntervalMin, attackIntervalMax));
 
-        }else if (attackCount == maxAttackRepeats)
+        }else if (attackCount == maxAttackRepeats && isUnderAttack == true)
         {
             this.isUnderAttack = false;
+            attackCount = 0;
+            Debug.Log("GG");
             Destroy(enemyShip);  
         }
     }

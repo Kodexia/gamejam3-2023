@@ -45,15 +45,16 @@ public class Planet : MonoBehaviour
         {
             Debug.Log("enemy ship collided!");
             SetAttack(other.gameObject.GetComponent<Spaceship>(), other.gameObject);
+            return;
         }
 
 
-        if (isTargeted == true && tag == "homeplanet")
-        {
-            Debug.Log("Home planet");
-            Destroy(other.gameObject);
-            isTargeted = false;
-        }
+        //if (isTargeted == true && tag == "homeplanet")
+        //{
+        //    Debug.Log("Home planet");
+        //    Destroy(other.gameObject);
+        //    isTargeted = false;
+        //}
 
         if (isTargeted == true && tag != "homeplanet")
         {
@@ -61,18 +62,12 @@ public class Planet : MonoBehaviour
             Debug.Log(tag + "");
             Debug.Log("Destroyed");
             Destroy(other.gameObject);
-            
-            if (MinePlanet(GameObject.Find("Main Camera Planets").GetComponent<Player>()))
-=======
+
             MinePlanet(GameObject.Find("Main Camera Planets").GetComponent<Player>());
             GameObject player = GameObject.Find("Main Camera Planets");
             player.GetComponent<Player>().attack += 5;
             player.GetComponent<Player>().defence += 5;
-            foreach(Resource ore in player.GetComponent<Player>().resources)
->>>>>>> 765ba3508dd2fe90588e7910a2ae61e360779752
-            {
-                Debug.Log($"Name:{ore.name} Amount: {ore.amm}");
-            }
+
             
         }
     }
