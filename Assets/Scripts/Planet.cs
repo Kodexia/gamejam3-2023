@@ -35,6 +35,7 @@ public class Planet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(isTargeted);
+        Debug.Log(tag) ;
         if (isTargeted == true && tag == "homeplanet")
         {
             Debug.Log("Home planet");
@@ -42,9 +43,10 @@ public class Planet : MonoBehaviour
             isTargeted = false;
         }
         
-        if (isTargeted && tag != "homeplanet")
+        if (isTargeted == true && tag != "homeplanet")
         {
             int type = other.GetComponent<Spaceship>().type;
+            Debug.Log(tag + "");
             Debug.Log("Destroyed");
             Destroy(other.gameObject);
             if(MinePlanet(GameObject.Find("Main Camera Planets").GetComponent<Player>()))

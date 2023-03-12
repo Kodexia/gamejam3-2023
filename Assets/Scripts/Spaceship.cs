@@ -8,6 +8,7 @@ public class Spaceship : MonoBehaviour
     Sprite sprite;
     float attack;
     float speed;
+    public int type;
     [SerializeField]
     public Vector2 whereToGo = new Vector2(0, 0);
     Upgrades upgrades = new Upgrades();

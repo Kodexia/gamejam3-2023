@@ -80,7 +80,7 @@ public class EnemySpawner : MonoBehaviour
         enemySpaceship = enemy.GetComponent<Spaceship>();
 
 
-        enemySpaceship.moveOnTo(new Vector2(homePlanet.position.x + 0.001f, homePlanet.position.y + 0.001f)); // ofset beacuse tomasek
+        enemySpaceship.moveOnTo(new Vector2(homePlanet.position.x + 0.001f, homePlanet.position.y + 0.001f), 0); // ofset beacuse tomasek
         Instantiate(enemy);
     }
 }

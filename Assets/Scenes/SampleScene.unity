@@ -223,7 +223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1089899490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,6 +622,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4d17e80de54be40b98c30aa79c173f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDead: 0
+  isWon: 0
+  attack: 0
+  defence: 0
+  raidsSurvived: 0
   spaceshipSprites:
   - {fileID: 7279026761454459694, guid: b975e94583634a0449236baa41201fac, type: 3}
   - {fileID: 920990135505060969, guid: f96dc9a1998fbcf43a9fa8d6de55adc0, type: 3}
