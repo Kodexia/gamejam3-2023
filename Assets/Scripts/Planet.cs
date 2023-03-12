@@ -26,7 +26,10 @@ public class Planet : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        //MinePlanet();
+        if (isTargeted)
+        {
+            MinePlanet(GameObject.Find("Main Camera Planets").GetComponent<Player>());
+        }
     }
     void MinePlanet(Player player)
     {
