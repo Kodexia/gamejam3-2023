@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     Vector2 pointOfTargetedPlanet;
 
 
-
+    public int minedPlanet = 0;
 
     private int attackCount = 0;
     private float nextAttackTime = 0;
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
 
             //If something was hit, the RaycastHit2D.collider will not be null.
-            if (hit.collider != null && hit.collider.tag == "planet" && attack >= 5 && defence >= 5)
+            if (hit.collider != null && hit.collider.tag == "planet" && attack >= 5 && defence >= 5 && hit.collider.GetComponent<Planet>().isTargeted == false)
             {
                 pointOfTargetedPlanet = new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y);
                 Debug.Log(pointOfTargetedPlanet);
@@ -72,6 +72,12 @@ public class Player : MonoBehaviour
                 attack -= 5;
                 defence -= 5;
             }
+        }
+
+        if (minedPlanet == 7)
+        {
+            this.isWon = true;
+            CheckForEndGame();
         }
 
         UpdateAttack();

@@ -62,13 +62,13 @@ public class Planet : MonoBehaviour
             Debug.Log(tag + "");
             Debug.Log("Destroyed");
             Destroy(other.gameObject);
-
             MinePlanet(GameObject.Find("Main Camera Planets").GetComponent<Player>());
             GameObject player = GameObject.Find("Main Camera Planets");
             player.GetComponent<Player>().attack += 5;
             player.GetComponent<Player>().defence += 5;
+            player.GetComponent<Player>().minedPlanet++;
 
-            
+
         }
     }
     void MinePlanet(Player player)

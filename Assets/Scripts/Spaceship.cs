@@ -6,9 +6,9 @@ public class Spaceship : MonoBehaviour
 {
     public bool isEnemy;
     Sprite sprite;
+    public int type;
     float attack;
     float speed;
-    public int type;
     [SerializeField]
     public Vector2 whereToGo = new Vector2(0, 0);
     Upgrades upgrades = new Upgrades();

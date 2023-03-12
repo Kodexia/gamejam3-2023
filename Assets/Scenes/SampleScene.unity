@@ -1460,14 +1460,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDead: 0
   isWon: 0
-  attack: 0
-  defence: 0
+  attack: 20
+  defence: 20
   raidsSurvived: 0
   spaceshipSprites:
   - {fileID: 7279026761454459694, guid: b975e94583634a0449236baa41201fac, type: 3}
   - {fileID: 920990135505060969, guid: f96dc9a1998fbcf43a9fa8d6de55adc0, type: 3}
   - {fileID: 7916721302183686682, guid: 15bac39f5505944408292401cf5a9324, type: 3}
   isAttacking: 0
+  minedPlanet: 0
   isUnderAttack: 0
   attackIntervalMin: 1
   attackIntervalMax: 2
