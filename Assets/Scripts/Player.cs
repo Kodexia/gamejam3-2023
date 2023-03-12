@@ -29,8 +29,8 @@ public class Player : MonoBehaviour
     {
 
         resources.Add(new Resource("Azurite", 100));
-        resources.Add(new Resource("Crimtain", 0));
-        resources.Add(new Resource("Uranium", 0));
+        resources.Add(new Resource("Crimtain", 100));
+        resources.Add(new Resource("Uranium", 100));
     }
     private void Start()
     {

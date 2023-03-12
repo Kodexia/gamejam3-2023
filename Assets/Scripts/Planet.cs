@@ -55,15 +55,16 @@ public class Planet : MonoBehaviour
         foreach(var playerOre in player.resources)
         {
             if(playerOre.name == ore.name && ore.amm > 0) {
-                if (ore.amm < 2*player.playerUpgrades.miningSpeedUpgrades)
+                if(ore.amm < 2*player.playerUpgrades.miningSpeedAndSpeedUpgrades)
                 {
                     playerOre.amm += ore.amm;
                     ore.amm = 0;
                 }
                 else
                 {
-                    playerOre.amm += 2 * player.playerUpgrades.miningSpeedUpgrades;
-                    ore.amm -= 2 * player.playerUpgrades.miningSpeedUpgrades;
+                    playerOre.amm += 2 * player.playerUpgrades.miningSpeedAndSpeedUpgrades;
+
+                    ore.amm -= 2 * player.playerUpgrades.miningSpeedAndSpeedUpgrades;
                 }
 
             }
