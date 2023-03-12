@@ -34,53 +34,40 @@ public class Planet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(isTargeted);
-        if (isTargeted == true && tag == "homeplanet")
-        {
-            Debug.Log("Home planet");
-            Destroy(other.gameObject);
-            isTargeted = false;
-        }
-        
         if (isTargeted && tag != "homeplanet")
         {
             int type = other.GetComponent<Spaceship>().type;
             Debug.Log("Destroyed");
             Destroy(other.gameObject);
-            if(MinePlanet(GameObject.Find("Main Camera Planets").GetComponent<Player>()))
+            MinePlanet(GameObject.Find("Main Camera Planets").GetComponent<Player>());
+            GameObject player = GameObject.Find("Main Camera Planets");
+            player.GetComponent<Player>().attack += 5;
+            player.GetComponent<Player>().defence += 5;
+            foreach(Resource ore in player.GetComponent<Player>().resources)
             {
-                isTargeted = false;
-                GameObject newPrefab = Instantiate(spaceshipSprites[type], transform.position, Quaternion.identity);
-                newPrefab.GetComponent<Spaceship>().whereToGo = new Vector2(0.1f, 0.1f);
-                homePlanet.GetComponent<Planet>().isTargeted = true;
+                Debug.Log($"Name:{ore.name} Amount: {ore.amm}");
             }
+            
         }
     }
-    bool MinePlanet(Player player)
+    void MinePlanet(Player player)
     {
         foreach(var playerOre in player.resources)
         {
-            Debug.Log("Started mining");
             if(playerOre.name == ore.name && ore.amm > 0) {
-                Debug.Log("Started mining");
                 if (ore.amm < 2*player.playerUpgrades.miningSpeedUpgrades)
                 {
                     playerOre.amm += ore.amm;
                     ore.amm = 0;
-                    Debug.Log("Done");
-                    return true;
                 }
                 else
                 {
                     playerOre.amm += 2 * player.playerUpgrades.miningSpeedUpgrades;
-                    Debug.Log("Done");
                     ore.amm -= 2 * player.playerUpgrades.miningSpeedUpgrades;
-                    return true;
                 }
 
             }
         }
-        return false;
     }
 
 }
