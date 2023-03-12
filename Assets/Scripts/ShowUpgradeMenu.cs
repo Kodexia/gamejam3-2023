@@ -26,13 +26,13 @@ public class ShowUpgradeMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        miningSpeedAndSpeedUpgradeText.text = $"Mining & Ship Speed \n[{player.playerUpgrades.miningSpeedAndSpeedUpgrades}]";
-        defenceUpgradeText.text = $"Defence \n[{player.playerUpgrades.defenceUpgrades}]";
-        attackUpgradeText.text = $"Attack \n[{player.playerUpgrades.attackUpgrades}]";
+        miningSpeedAndSpeedUpgradeText.text = $"Mining & Ship Speed \n\n[{player.playerUpgrades.miningSpeedAndSpeedUpgrades}]";
+        defenceUpgradeText.text = $"Defence \n\n[{player.playerUpgrades.defenceUpgrades}]";
+        attackUpgradeText.text = $"Attack \n\n[{player.playerUpgrades.attackUpgrades}]";
 
-        AzuriteText.text = $"Need Azurite: [{player.playerUpgrades.miningSpeedAndSpeedUpgrades * 10}]";
-        UraniumText.text = $"Need Uranium: [{player.playerUpgrades.defenceUpgrades * 10}]";
-        CrimtainText.text = $"Need Crimtain: [{player.playerUpgrades.attackUpgrades * 10}]";
+        AzuriteText.text = $"{player.playerUpgrades.miningSpeedAndSpeedUpgrades * 10}";
+        UraniumText.text = $"{player.playerUpgrades.defenceUpgrades * 10}";
+        CrimtainText.text = $"{player.playerUpgrades.attackUpgrades * 10}";
         upgradeMenu.enabled = false;
         
 
@@ -72,8 +72,8 @@ public class ShowUpgradeMenu : MonoBehaviour
             }
             Debug.Log(ore.name + " " + ore.amm);
         }
-        miningSpeedAndSpeedUpgradeText.text = $"Mining & Ship Speed \n[{player.playerUpgrades.miningSpeedAndSpeedUpgrades}]";
-        AzuriteText.text = $"Need Azurite: [{player.playerUpgrades.miningSpeedAndSpeedUpgrades * 10}]";
+        miningSpeedAndSpeedUpgradeText.text = $"Mining & Ship Speed \n\n[{player.playerUpgrades.miningSpeedAndSpeedUpgrades}]";
+        AzuriteText.text = $"{player.playerUpgrades.miningSpeedAndSpeedUpgrades * 10}";
     }
     public void UpgradeDefence()
     {
@@ -97,8 +97,8 @@ public class ShowUpgradeMenu : MonoBehaviour
             }
             Debug.Log(ore.name + " " + ore.amm);
         }
-        defenceUpgradeText.text = $"Defence \n[{player.playerUpgrades.defenceUpgrades}]";
-        UraniumText.text = $"Need Uranium: [{player.playerUpgrades.defenceUpgrades * 10}]";
+        defenceUpgradeText.text = $"Defence \n\n[{player.playerUpgrades.defenceUpgrades}]";
+        UraniumText.text = $"{player.playerUpgrades.defenceUpgrades * 10}";
     }
     public void UpgradeAttack()
     {
@@ -121,7 +121,7 @@ public class ShowUpgradeMenu : MonoBehaviour
             }
             Debug.Log(ore.name + " " + ore.amm);
         }
-        attackUpgradeText.text = $"Attack \n[{player.playerUpgrades.attackUpgrades}]";
-        CrimtainText.text = $"Need Crimtain: [{player.playerUpgrades.attackUpgrades * 10}]";
+        attackUpgradeText.text = $"Attack \n\n[{player.playerUpgrades.attackUpgrades}]";
+        CrimtainText.text = $"{player.playerUpgrades.attackUpgrades * 10}";
     }
 }

@@ -926,7 +926,7 @@ MonoBehaviour:
   - {fileID: 1352833303979343127, guid: 1916f780dcdbdf3449264de27a786475, type: 3}
   - {fileID: 4328578854150127471, guid: 7fff3adfa4006794bad5734cc8502f10, type: 3}
   isAttacking: 0
---- !u!1001 &2852181394682243956
+--- !u!1001 &1868833283
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -941,10 +941,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1854640688}
-    - target: {fileID: 2852181394276576718, guid: 87edc925057dc2140bd2961c5df85b69, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1854640686}
     - target: {fileID: 2852181394276576719, guid: 87edc925057dc2140bd2961c5df85b69, type: 3}
       propertyPath: m_Pivot.x
       value: 0
