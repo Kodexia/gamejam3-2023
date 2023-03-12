@@ -9,9 +9,9 @@ using System;
 public class Player : MonoBehaviour
 {
     public bool isDead = false;
-    public bool isWon= false;
-    public int attack = 0;
-    public int defence = 0;
+    public bool isWon = false;
+    public int attack = 10;
+    public int defence = 50;
     public int raidsSurvived = 0;
 
 
@@ -24,6 +24,22 @@ public class Player : MonoBehaviour
     public bool isAttacking = false;
 
     Vector2 pointOfTargetedPlanet;
+
+
+
+
+    private int attackCount = 0;
+    private float nextAttackTime = 0;
+    private int enemyAttack = 0;
+    public bool isUnderAttack = false;
+
+    private GameObject enemyShip;
+
+    public float attackIntervalMin = 1f; // minimum time between attacks
+    public float attackIntervalMax = 2f; // maximum time between attacks
+    public int maxAttackRepeats = 5; // maximum number of times to attack
+
+
     public Player()
     {
 
@@ -46,7 +62,7 @@ public class Player : MonoBehaviour
             //If something was hit, the RaycastHit2D.collider will not be null.
             if (hit.collider != null && hit.collider.tag == "planet" && !isAttacking)
             {
-                pointOfTargetedPlanet = new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y) ;
+                pointOfTargetedPlanet = new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y);
                 Debug.Log(pointOfTargetedPlanet);
                 mainSpaceship.whereToGo = pointOfTargetedPlanet;
                 Planet planet = hit.collider.GetComponent<Planet>();
@@ -55,9 +71,11 @@ public class Player : MonoBehaviour
 
             }
         }
-        
+
+        UpdateAttack();
+
     }
-    void CheckForEndGame()
+    public void CheckForEndGame()
     {
         if (this.isDead || this.isWon)
         {
@@ -75,6 +93,43 @@ public class Player : MonoBehaviour
 
 
 
+        }
+    }
+
+    public void EnemyAttack(Spaceship spaceship, Planet planet, GameObject enemyShipObject)
+    {
+        attackCount = 0;
+        isUnderAttack = true;
+        enemyAttack = spaceship.enemyAttack;
+        nextAttackTime = Time.time + UnityEngine.Random.Range(attackIntervalMin, attackIntervalMax);
+
+        enemyShip = enemyShipObject;
+
+    }
+
+    void UpdateAttack()
+    {
+        if (Time.time >= nextAttackTime && attackCount < maxAttackRepeats && isUnderAttack == true)
+        {
+            // Attack
+            Debug.Log("Attacking!");
+
+
+            this.defence -= enemyAttack * 2;
+            this.attack -= enemyAttack;
+
+            this.CheckForEndGame();
+
+            // Increase the attack count
+            attackCount++;
+
+            // Set the time for the next attack
+            nextAttackTime = Time.time + (UnityEngine.Random.Range(attackIntervalMin, attackIntervalMax));
+
+        }else if (attackCount == maxAttackRepeats)
+        {
+            this.isUnderAttack = false;
+            Destroy(enemyShip);  
         }
     }
 }
