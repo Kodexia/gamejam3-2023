@@ -64,8 +64,7 @@ public class Planet : MonoBehaviour
         {
             Debug.Log("Started mining");
             if(playerOre.name == ore.name && ore.amm > 0) {
-                Debug.Log("Started mining");
-                if (ore.amm < 2*player.playerUpgrades.miningSpeedUpgrades)
+                if(ore.amm < 2*player.playerUpgrades.miningSpeedAndSpeedUpgrades)
                 {
                     playerOre.amm += ore.amm;
                     ore.amm = 0;
@@ -74,10 +73,9 @@ public class Planet : MonoBehaviour
                 }
                 else
                 {
-                    playerOre.amm += 2 * player.playerUpgrades.miningSpeedUpgrades;
-                    Debug.Log("Done");
-                    ore.amm -= 2 * player.playerUpgrades.miningSpeedUpgrades;
-                    return true;
+                    playerOre.amm += 2 * player.playerUpgrades.miningSpeedAndSpeedUpgrades;
+
+                    ore.amm -= 2 * player.playerUpgrades.miningSpeedAndSpeedUpgrades;
                 }
 
             }
