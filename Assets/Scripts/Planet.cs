@@ -34,7 +34,29 @@ public class Planet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (isTargeted && tag != "homeplanet")
+        //Debug.Log("COLIDED WITH PLANET");
+        //Debug.Log(isTargeted);
+        //Debug.Log(tag) ;
+
+        bool isShipEnemy = other.gameObject.GetComponent<Spaceship>().isEnemy; // throws an error if an asteroid collides with the planet --> fix spawner
+        Debug.Log(isShipEnemy);
+
+        if (isShipEnemy == true)
+        {
+            Debug.Log("enemy ship collided!");
+            SetAttack(other.gameObject.GetComponent<Spaceship>(), other.gameObject);
+            return;
+        }
+
+
+        //if (isTargeted == true && tag == "homeplanet")
+        //{
+        //    Debug.Log("Home planet");
+        //    Destroy(other.gameObject);
+        //    isTargeted = false;
+        //}
+
+        if (isTargeted == true && tag != "homeplanet")
         {
             int type = other.GetComponent<Spaceship>().type;
             Debug.Log(tag + "");
@@ -44,19 +66,19 @@ public class Planet : MonoBehaviour
             GameObject player = GameObject.Find("Main Camera Planets");
             player.GetComponent<Player>().attack += 5;
             player.GetComponent<Player>().defence += 5;
-            foreach(Resource ore in player.GetComponent<Player>().resources)
-            {
-                Debug.Log($"Name:{ore.name} Amount: {ore.amm}");
-            }
-            
+            player.GetComponent<Player>().minedPlanet++;
+
+
         }
     }
     void MinePlanet(Player player)
     {
         foreach (var playerOre in player.resources)
         {
-            if(playerOre.name == ore.name && ore.amm > 0) {
-                if(ore.amm < 2*player.playerUpgrades.miningSpeedAndSpeedUpgrades)
+            Debug.Log("Started mining");
+            if (playerOre.name == ore.name && ore.amm > 0)
+            {
+                if (ore.amm < 2 * player.playerUpgrades.miningSpeedAndSpeedUpgrades)
                 {
                     playerOre.amm += ore.amm;
                     ore.amm = 0;

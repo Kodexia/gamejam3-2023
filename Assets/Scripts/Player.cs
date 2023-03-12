@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     Vector2 pointOfTargetedPlanet;
 
 
-
+    public int minedPlanet = 0;
 
     private int attackCount = 0;
     private float nextAttackTime = 0;
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
-        mainSpaceship = spaceshipSprites[0].GetComponent<Spaceship>();
+        mainSpaceship = spaceshipSprites[(int)this.playerUpgrades.miningSpeedAndSpeedUpgrades/3].GetComponent<Spaceship>();
     }
     private void Update()
     {
@@ -61,17 +61,23 @@ public class Player : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
 
             //If something was hit, the RaycastHit2D.collider will not be null.
-            if (hit.collider != null && hit.collider.tag == "planet" && attack >= 5 && defence >= 5)
+            if (hit.collider != null && hit.collider.tag == "planet" && attack >= 5 && defence >= 5 && hit.collider.GetComponent<Planet>().isTargeted == false)
             {
                 pointOfTargetedPlanet = new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y);
                 Debug.Log(pointOfTargetedPlanet);
                 mainSpaceship.whereToGo = pointOfTargetedPlanet;
                 Planet planet = hit.collider.GetComponent<Planet>();
                 planet.isTargeted = true;
-                Instantiate(spaceshipSprites[0]);
+                Instantiate(spaceshipSprites[(int)this.playerUpgrades.miningSpeedAndSpeedUpgrades / 3]);
                 attack -= 5;
                 defence -= 5;
             }
+        }
+
+        if (minedPlanet == 7)
+        {
+            this.isWon = true;
+            CheckForEndGame();
         }
 
         UpdateAttack();
@@ -128,9 +134,11 @@ public class Player : MonoBehaviour
             // Set the time for the next attack
             nextAttackTime = Time.time + (UnityEngine.Random.Range(attackIntervalMin, attackIntervalMax));
 
-        }else if (attackCount == maxAttackRepeats)
+        }else if (attackCount == maxAttackRepeats && isUnderAttack == true)
         {
             this.isUnderAttack = false;
+            attackCount = 0;
+            Debug.Log("GG");
             Destroy(enemyShip);  
         }
     }
