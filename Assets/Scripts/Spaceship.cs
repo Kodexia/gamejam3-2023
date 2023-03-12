@@ -30,12 +30,16 @@ public class Spaceship : MonoBehaviour
         Vector3 direction = (toGo - (Vector2)transform.position).normalized;
 
         // Move the object towards the target position
-        transform.Translate(direction * speed * Time.deltaTime, Space.World);
+        transform.Translate(direction * 100 * Time.deltaTime, Space.World);
 
         // Calculate the angle to the target position
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         // Rotate the object towards the target position only on the z-axis
         transform.rotation = Quaternion.Euler(0, 0, angle + 90);
+    }
+    private void Update()
+    {
+        moveOnTo(new Vector2(transform.position.x + 10, transform.position.y + 10));
     }
 }

@@ -64,9 +64,10 @@ public class Player : MonoBehaviour
         {
             if(ore.name == "Azurite" && ore.amm > 1)
             {
-                Spaceship spaceship = new Spaceship(playerUpgrades, false);
+                GameObject spaceshipObject = Instantiate(spaceshipSprites[0]);
+                Spaceship spaceship = spaceshipObject.AddComponent<Spaceship>();
                 spaceshipsOnPlanet.Add(spaceship);
-                
+
                 Debug.Log("koupil si lod");
                 
             }
