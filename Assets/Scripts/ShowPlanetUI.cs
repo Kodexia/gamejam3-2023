@@ -53,9 +53,11 @@ public class ShowPlanetUI : MonoBehaviour
             textObject.transform.SetParent(planetUI.transform, false);
             planetText = textObject.GetComponent<TextMeshProUGUI>();
 
+
             planetText.fontSize = 0.3f;
-            planetText.alignment = TextAlignmentOptions.Center;
+            planetText.alignment = TextAlignmentOptions.Left;
             planetText.horizontalAlignment = HorizontalAlignmentOptions.Center;
+            planetText.rectTransform.sizeDelta = new Vector2(1.9226f, 1.5f);
         }
         
         
