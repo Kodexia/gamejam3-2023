@@ -291,7 +291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.000183, y: 125}
+  m_AnchoredPosition: {x: 11, y: 88}
   m_SizeDelta: {x: 488.0894, y: 63.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &213124955
@@ -426,7 +426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 317.56, y: -212}
+  m_AnchoredPosition: {x: 317.56, y: -337}
   m_SizeDelta: {x: 72, y: 72}
   m_Pivot: {x: 0.5000002, y: 0.5000002}
 --- !u!114 &238305406
@@ -717,8 +717,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000020981, y: -121.08496}
-  m_SizeDelta: {x: 1172.6664, y: 645.22}
+  m_AnchoredPosition: {x: -0.000020981, y: -127.190186}
+  m_SizeDelta: {x: 1172.6664, y: 664.3505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388395486
 MonoBehaviour:
@@ -880,7 +880,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10.387, y: 1577.4}
+  m_SizeDelta: {x: 10.387, y: 1678.4213}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &978614093
 GameObject:
@@ -1323,7 +1323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035156, y: -391}
+  m_AnchoredPosition: {x: -0.000061035156, y: -429}
   m_SizeDelta: {x: 488.0894, y: 63.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1150198727
@@ -1458,7 +1458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 203, y: -662}
+  m_AnchoredPosition: {x: 190, y: -710}
   m_SizeDelta: {x: 72, y: 72}
   m_Pivot: {x: 0.5000008, y: 0.49999976}
 --- !u!114 &1189451803
@@ -1813,7 +1813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 275, y: -740.99994}
+  m_AnchoredPosition: {x: 275, y: -782}
   m_SizeDelta: {x: 72, y: 72}
   m_Pivot: {x: 0.5, y: 0.49999976}
 --- !u!114 &1312516325
@@ -2308,37 +2308,40 @@ MonoBehaviour:
       m_Calls: []
   m_text: '-You can move around space using mouse
 
-
-
-    -When you left click on
-    a planet, it will send mining ships to the planet you have chosen. Once the ships
-    arrive at the planet, they will immediately disappear, and then begin mining
-    materials.
-
-    -Be careful, sending ships will slightly decrese your attack
-    and deffence until the ship returns!
-
-
-    -You can upgrade your mining ships
-    using ore:
-
-
-    --Travel Speed and Mining speed using Azurite
+    -you can open upgrade menu
+    using P
 
 
 
+    -When you left click on a planet, it will send mining ships to
+    the planet you have chosen. Once the ships arrive at the planet, they will immediately
+    disappear, and then begin mining materials.
 
-    - You
-    will have to be careful, in this game other inhabitants of the galaxy may attack
-    you, and they will take away your lives. If you don''t defend yourself, they
-    take away all your lives, you will die and the game will end.
-
-
-    -You can
-    raise your HP using  Crimtain
+    -Be careful, sending ships will
+    slightly decrese your attack and deffence until the ship returns!
 
 
-    -You can raise your Defence using Uranium
+    -You
+    can upgrade your mining ships using ore:
+
+
+    --Travel Speed and Mining speed
+    using Azurite
+
+
+
+
+    - You will have to be careful, in this game other inhabitants
+    of the galaxy may attack you, and they will take away your lives. If you don''t
+    defend yourself, they take away all your lives, you will die and the game will
+    end.
+
+
+    -You can raise your HP using  Crimtain
+
+
+    -You can raise your Defence
+    using Uranium
 
 
 '
@@ -2670,7 +2673,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 350771818}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.41032076
+  m_Size: 0.39702222
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
