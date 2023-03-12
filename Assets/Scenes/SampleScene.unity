@@ -525,7 +525,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975913985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1051,6 +1051,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9329fd1772c474f448adb66114c582f9, type: 3}
+--- !u!1 &1663325311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1663325313}
+  - component: {fileID: 1663325312}
+  m_Layer: 0
+  m_Name: Enemy spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1663325312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663325311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a9e965f44b92449b2cea8d95fb86e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1352833303979343127, guid: 0bc7d27854439af48a30f9121b26f959, type: 3}
+  homePlanet: {fileID: 4411211032317082942, guid: b34bd90c695282041869e312710fdde4, type: 3}
+  background: {fileID: 975913986}
+  spawnInterval: 50
+  enemySpeed: 5
+--- !u!4 &1663325313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663325311}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8219717, y: -0.052399695, z: -0.06933399}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1727056648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1299,7 +1348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2947880170109234369, guid: 072cabf292dba024c9d442d20a344293, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 072cabf292dba024c9d442d20a344293, type: 3}
@@ -1313,9 +1362,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1967866737}
   - component: {fileID: 1967866736}
-  - component: {fileID: 1967866735}
   - component: {fileID: 1967866734}
   - component: {fileID: 1967866738}
+  - component: {fileID: 1967866735}
   m_Layer: 0
   m_Name: Main Camera Planets
   m_TagString: MainCamera
@@ -1419,14 +1468,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDead: 0
   isWon: 0
-  attack: 0
-  defence: 0
+  attack: 20
+  defence: 20
   raidsSurvived: 0
   spaceshipSprites:
   - {fileID: 7279026761454459694, guid: b975e94583634a0449236baa41201fac, type: 3}
   - {fileID: 920990135505060969, guid: f96dc9a1998fbcf43a9fa8d6de55adc0, type: 3}
   - {fileID: 7916721302183686682, guid: 15bac39f5505944408292401cf5a9324, type: 3}
   isAttacking: 0
+  minedPlanet: 0
+  isUnderAttack: 0
+  attackIntervalMin: 1
+  attackIntervalMax: 2
+  maxAttackRepeats: 5
 --- !u!1001 &2038351647
 PrefabInstance:
   m_ObjectHideFlags: 0

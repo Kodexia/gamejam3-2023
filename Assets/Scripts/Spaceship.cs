@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Spaceship : MonoBehaviour
 {
-    bool isEnemy;
+    public bool isEnemy;
     Sprite sprite;
+    public int type;
     float attack;
     float speed;
     [SerializeField]
     public Vector2 whereToGo = new Vector2(0, 0);
-    [SerializeField]
-    public int type = 0;
-    
-    public Spaceship(Upgrades upgrades, bool isEnemy)
+    Upgrades upgrades = new Upgrades();
+
+    public int enemyAttack = 1;
+    public Spaceship(bool isEnemy)
     {
         this.isEnemy = isEnemy;
         //sprite = 
@@ -21,9 +22,11 @@ public class Spaceship : MonoBehaviour
         speed = 5 * upgrades.defenceUpgrades;
     }
 
+
+
     private void Update()
     {
-        if(whereToGo != new Vector2(0, 0))
+        if (whereToGo != new Vector2(0, 0))
         {
             /*Vector2 distance = new Vector2(transform.position.x , transform.position.y);*/
             if (transform.position.y >= whereToGo.y - 0.1 && transform.position.y <= whereToGo.y + 0.1 && transform.position.x >= whereToGo.x - 0.1 && transform.position.x <= whereToGo.x + 0.1)

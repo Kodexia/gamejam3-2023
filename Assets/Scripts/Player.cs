@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngineInternal;
 using System;
-
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -25,6 +25,22 @@ public class Player : MonoBehaviour
     public bool isAttacking = false;
 
     Vector2 pointOfTargetedPlanet;
+
+
+    public int minedPlanet = 0;
+
+    private int attackCount = 0;
+    private float nextAttackTime = 0;
+    private int enemyAttack = 0;
+    public bool isUnderAttack = false;
+
+    private GameObject enemyShip;
+
+    public float attackIntervalMin = 1f; // minimum time between attacks
+    public float attackIntervalMax = 2f; // maximum time between attacks
+    public int maxAttackRepeats = 5; // maximum number of times to attack
+
+
     public Player()
     {
 
@@ -34,7 +50,7 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
-        mainSpaceship = spaceshipSprites[0].GetComponent<Spaceship>();
+        mainSpaceship = spaceshipSprites[(int)this.playerUpgrades.miningSpeedAndSpeedUpgrades / 3].GetComponent<Spaceship>();
     }
     private void Update()
     {
@@ -45,21 +61,29 @@ public class Player : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
 
             //If something was hit, the RaycastHit2D.collider will not be null.
-            if (hit.collider != null && hit.collider.tag == "planet" && attack >= 5 && defence >= 5)
+            if (hit.collider != null && hit.collider.tag == "planet" && attack >= 5 && defence >= 5 && hit.collider.GetComponent<Planet>().isTargeted == false)
             {
-                pointOfTargetedPlanet = new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y) ;
+                pointOfTargetedPlanet = new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y);
                 Debug.Log(pointOfTargetedPlanet);
                 mainSpaceship.whereToGo = pointOfTargetedPlanet;
                 Planet planet = hit.collider.GetComponent<Planet>();
                 planet.isTargeted = true;
-                Instantiate(spaceshipSprites[0]);
+                Instantiate(spaceshipSprites[(int)this.playerUpgrades.miningSpeedAndSpeedUpgrades / 3]);
                 attack -= 5;
                 defence -= 5;
             }
         }
-        
+
+        if (minedPlanet == 7)
+        {
+            this.isWon = true;
+            CheckForEndGame();
+        }
+
+        UpdateAttack();
+
     }
-    void CheckForEndGame()
+    public void CheckForEndGame()
     {
         if (this.isDead || this.isWon)
         {
@@ -75,7 +99,51 @@ public class Player : MonoBehaviour
             PlayerStats.raidSurvived = raidsSurvived;
             PlayerStats.endTime = DateTime.Now;
 
+            SceneManager.LoadScene(4);
 
+        }
+    }
+
+    public void EnemyAttack(Spaceship spaceship, Planet planet, GameObject enemyShipObject)
+    {
+        attackCount = 0;
+        isUnderAttack = true;
+        enemyAttack = spaceship.enemyAttack;
+        nextAttackTime = Time.time + UnityEngine.Random.Range(attackIntervalMin, attackIntervalMax);
+
+        enemyShip = enemyShipObject;
+
+    }
+
+    void UpdateAttack()
+    {
+        if (Time.time >= nextAttackTime && attackCount < maxAttackRepeats && isUnderAttack == true)
+        {
+            // Attack
+            Debug.Log("Attacking!");
+
+
+            this.defence -= enemyAttack * 2;
+            this.attack -= enemyAttack;
+            if (defence <= 0)
+            {
+                this.isDead = true;
+            }
+            this.CheckForEndGame();
+
+            // Increase the attack count
+            attackCount++;
+
+            // Set the time for the next attack
+            nextAttackTime = Time.time + (UnityEngine.Random.Range(attackIntervalMin, attackIntervalMax));
+
+        }else if (attackCount == maxAttackRepeats && isUnderAttack == true)
+        {
+            this.isUnderAttack = false;
+            attackCount = 0;
+            Debug.Log("GG");
+            Destroy(enemyShip);
+            raidsSurvived++;
 
         }
     }
