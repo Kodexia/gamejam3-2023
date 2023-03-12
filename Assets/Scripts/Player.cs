@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngineInternal;
 using System;
-
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
             PlayerStats.raidSurvived = raidsSurvived;
             PlayerStats.endTime = DateTime.Now;
 
-
+            SceneManager.LoadScene(4);
 
         }
     }
