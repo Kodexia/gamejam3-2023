@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 152259159038596827}
   - component: {fileID: 2589797749534143376}
   - component: {fileID: 4779296214927860597}
-  m_Layer: 8
+  - component: {fileID: -5862613270428105382}
+  m_Layer: 0
   m_Name: Redplanet
   m_TagString: planet
   m_Icon: {fileID: 0}
@@ -126,6 +127,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTargeted: 0
+  homePlanet: {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
+  spaceshipSprites:
+  - {fileID: 7279026761454459694, guid: b975e94583634a0449236baa41201fac, type: 3}
+  - {fileID: 920990135505060969, guid: f96dc9a1998fbcf43a9fa8d6de55adc0, type: 3}
+  - {fileID: 7916721302183686682, guid: 15bac39f5505944408292401cf5a9324, type: 3}
 --- !u!114 &4779296214927860597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,3 +145,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.2
+--- !u!50 &-5862613270428105382
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6819484326165767468}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

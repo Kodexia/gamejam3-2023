@@ -41,6 +41,8 @@ public class Player : MonoBehaviour
                 pointOfTargetedPlanet = new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y) ;
                 Debug.Log(pointOfTargetedPlanet);
                 mainSpaceship.whereToGo = pointOfTargetedPlanet;
+                Planet planet = hit.collider.GetComponent<Planet>();
+                planet.isTargeted = true;
                 Instantiate(spaceshipSprites[0]);
 
             }
