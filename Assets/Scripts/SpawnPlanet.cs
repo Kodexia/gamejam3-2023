@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -43,14 +44,7 @@ public class SpawnPlanet : MonoBehaviour
         float posX = bg.transform.position.x - width;
         float posY = bg.transform.position.y - height;
 
-        float sqrt2 = Mathf.Sqrt(2);
-        float cellSize = distanceBetweenPoints / sqrt2;
-        int dim = (int)Mathf.Ceil(width / cellSize);
-        float[,] array = new float[dim, dim];
-        //    X, Y
-        Debug.Log("Dim: " + dim);
-        Debug.Log("Cellsize: " + cellSize);
-        Debug.Log("--");
+        List<Vector2> vectors = GeneratePoints(distanceBetweenPoints, spriteRenderer.sprite.bounds.size);
 
         if (sprite.Count < planets)
         {
@@ -65,34 +59,12 @@ public class SpawnPlanet : MonoBehaviour
 
             Instantiate(planet);
 
-            bool validPosition = false;
-            Vector2 newPosition = Vector2.zero;
-            int timesFailed = 0;
-            while (!validPosition)
-            {
-                if (timesFailed >= maxFailedChecks) break;
-                float planetX = UnityEngine.Random.Range(posX + 3f, width - 3f);
-                float planetY = UnityEngine.Random.Range(posY + 3f, height - 3f);
+            Vector2 chosenVector = vectors[UnityEngine.Random.Range(0, vectors.Count)];
 
-                newPosition = new Vector2(planetX, planetY);
+            Vector2 spawnPosition = new Vector2(posX + chosenVector.x, posY + chosenVector.y);
 
-                validPosition = true;
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(newPosition, distanceBetweenPoints);
-                Debug.Log("colliders: " + colliders.Length);
-
-                if (colliders.Length != 0)
-                {
-                    validPosition = false;
-                    timesFailed++;
-                }
-            }
-            if (timesFailed >= maxFailedChecks) continue;
-
-            planet.transform.position = newPosition;
-
-            positions.Add(newPosition);
-
-            sprite.RemoveAt(randomPlanet);
+            planet.transform.position = spawnPosition;
+            positions.Add(spawnPosition);
         }
 
         Instantiate(homePlanet);
@@ -100,9 +72,73 @@ public class SpawnPlanet : MonoBehaviour
         positions.Add(new Vector2(0, 0));
     }
 
-    // Update is called once per frame
-    void Update()
+    public static List<Vector2> GeneratePoints(float radius, Vector2 sampleRegionSize, int numSamplesBeforeRejection = 30)
     {
+        float cellSize = radius / Mathf.Sqrt(2);
 
+        int[,] grid = new int[Mathf.CeilToInt(sampleRegionSize.x / cellSize), Mathf.CeilToInt(sampleRegionSize.y / cellSize)];
+        List<Vector2> points = new List<Vector2>();
+        List<Vector2> spawnPoints = new List<Vector2>();
+
+        spawnPoints.Add(sampleRegionSize / 2);
+        while (spawnPoints.Count > 0)
+        {
+            int spawnIndex = UnityEngine.Random.Range(0, spawnPoints.Count);
+            Vector2 spawnCentre = spawnPoints[spawnIndex];
+            bool candidateAccepted = false;
+
+            for (int i = 0; i < numSamplesBeforeRejection; i++)
+            {
+                float angle = UnityEngine.Random.value * Mathf.PI * 2;
+                Vector2 dir = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle));
+                Vector2 candidate = spawnCentre + dir * UnityEngine.Random.Range(radius, 2 * radius);
+                if (IsValid(candidate, sampleRegionSize, cellSize, radius, points, grid))
+                {
+                    points.Add(candidate);
+                    spawnPoints.Add(candidate);
+                    grid[(int)(candidate.x / cellSize), (int)(candidate.y / cellSize)] = points.Count;
+                    candidateAccepted = true;
+                    break;
+                }
+            }
+            if (!candidateAccepted)
+            {
+                spawnPoints.RemoveAt(spawnIndex);
+            }
+
+        }
+
+        return points;
+    }
+
+    static bool IsValid(Vector2 candidate, Vector2 sampleRegionSize, float cellSize, float radius, List<Vector2> points, int[,] grid)
+    {
+        if (candidate.x >= 0 && candidate.x < sampleRegionSize.x && candidate.y >= 0 && candidate.y < sampleRegionSize.y)
+        {
+            int cellX = (int)(candidate.x / cellSize);
+            int cellY = (int)(candidate.y / cellSize);
+            int searchStartX = Mathf.Max(0, cellX - 2);
+            int searchEndX = Mathf.Min(cellX + 2, grid.GetLength(0) - 1);
+            int searchStartY = Mathf.Max(0, cellY - 2);
+            int searchEndY = Mathf.Min(cellY + 2, grid.GetLength(1) - 1);
+
+            for (int x = searchStartX; x <= searchEndX; x++)
+            {
+                for (int y = searchStartY; y <= searchEndY; y++)
+                {
+                    int pointIndex = grid[x, y] - 1;
+                    if (pointIndex != -1)
+                    {
+                        float sqrDst = (candidate - points[pointIndex]).sqrMagnitude;
+                        if (sqrDst < radius * radius)
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+        return false;
     }
 }
