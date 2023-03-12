@@ -34,6 +34,7 @@ public class Planet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+<<<<<<< HEAD
         //Debug.Log("COLIDED WITH PLANET");
         //Debug.Log(isTargeted);
         //Debug.Log(tag) ;
@@ -56,33 +57,45 @@ public class Planet : MonoBehaviour
         }
 
         if (isTargeted == true && tag != "homeplanet")
+=======
+        if (isTargeted && tag != "homeplanet")
+>>>>>>> 765ba3508dd2fe90588e7910a2ae61e360779752
         {
             int type = other.GetComponent<Spaceship>().type;
             Debug.Log(tag + "");
             Debug.Log("Destroyed");
             Destroy(other.gameObject);
+<<<<<<< HEAD
             if (MinePlanet(GameObject.Find("Main Camera Planets").GetComponent<Player>()))
+=======
+            MinePlanet(GameObject.Find("Main Camera Planets").GetComponent<Player>());
+            GameObject player = GameObject.Find("Main Camera Planets");
+            player.GetComponent<Player>().attack += 5;
+            player.GetComponent<Player>().defence += 5;
+            foreach(Resource ore in player.GetComponent<Player>().resources)
+>>>>>>> 765ba3508dd2fe90588e7910a2ae61e360779752
             {
-                isTargeted = false;
-                GameObject newPrefab = Instantiate(spaceshipSprites[type], transform.position, Quaternion.identity);
-                newPrefab.GetComponent<Spaceship>().whereToGo = new Vector2(0.1f, 0.1f);
-                homePlanet.GetComponent<Planet>().isTargeted = true;
+                Debug.Log($"Name:{ore.name} Amount: {ore.amm}");
             }
+            
         }
     }
-    bool MinePlanet(Player player)
+    void MinePlanet(Player player)
     {
         foreach (var playerOre in player.resources)
         {
+<<<<<<< HEAD
             Debug.Log("Started mining");
             if (playerOre.name == ore.name && ore.amm > 0)
             {
                 if (ore.amm < 2 * player.playerUpgrades.miningSpeedAndSpeedUpgrades)
+=======
+            if(playerOre.name == ore.name && ore.amm > 0) {
+                if(ore.amm < 2*player.playerUpgrades.miningSpeedAndSpeedUpgrades)
+>>>>>>> 765ba3508dd2fe90588e7910a2ae61e360779752
                 {
                     playerOre.amm += ore.amm;
                     ore.amm = 0;
-                    Debug.Log("Done");
-                    return true;
                 }
                 else
                 {
@@ -93,7 +106,6 @@ public class Planet : MonoBehaviour
 
             }
         }
-        return false;
     }
 
     public void AttackPlanet(Spaceship spaceship)

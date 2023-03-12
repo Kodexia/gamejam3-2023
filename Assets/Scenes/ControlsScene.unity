@@ -426,9 +426,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.000061, y: -283.8}
+  m_AnchoredPosition: {x: 317.56, y: -212}
   m_SizeDelta: {x: 72, y: 72}
-  m_Pivot: {x: 0.5, y: 0.49999976}
+  m_Pivot: {x: 0.5000002, y: 0.5000002}
 --- !u!114 &238305406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,8 +717,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000020981, y: -147.19623}
-  m_SizeDelta: {x: 1172.6664, y: 697.4302}
+  m_AnchoredPosition: {x: -0.000020981, y: -121.08496}
+  m_SizeDelta: {x: 1172.6664, y: 645.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388395486
 MonoBehaviour:
@@ -880,7 +880,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10.387, y: 1597.2325}
+  m_SizeDelta: {x: 10.387, y: 1577.4}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &978614093
 GameObject:
@@ -1323,7 +1323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.999939, y: -404.99994}
+  m_AnchoredPosition: {x: -0.000061035156, y: -391}
   m_SizeDelta: {x: 488.0894, y: 63.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1150198727
@@ -1458,7 +1458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 176.00006, y: -672.99994}
+  m_AnchoredPosition: {x: 203, y: -662}
   m_SizeDelta: {x: 72, y: 72}
   m_Pivot: {x: 0.5000008, y: 0.49999976}
 --- !u!114 &1189451803
@@ -1790,7 +1790,7 @@ GameObject:
   - component: {fileID: 1312516326}
   - component: {fileID: 1312516325}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Uranium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1813,7 +1813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 301.56006, y: -201.99994}
+  m_AnchoredPosition: {x: 275, y: -740.99994}
   m_SizeDelta: {x: 72, y: 72}
   m_Pivot: {x: 0.5, y: 0.49999976}
 --- !u!114 &1312516325
@@ -2310,32 +2310,35 @@ MonoBehaviour:
 
 
 
-    -When you click on a planet,
-    it will send mining ships to the planet you have chosen. Once the ships arrive
-    at the planet, they will immediately disappear, and thenbegin mining materials."
+    -When you left click on
+    a planet, it will send mining ships to the planet you have chosen. Once the ships
+    arrive at the planet, they will immediately disappear, and then begin mining
+    materials.
+
+    -Be careful, sending ships will slightly decrese your attack
+    and deffence until the ship returns!
 
 
-    -You
-    can upgrade your mining ships in two ways:
+    -You can upgrade your mining ships
+    using ore:
 
 
-    --Travel Speed and base attack
-    using Uranium
-
-
-    --Mining speed using Azurite
+    --Travel Speed and Mining speed using Azurite
 
 
 
 
-    - You will have to be
-    careful, in this game other inhabitants of the galaxy may attack you, and they
-    will take away your lives. If you don''t defend yourself and they take away all
-    your lives, you will die and the game will end.
+    - You
+    will have to be careful, in this game other inhabitants of the galaxy may attack
+    you, and they will take away your lives. If you don''t defend yourself, they
+    take away all your lives, you will die and the game will end.
 
 
-    -You can raise your HP
-    using  Crimtain
+    -You can
+    raise your HP using  Crimtain
+
+
+    -You can raise your Defence using Uranium
 
 
 '
@@ -2525,6 +2528,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 153890542265965995, guid: 072cabf292dba024c9d442d20a344293, type: 3}
+      propertyPath: transitionTime
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 2947880170109234368, guid: 072cabf292dba024c9d442d20a344293, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2572,6 +2579,10 @@ PrefabInstance:
     - target: {fileID: 2947880170109234369, guid: 072cabf292dba024c9d442d20a344293, type: 3}
       propertyPath: m_Name
       value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947880170109234369, guid: 072cabf292dba024c9d442d20a344293, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 072cabf292dba024c9d442d20a344293, type: 3}
@@ -2659,7 +2670,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 350771818}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4379138
+  m_Size: 0.41032076
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

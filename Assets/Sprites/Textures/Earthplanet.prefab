@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8425774163418198175}
   - component: {fileID: 7256829800684263977}
   - component: {fileID: -3011033283714339801}
-  - component: {fileID: 4075931069488763745}
   - component: {fileID: 2536269278036607399}
   m_Layer: 0
   m_Name: Earthplanet
@@ -29,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3763847190033552507}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.241412, y: -1.9368887, z: 0}
+  m_LocalPosition: {x: -14.735814, y: 6.057928, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -132,23 +131,6 @@ MonoBehaviour:
   - {fileID: 920990135505060969, guid: f96dc9a1998fbcf43a9fa8d6de55adc0, type: 3}
   - {fileID: 7916721302183686682, guid: 15bac39f5505944408292401cf5a9324, type: 3}
   homePlanet: {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
---- !u!114 &4075931069488763745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3763847190033552507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9be76a510e8b3aa43ab2305f3c9be7fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oreResourceImage: {fileID: 0}
-  Uranium: {fileID: 0}
-  Azurite: {fileID: 0}
-  Crimtain: {fileID: 0}
-  fadeDuration: 0.2
 --- !u!50 &2536269278036607399
 Rigidbody2D:
   serializedVersion: 4

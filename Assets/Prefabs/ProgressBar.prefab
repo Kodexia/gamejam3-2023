@@ -73,7 +73,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.51
+  m_FillAmount: 0.38
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maximum: 100
-  progress: 51
+  progress: 38
   mask: {fileID: 8602696129559153775}
   fill: {fileID: 8602696130827841587}
   color: {r: 0.787902, g: 0.8396226, b: 0, a: 1}

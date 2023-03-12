@@ -9,13 +9,20 @@ using System;
 public class Player : MonoBehaviour
 {
     public bool isDead = false;
+<<<<<<< HEAD
     public bool isWon = false;
     public int attack = 10;
     public int defence = 50;
+=======
+    public bool isWon= false;
+    public int attack = 10;
+    public int defence = 10;
+>>>>>>> 765ba3508dd2fe90588e7910a2ae61e360779752
     public int raidsSurvived = 0;
 
 
     public List<GameObject> spaceshipSprites = new List<GameObject>();
+    [SerializeField]
     public List<Resource> resources = new List<Resource>();
     public Upgrades playerUpgrades = new Upgrades();
     List<Spaceship> spaceshipsOnPlanet = new List<Spaceship>();
@@ -60,7 +67,7 @@ public class Player : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
 
             //If something was hit, the RaycastHit2D.collider will not be null.
-            if (hit.collider != null && hit.collider.tag == "planet" && !isAttacking)
+            if (hit.collider != null && hit.collider.tag == "planet" && attack >= 5 && defence >= 5)
             {
                 pointOfTargetedPlanet = new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y);
                 Debug.Log(pointOfTargetedPlanet);
@@ -68,7 +75,8 @@ public class Player : MonoBehaviour
                 Planet planet = hit.collider.GetComponent<Planet>();
                 planet.isTargeted = true;
                 Instantiate(spaceshipSprites[0]);
-
+                attack -= 5;
+                defence -= 5;
             }
         }
 
