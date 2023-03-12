@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 1345783362130294819}
   - component: {fileID: 5492185801059598639}
   - component: {fileID: -7988004152248878552}
-  m_Layer: 8
+  - component: {fileID: 6061080714801587618}
+  m_Layer: 0
   m_Name: Gasgigant2
   m_TagString: planet
   m_Icon: {fileID: 0}
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526442387449076733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.334155, y: 0.6506138, z: 0}
+  m_LocalPosition: {x: 10.986287, y: 7.8572273, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -126,6 +127,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTargeted: 0
+  spaceshipSprites:
+  - {fileID: 7279026761454459694, guid: b975e94583634a0449236baa41201fac, type: 3}
+  - {fileID: 920990135505060969, guid: f96dc9a1998fbcf43a9fa8d6de55adc0, type: 3}
+  - {fileID: 7916721302183686682, guid: 15bac39f5505944408292401cf5a9324, type: 3}
+  homePlanet: {fileID: 6758447520651698160, guid: b34bd90c695282041869e312710fdde4, type: 3}
 --- !u!114 &-7988004152248878552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,3 +145,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.2
+--- !u!50 &6061080714801587618
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526442387449076733}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
