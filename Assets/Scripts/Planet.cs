@@ -43,13 +43,7 @@ public class Planet : MonoBehaviour
     }
     private void Start()
     {
-        player = GameObject.Find("Main Camera Planets");
-
-
-
-
-
-
+        player = GameObject.Find("Main Camera");
     }
     private void Update()
     {
@@ -77,7 +71,7 @@ public class Planet : MonoBehaviour
         bool isShipEnemy = other.gameObject.GetComponent<Spaceship>().isEnemy; // throws an error if an asteroid collides with the planet --> fix spawner
         Debug.Log(isShipEnemy);
 
-        if (isShipEnemy == true)
+        if (isShipEnemy == true && tag == "homeplanet")
         {
             Debug.Log("enemy ship collided!");
             SetAttack(other.gameObject.GetComponent<Spaceship>(), other.gameObject);
@@ -107,11 +101,6 @@ public class Planet : MonoBehaviour
 
 
         }
-
-
-
-
-
     }
     void MinePlanet()
     {
@@ -144,7 +133,7 @@ public class Planet : MonoBehaviour
     {
         int damage = spaceship.enemyAttack;
 
-        Player playerScritp = GameObject.Find("Main Camera Planets").GetComponent<Player>();
+        Player playerScritp = GameObject.Find("Main Camera").GetComponent<Player>();
 
         playerScritp.defence -= damage * 2;
         playerScritp.attack -= damage;
@@ -155,7 +144,7 @@ public class Planet : MonoBehaviour
 
     public void SetAttack(Spaceship spaceship, GameObject enemyShipObject)
     {
-        Player playerScritp = GameObject.Find("Main Camera Planets").GetComponent<Player>();
+        Player playerScritp = GameObject.Find("Main Camera").GetComponent<Player>();
         playerScritp.EnemyAttack(spaceship, this, enemyShipObject);
     }
 
