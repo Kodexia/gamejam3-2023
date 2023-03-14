@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
 
     public Player()
     {
-
+        PlayerStats.startTime = DateTime.Now;
         resources.Add(new Resource("Azurite", 100));
         resources.Add(new Resource("Crimtain", 100));
         resources.Add(new Resource("Uranium", 100));
@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
             PlayerStats.raidSurvived = raidsSurvived;
             PlayerStats.endTime = DateTime.Now;
 
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(5);
 
         }
     }

@@ -24,8 +24,7 @@ public class Planet : MonoBehaviour
     [SerializeField]
     float timeToMine = 10;
     float timePassed;
-    [SerializeField]
-    GameObject progressBar;
+ 
     [SerializeField]
     Vector3 planetPosition;
     GameObject spawned;
@@ -43,9 +42,7 @@ public class Planet : MonoBehaviour
     {
         player = GameObject.Find("Main Camera Planets");
         
-        progressBar.GetComponentInParent<Canvas>().enabled = true;
-        progressBar.transform.SetParent(progressBar.GetComponentInParent<Transform>());
-        progressBar.transform.parent = GameObject.Find("Canvas").GetComponent<Transform>();
+  
 
 
 
@@ -92,11 +89,7 @@ public class Planet : MonoBehaviour
             Destroy(other.gameObject);
             isTargeted = false;
             isMined = true;
-            spawned = Instantiate(progressBar, new Vector3(this.GetComponentInParent<Transform>().position.x, this.GetComponentInParent<Transform>().position.y + 2, this.GetComponentInParent<Transform>().position.z), Quaternion.identity);
-
-            spawned.name = "PlanetMineBar";
-            spawned.transform.SetParent(progressBar.GetComponentInParent<Canvas>().transform);
-            spawned.transform.localScale = new Vector3(108, 108, 108);
+            
 
         }
        
@@ -107,7 +100,7 @@ public class Planet : MonoBehaviour
     }
     void MinePlanet()
     {
-        spawned.GetComponent<ProgressBar>().progress = timePassed / timeToMine * 100f;
+
         if(timePassed >= timeToMine - player.GetComponent<Player>().playerUpgrades.miningSpeedAndSpeedUpgrades)
         {
             foreach (var playerOre in player.GetComponent<Player>().resources)
