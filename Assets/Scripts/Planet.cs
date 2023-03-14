@@ -24,10 +24,13 @@ public class Planet : MonoBehaviour
     [SerializeField]
     float timeToMine = 10;
     float timePassed;
-
     [SerializeField]
-    Vector3 planetPosition;
-    GameObject spawned;
+    GameObject progressBar;
+    [SerializeField]
+    Canvas progressBarCanvas;
+    [SerializeField]
+    Transform planetsPosition;
+    GameObject planetsProgressBar;
     public Planet()
     {
         resources.Add(new Resource("Azurite", rnd.Next(10, 50)));
@@ -50,19 +53,27 @@ public class Planet : MonoBehaviour
     }
     private void Update()
     {
+
         if (isMined)
         {
-            timePassed += Time.deltaTime;
-            MinePlanet();
+
+
+                timePassed += Time.deltaTime;
+                MinePlanet();
+            planetsProgressBar.GetComponent<ProgressBar>().progress = timePassed / timeToMine * 100;
+
+
+
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        
         //Debug.Log("COLIDED WITH PLANET");
         //Debug.Log(isTargeted);
         //Debug.Log(tag) ;
-
+        
         bool isShipEnemy = other.gameObject.GetComponent<Spaceship>().isEnemy; // throws an error if an asteroid collides with the planet --> fix spawner
         Debug.Log(isShipEnemy);
 
@@ -80,9 +91,13 @@ public class Planet : MonoBehaviour
         //    Destroy(other.gameObject);
         //    isTargeted = false;
         //}
-
+        
         if (isTargeted == true && tag != "homeplanet")
         {
+            planetsProgressBar = Instantiate(progressBar);
+            planetsProgressBar.transform.position = new Vector2(planetsPosition.position.x, planetsPosition.position.y+2);
+            planetsProgressBar.transform.SetParent(progressBarCanvas.transform);
+            
             int type = other.GetComponent<Spaceship>().type;
             Debug.Log(tag + "");
             Debug.Log("Destroyed");
@@ -118,7 +133,7 @@ public class Planet : MonoBehaviour
             }
             timePassed = 0;
             isMined = false;
-            Destroy(spawned);
+            Destroy(planetsProgressBar);
             player.GetComponent<Player>().attack += 5;
             player.GetComponent<Player>().defence += 5;
         }
