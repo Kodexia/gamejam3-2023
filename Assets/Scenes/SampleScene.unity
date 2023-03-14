@@ -137,7 +137,7 @@ PrefabInstance:
     - target: {fileID: 3136730475311604968, guid: 2f2ddb65d9f68f644b2ed1300c4e8765, type: 3}
       propertyPath: progressBar
       value: 
-      objectReference: {fileID: 1899947951}
+      objectReference: {fileID: 0}
     - target: {fileID: 6085365176889885798, guid: 2f2ddb65d9f68f644b2ed1300c4e8765, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -210,7 +210,7 @@ PrefabInstance:
     - target: {fileID: -3011033283714339801, guid: 83f66ce0980586c4db923b14363094e7, type: 3}
       propertyPath: progressBar
       value: 
-      objectReference: {fileID: 1899947951}
+      objectReference: {fileID: 0}
     - target: {fileID: 3763847190033552507, guid: 83f66ce0980586c4db923b14363094e7, type: 3}
       propertyPath: m_Name
       value: Earthplanet
@@ -351,7 +351,7 @@ PrefabInstance:
     - target: {fileID: 5492185801059598639, guid: b1d85534ac89a5f4e8195605378e580c, type: 3}
       propertyPath: progressBar
       value: 
-      objectReference: {fileID: 1899947951}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1d85534ac89a5f4e8195605378e580c, type: 3}
 --- !u!114 &655662166 stripped
@@ -464,6 +464,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1967866736}
+    - target: {fileID: 6542843391747889755, guid: f76904aae686a3a4eaa5d203afd1e0af, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1869213945
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542843392832114031, guid: f76904aae686a3a4eaa5d203afd1e0af, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -490.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542843392832114031, guid: f76904aae686a3a4eaa5d203afd1e0af, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -449
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f76904aae686a3a4eaa5d203afd1e0af, type: 3}
 --- !u!1 &690643138 stripped
@@ -655,7 +667,7 @@ PrefabInstance:
     - target: {fileID: -7431263294820084635, guid: bc1530c63d013984aa62f7859461e497, type: 3}
       propertyPath: progressBar
       value: 
-      objectReference: {fileID: 1899947951}
+      objectReference: {fileID: 0}
     - target: {fileID: 2949807147873241650, guid: bc1530c63d013984aa62f7859461e497, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -805,6 +817,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1967866738}
+    - target: {fileID: 2852181394276576718, guid: 87edc925057dc2140bd2961c5df85b69, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1967866736}
     - target: {fileID: 2852181394276576719, guid: 87edc925057dc2140bd2961c5df85b69, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -913,7 +929,7 @@ PrefabInstance:
     - target: {fileID: 3136730475311604968, guid: ec656b0bc5e4cb2479c01496175f815f, type: 3}
       propertyPath: progressBar
       value: 
-      objectReference: {fileID: 1899947951}
+      objectReference: {fileID: 0}
     - target: {fileID: 6085365176889885798, guid: ec656b0bc5e4cb2479c01496175f815f, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -987,6 +1003,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1362136829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1362136832}
+  - component: {fileID: 1362136831}
+  - component: {fileID: 1362136830}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1362136830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362136829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1362136831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362136829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1362136832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362136829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1435287686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1159,7 +1243,7 @@ PrefabInstance:
     - target: {fileID: -7254370733240954921, guid: b34bd90c695282041869e312710fdde4, type: 3}
       propertyPath: progressBar
       value: 
-      objectReference: {fileID: 1899947951}
+      objectReference: {fileID: 0}
     - target: {fileID: 4411211032317082942, guid: b34bd90c695282041869e312710fdde4, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1422,7 +1506,7 @@ PrefabInstance:
     - target: {fileID: 6611010899648293695, guid: 88e1ae2f84a00ca4b99de51002724bc5, type: 3}
       propertyPath: progressBar
       value: 
-      objectReference: {fileID: 1899947951}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e1ae2f84a00ca4b99de51002724bc5, type: 3}
 --- !u!1001 &1746152071
@@ -1492,7 +1576,7 @@ PrefabInstance:
     - target: {fileID: 2589797749534143376, guid: 4c834f2b1535a2945864b8afb89463a3, type: 3}
       propertyPath: progressBar
       value: 
-      objectReference: {fileID: 1899947951}
+      objectReference: {fileID: 0}
     - target: {fileID: 4394220094741312325, guid: 4c834f2b1535a2945864b8afb89463a3, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1608,11 +1692,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 072cabf292dba024c9d442d20a344293, type: 3}
---- !u!1 &1899947951 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3291625462934987359, guid: f76904aae686a3a4eaa5d203afd1e0af, type: 3}
-  m_PrefabInstance: {fileID: 657246744}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1967866733
 GameObject:
   m_ObjectHideFlags: 0
