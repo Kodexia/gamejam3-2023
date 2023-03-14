@@ -30,18 +30,19 @@ public class ShowPlanetUI : MonoBehaviour
     Vector2 screenBounds;
     bool fadeIn = false;
     bool fadeOut = false;
-  
+
     private void Start()
     {
 
-        
+
         GameObject tempObject = GameObject.Find("PlanetUICanvas");
         GameObject imgTempObject = GameObject.Find("Image (1)");
-        if(imgTempObject != null)
+        if (imgTempObject != null)
         {
-            
+
             img = imgTempObject.GetComponent<TextMeshProUGUI>();
-            if(img == null) {
+            if (img == null)
+            {
                 Debug.Log("didnt find img");
             }
         }
@@ -78,18 +79,18 @@ public class ShowPlanetUI : MonoBehaviour
             planetText.horizontalAlignment = HorizontalAlignmentOptions.Center;
             planetText.rectTransform.sizeDelta = new Vector2(1.9226f, 1.5f);
         }
-        
-        
-        
-        
 
 
-        
 
 
-        
-        
-        
+
+
+
+
+
+
+
+
 
         planetUI.enabled = false;
         planetUIGroup.alpha = 0f;
@@ -100,15 +101,15 @@ public class ShowPlanetUI : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-          
+
             Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
-            
+
 
             if (hit.collider != null && hit.collider.tag == "planet")
             {
                 rend = hit.collider.GetComponent<SpriteRenderer>();
-               
+
                 planet = hit.collider.GetComponent<Planet>();
                 tr = hit.collider.GetComponent<Transform>();
                 ShowPlanetInfo();
@@ -120,13 +121,13 @@ public class ShowPlanetUI : MonoBehaviour
         }
         if (fadeIn)
         {
-            if(planetUIGroup.alpha < 1)
+            if (planetUIGroup.alpha < 1)
             {
                 float t = elapsedTime / fadeDuration;
                 planetUIGroup.alpha = Mathf.Lerp(0f, 1f, t);
                 elapsedTime += Time.deltaTime;
 
-                if (planetUIGroup.alpha >= 1 ) 
+                if (planetUIGroup.alpha >= 1)
                 {
                     fadeIn = false;
                     elapsedTime = 0.0f;
@@ -134,9 +135,9 @@ public class ShowPlanetUI : MonoBehaviour
             }
         }
 
-        else if(fadeOut)
+        else if (fadeOut)
         {
-            if(planetUIGroup.alpha > 0)
+            if (planetUIGroup.alpha > 0)
             {
                 float t = elapsedTime / fadeDuration;
                 planetUIGroup.alpha = Mathf.Lerp(1f, 0f, t);
@@ -147,7 +148,7 @@ public class ShowPlanetUI : MonoBehaviour
                     fadeOut = false;
                     elapsedTime = 0.0f;
                     planetUI.enabled = false;
-                  
+
                 }
             }
         }
@@ -158,7 +159,7 @@ public class ShowPlanetUI : MonoBehaviour
         float height = rend.sprite.bounds.size.y;
         float width = rend.sprite.bounds.size.x;
         //Debug.Log(planetUI.enabled + " - " + fadeIn);
-        
+
         if (planetUI.enabled == false && fadeIn == false)
         {
             fadeIn = true;
@@ -187,20 +188,20 @@ public class ShowPlanetUI : MonoBehaviour
 
             }
 
-            
+
 
         }
     }
 
     public void HidePlanetInfo()
     {
-        if(fadeOut == false && planetUI.enabled == true)
+        if (fadeOut == false && planetUI.enabled == true)
         {
             fadeOut = true;
         }
-       
-       
+
+
 
     }
-    
+
 }

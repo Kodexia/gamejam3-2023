@@ -17,7 +17,6 @@ public class Spaceship : MonoBehaviour
     public Spaceship(bool isEnemy)
     {
         this.isEnemy = isEnemy;
-        //sprite = 
         attack = 10 * upgrades.attackUpgrades;
         speed = 5 * upgrades.defenceUpgrades;
     }

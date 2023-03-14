@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab; // the enemy prefab to spawn
-    public Transform homePlanet; // the player's home planet
-    public SpriteRenderer background; // the background sprite renderer
-    public float spawnInterval = 5f; // how often to spawn enemies
-    public float enemySpeed = 5f; // the speed at which enemies move
+    public GameObject enemyPrefab;
+    public Transform homePlanet;
+    public SpriteRenderer background;
+    public float spawnInterval = 5f;
+    public float enemySpeed = 5f;
     Spaceship enemySpaceship;
 
     private float timeSinceLastSpawn = 0f;
@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-        // Get the dimensions of the background sprite
+        // Get the dimensions of the background
         backgroundWidth = background.bounds.size.x;
         backgroundHeight = background.bounds.size.y;
 
@@ -65,7 +65,7 @@ public class EnemySpawner : MonoBehaviour
                 break;
         }
 
-        // Spawn the enemy at the chosen position and rotate it towards the player's home planet
+        // Spawn the enemy at the chosen position
         Vector3 spawnPosition = new Vector3(x, y, 0f);
 
 
@@ -73,14 +73,10 @@ public class EnemySpawner : MonoBehaviour
         Spaceship script = enemy.GetComponent<Spaceship>();
         script.isEnemy = true;
 
-
-
-        Vector3 direction = homePlanet.position - enemy.transform.position;
-
         enemySpaceship = enemy.GetComponent<Spaceship>();
 
 
-        enemySpaceship.moveOnTo(new Vector2(homePlanet.position.x + 0.001f, homePlanet.position.y + 0.001f), 0); // ofset beacuse tomasek
+        enemySpaceship.moveOnTo(new Vector2(homePlanet.position.x + 0.001f, homePlanet.position.y + 0.001f), 0); // ofset beacuse tomasek neunmi programovat
         //Instantiate(enemy);
     }
 }

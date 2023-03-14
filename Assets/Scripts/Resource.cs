@@ -6,9 +6,9 @@ public class Resource
 {
     public string name { get; private set; }
     public int amm;
-    
-  
-    
+
+
+
 
     public Resource(string name, int amm)
     {

@@ -6,7 +6,7 @@ public class Upgrades
 {
     public int miningSpeedAndSpeedUpgrades { get; private set; }
     public int defenceUpgrades { get; private set; }
-    public int attackUpgrades { get; private set;}
+    public int attackUpgrades { get; private set; }
     public Upgrades()
     {
         miningSpeedAndSpeedUpgrades = 1;
@@ -15,9 +15,9 @@ public class Upgrades
     }
     public void upgradeSpeeds(List<Resource> useableOres)
     {
-        foreach(Resource ore in useableOres)
+        foreach (Resource ore in useableOres)
         {
-            if(ore.name == "Azurite" && ore.amm >= 10 * miningSpeedAndSpeedUpgrades)
+            if (ore.name == "Azurite" && ore.amm >= 10 * miningSpeedAndSpeedUpgrades)
             {
                 ore.amm -= 10 * miningSpeedAndSpeedUpgrades;
                 miningSpeedAndSpeedUpgrades++;

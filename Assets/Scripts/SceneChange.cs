@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    
+
     public void ChangeToSampleScene(int sceneID)
     {
         SceneManager.LoadScene(sceneID);

@@ -24,7 +24,7 @@ public class Planet : MonoBehaviour
     [SerializeField]
     float timeToMine = 10;
     float timePassed;
- 
+
     [SerializeField]
     Vector3 planetPosition;
     GameObject spawned;
@@ -41,8 +41,8 @@ public class Planet : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Main Camera Planets");
-        
-  
+
+
 
 
 
@@ -89,32 +89,32 @@ public class Planet : MonoBehaviour
             Destroy(other.gameObject);
             isTargeted = false;
             isMined = true;
-            
+
 
         }
-       
-     
-        
-            
+
+
+
+
 
     }
     void MinePlanet()
     {
 
-        if(timePassed >= timeToMine - player.GetComponent<Player>().playerUpgrades.miningSpeedAndSpeedUpgrades)
+        if (timePassed >= timeToMine - player.GetComponent<Player>().playerUpgrades.miningSpeedAndSpeedUpgrades)
         {
             foreach (var playerOre in player.GetComponent<Player>().resources)
             {
                 if (playerOre.name == ore.name && ore.amm > 0)
                 {
-                        playerOre.amm += ore.amm;
-                        ore.amm = 0;
-                   
+                    playerOre.amm += ore.amm;
+                    ore.amm = 0;
+
 
 
                 }
 
-            Debug.Log($"Name:{playerOre.name} Amount: {playerOre.amm}");
+                Debug.Log($"Name:{playerOre.name} Amount: {playerOre.amm}");
             }
             timePassed = 0;
             isMined = false;

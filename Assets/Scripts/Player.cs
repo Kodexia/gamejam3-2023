@@ -5,22 +5,26 @@ using UnityEngine;
 using UnityEngineInternal;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
     public bool isDead = false;
-    public bool isWon= false;
+    public bool isWon = false;
     public int attack = 10;
     public int defence = 10;
     public int raidsSurvived = 0;
 
 
+    [SerializeField] private TextMeshPro attackDefenceText;
+
     public List<GameObject> spaceshipSprites = new List<GameObject>();
     [SerializeField]
     public List<Resource> resources = new List<Resource>();
     public Upgrades playerUpgrades = new Upgrades();
-    List<Spaceship> spaceshipsOnPlanet = new List<Spaceship>();
-    List<Spaceship> spaceshipsOffPlanet = new List<Spaceship>();
+    //List<Spaceship> spaceshipsOnPlanet = new List<Spaceship>();
+    //List<Spaceship> spaceshipsOffPlanet = new List<Spaceship>();
     Spaceship mainSpaceship;
     public bool isAttacking = false;
 
@@ -109,7 +113,7 @@ public class Player : MonoBehaviour
         attackCount = 0;
         isUnderAttack = true;
         enemyAttack = spaceship.enemyAttack;
-        nextAttackTime = Time.time + UnityEngine.Random.Range(attackIntervalMin, attackIntervalMax);
+        nextAttackTime = Time.time + 1;
 
         enemyShip = enemyShipObject;
 
@@ -125,23 +129,30 @@ public class Player : MonoBehaviour
 
             this.defence -= enemyAttack * 2;
             this.attack -= enemyAttack;
+
             if (defence <= 0)
             {
                 this.isDead = true;
             }
+
             this.CheckForEndGame();
 
-            // Increase the attack count
+            if (attackDefenceText != null) // temp gui
+            {
+                // Update the attackDefenseText to show the new attack and defense values
+                attackDefenceText.text = "Attack: " + this.attack + "\nDefense: " + this.defence;
+
+            }
+
             attackCount++;
+            nextAttackTime = Time.time + 1;
 
-            // Set the time for the next attack
-            nextAttackTime = Time.time + (UnityEngine.Random.Range(attackIntervalMin, attackIntervalMax));
-
-        }else if (attackCount == maxAttackRepeats && isUnderAttack == true)
+        }
+        else if (attackCount == maxAttackRepeats && isUnderAttack == true)
         {
             this.isUnderAttack = false;
             attackCount = 0;
-            Debug.Log("GG");
+            Debug.Log("Destroyed ship, correct!");
             Destroy(enemyShip);
             raidsSurvived++;
 
