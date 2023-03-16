@@ -5,22 +5,20 @@ using UnityEngine;
 public class Spaceship : MonoBehaviour
 {
     public bool isEnemy;
-    Sprite sprite;
     public int type;
     float attack;
     float speed;
-    [SerializeField]
+    public int enemyAttack = 1;
+
     public Vector2 whereToGo = new Vector2(0, 0);
     Upgrades upgrades = new Upgrades();
 
-    public int enemyAttack = 1;
     public Spaceship(bool isEnemy)
     {
         this.isEnemy = isEnemy;
         attack = 10 * upgrades.attackUpgrades;
         speed = 5 * upgrades.defenceUpgrades;
     }
-
 
 
     private void Update()

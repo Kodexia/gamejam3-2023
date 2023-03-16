@@ -14,17 +14,15 @@ public class ShowPlanetUI : MonoBehaviour
     SpriteRenderer rend;
     TextMeshProUGUI img;
     TextMeshProUGUI planetText;
-    [SerializeField]
-    Image oreResourceImage;
-    [SerializeField]
-    Sprite Uranium;
-    [SerializeField]
-    Sprite Azurite;
-    [SerializeField]
-    Sprite Crimtain;
     CanvasGroup planetUIGroup;
-    [SerializeField]
-    float fadeDuration = 1.0f;
+
+    [SerializeField] Image oreResourceImage;
+    [SerializeField] Sprite Uranium;
+    [SerializeField] Sprite Azurite;
+    [SerializeField] Sprite Crimtain;
+    [SerializeField] float fadeDuration = 1.0f;
+
+
     float elapsedTime = 0.0f;
 
     Vector2 screenBounds;
@@ -33,10 +31,9 @@ public class ShowPlanetUI : MonoBehaviour
 
     private void Start()
     {
-
-
         GameObject tempObject = GameObject.Find("PlanetUICanvas");
         GameObject imgTempObject = GameObject.Find("Image (1)");
+
         if (imgTempObject != null)
         {
 
@@ -46,6 +43,7 @@ public class ShowPlanetUI : MonoBehaviour
                 Debug.Log("didnt find img");
             }
         }
+
         if (tempObject != null)
         {
             //If we found the object , get the Canvas component from it.
@@ -80,18 +78,6 @@ public class ShowPlanetUI : MonoBehaviour
             planetText.rectTransform.sizeDelta = new Vector2(1.9226f, 1.5f);
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
         planetUI.enabled = false;
         planetUIGroup.alpha = 0f;
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
@@ -101,10 +87,8 @@ public class ShowPlanetUI : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-
             Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
-
 
             if (hit.collider != null && hit.collider.tag == "planet")
             {
@@ -158,6 +142,7 @@ public class ShowPlanetUI : MonoBehaviour
     {
         float height = rend.sprite.bounds.size.y;
         float width = rend.sprite.bounds.size.x;
+
         //Debug.Log(planetUI.enabled + " - " + fadeIn);
 
         if (planetUI.enabled == false && fadeIn == false)
@@ -172,23 +157,24 @@ public class ShowPlanetUI : MonoBehaviour
             {
                 oreResourceImage.sprite = Uranium;
             }
+
             if (planet.ore.name == "Azurite")
             {
                 oreResourceImage.sprite = Azurite;
             }
+
             if (planet.ore.name == "Crimtain")
             {
                 oreResourceImage.sprite = Crimtain;
             }
 
             planetUI.transform.position = new Vector2(tr.position.x + height + 1, tr.position.y);
+
             if (planetUI.transform.position.x + 1 > screenBounds.x)
             {
                 planetUI.transform.position = new Vector2(tr.position.x - height - 1, tr.position.y);
 
             }
-
-
 
         }
     }
@@ -199,9 +185,5 @@ public class ShowPlanetUI : MonoBehaviour
         {
             fadeOut = true;
         }
-
-
-
     }
-
 }

@@ -5,13 +5,10 @@ using TMPro;
 using System;
 public class EndGameHandler : MonoBehaviour
 {
-    [SerializeField]
-    TMP_Text Heading;
-    [SerializeField]
-    TMP_Text Stats;
+    [SerializeField] TMP_Text Heading;
+    [SerializeField] TMP_Text Stats;
     TimeSpan timeResult;
 
-    // Start is called before the first frame update
     void Start()
     {
         PlayerStats.endTime = DateTime.Now;
@@ -21,7 +18,7 @@ public class EndGameHandler : MonoBehaviour
         }
         else
         {
-            timeResult = new TimeSpan(0,0,0);
+            timeResult = new TimeSpan(0, 0, 0);
         }
         if (!PlayerStats.isDead)
         {

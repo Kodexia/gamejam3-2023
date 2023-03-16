@@ -37,8 +37,8 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        // Determine a random side of the background to spawn the enemy on
-        int side = Random.Range(0, 4); // 0=top, 1=right, 2=bottom, 3=left
+        // Determine a random side of the background to spawn the enemy
+        int side = Random.Range(0, 4);
         float x, y;
 
         switch (side)
@@ -65,7 +65,6 @@ public class EnemySpawner : MonoBehaviour
                 break;
         }
 
-        // Spawn the enemy at the chosen position
         Vector3 spawnPosition = new Vector3(x, y, 0f);
 
 

@@ -5,25 +5,17 @@ using TMPro;
 
 public class ShowUpgradeMenu : MonoBehaviour
 {
-    [SerializeField]
-    TextMeshProUGUI miningSpeedAndSpeedUpgradeText;
-    [SerializeField]
-    TextMeshProUGUI defenceUpgradeText;
-    [SerializeField]
-    TextMeshProUGUI attackUpgradeText;
-    [SerializeField]
-    TextMeshProUGUI AzuriteText; 
-    [SerializeField]
-    TextMeshProUGUI UraniumText; 
-    [SerializeField]
-    TextMeshProUGUI CrimtainText;
-    [SerializeField]
-    Player player;
-    [SerializeField]
-    Canvas upgradeMenu;
-    [SerializeField]
-    TextMeshProUGUI notificationText;
-    // Start is called before the first frame update
+    [SerializeField] TextMeshProUGUI miningSpeedAndSpeedUpgradeText;
+    [SerializeField] TextMeshProUGUI defenceUpgradeText;
+    [SerializeField] TextMeshProUGUI attackUpgradeText;
+    [SerializeField] TextMeshProUGUI AzuriteText;
+    [SerializeField] TextMeshProUGUI UraniumText;
+    [SerializeField] TextMeshProUGUI CrimtainText;
+    [SerializeField] Player player;
+    [SerializeField] Canvas upgradeMenu;
+    [SerializeField] TextMeshProUGUI notificationText;
+
+
     void Start()
     {
         miningSpeedAndSpeedUpgradeText.text = $"Mining & Ship Speed \n\n[{player.playerUpgrades.miningSpeedAndSpeedUpgrades}]";
@@ -34,7 +26,7 @@ public class ShowUpgradeMenu : MonoBehaviour
         UraniumText.text = $"{player.playerUpgrades.defenceUpgrades * 10}";
         CrimtainText.text = $"{player.playerUpgrades.attackUpgrades * 10}";
         upgradeMenu.enabled = false;
-        
+
 
     }
 
@@ -45,17 +37,18 @@ public class ShowUpgradeMenu : MonoBehaviour
         {
             Debug.Log("Key works");
             if (upgradeMenu.enabled)
-            upgradeMenu.enabled = false;
+                upgradeMenu.enabled = false;
             else
-            upgradeMenu.enabled = true;
-            
+                upgradeMenu.enabled = true;
+
         }
     }
+
     public void UpgradeSpeedAndMiningSpeed()
     {
         Debug.Log("Button up a&s Funguje");
 
-        foreach(Resource ore in player.resources)
+        foreach (Resource ore in player.resources)
         {
             Debug.Log(ore.name + " " + ore.amm);
             if (ore.name == "Azurite" && ore.amm >= player.playerUpgrades.defenceUpgrades * 10)
@@ -75,10 +68,11 @@ public class ShowUpgradeMenu : MonoBehaviour
         miningSpeedAndSpeedUpgradeText.text = $"Mining & Ship Speed \n\n[{player.playerUpgrades.miningSpeedAndSpeedUpgrades}]";
         AzuriteText.text = $"{player.playerUpgrades.miningSpeedAndSpeedUpgrades * 10}";
     }
+
     public void UpgradeDefence()
     {
         Debug.Log("Button up def Funguje");
-        
+
 
         foreach (Resource ore in player.resources)
         {
@@ -89,7 +83,7 @@ public class ShowUpgradeMenu : MonoBehaviour
                 notificationText.text = "";
 
             }
-            else if(ore.name == "Uranium" && ore.amm < player.playerUpgrades.defenceUpgrades * 10)
+            else if (ore.name == "Uranium" && ore.amm < player.playerUpgrades.defenceUpgrades * 10)
             {
                 player.playerUpgrades.upgradeDefence(player.resources);
                 notificationText.text = "Not Enough ore";
@@ -100,10 +94,11 @@ public class ShowUpgradeMenu : MonoBehaviour
         defenceUpgradeText.text = $"Defence \n\n[{player.playerUpgrades.defenceUpgrades}]";
         UraniumText.text = $"{player.playerUpgrades.defenceUpgrades * 10}";
     }
+
     public void UpgradeAttack()
     {
         Debug.Log("Button up mine Funguje");
-        
+
         foreach (Resource ore in player.resources)
         {
             Debug.Log(ore.name + " " + ore.amm);
@@ -115,7 +110,7 @@ public class ShowUpgradeMenu : MonoBehaviour
             }
             else if (ore.name == "Crimtain" && ore.amm < player.playerUpgrades.defenceUpgrades * 10)
             {
-               player.playerUpgrades.upgradeAttack(player.resources);
+                player.playerUpgrades.upgradeAttack(player.resources);
                 notificationText.text = "Not Enough ore";
                 Debug.Log("Not Enough ore");
             }

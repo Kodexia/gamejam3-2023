@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public static class PlayerStats 
+public static class PlayerStats
 {
     public static bool isDead = false;
     public static int attack = 0;

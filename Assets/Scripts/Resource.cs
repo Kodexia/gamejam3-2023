@@ -8,8 +8,6 @@ public class Resource
     public int amm;
 
 
-
-
     public Resource(string name, int amm)
     {
         this.name = name;

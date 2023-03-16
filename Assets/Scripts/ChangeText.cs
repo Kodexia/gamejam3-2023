@@ -6,14 +6,10 @@ using UnityEngine;
 public class ChangeText : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField]
-    TextMeshProUGUI Azurite;
-    [SerializeField]
-    TextMeshProUGUI Uranium;
-    [SerializeField]
-    TextMeshProUGUI Crimtain;
-    [SerializeField]
-    Player player;
+    [SerializeField] TextMeshProUGUI Azurite;
+    [SerializeField] TextMeshProUGUI Uranium;
+    [SerializeField] TextMeshProUGUI Crimtain;
+    [SerializeField] Player player;
     void Start()
     {
         UpdateText();
@@ -26,9 +22,9 @@ public class ChangeText : MonoBehaviour
     }
     public void UpdateText()
     {
-        foreach(Resource ore in player.resources)
+        foreach (Resource ore in player.resources)
         {
-            if(ore.name == "Azurite")
+            if (ore.name == "Azurite")
             {
                 Azurite.text = ore.amm.ToString();
             }

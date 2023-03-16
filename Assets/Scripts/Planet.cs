@@ -8,29 +8,23 @@ using Unity.VisualScripting;
 public class Planet : MonoBehaviour
 {
     public bool isTargeted = false;
-    bool isMined;
-    public string name { get; set; }
+    public bool isMined;
+    public string name;
     private List<Resource> resources = new List<Resource>();
     public Resource ore;
 
     System.Random rnd = new System.Random();
 
-    [SerializeField]
-    public List<GameObject> spaceshipSprites = new List<GameObject>();
+    [SerializeField] public List<GameObject> spaceshipSprites = new List<GameObject>();
+    [SerializeField] public GameObject homePlanet;
+    [SerializeField] float timeToMine = 10;
 
-    [SerializeField]
-    public GameObject homePlanet;
-    GameObject player;
-    [SerializeField]
-    float timeToMine = 10;
-    float timePassed;
-    [SerializeField]
-    GameObject progressBar;
-    [SerializeField]
-    Canvas progressBarCanvas;
-    [SerializeField]
-    Transform planetsPosition;
+    [SerializeField] GameObject progressBar;
+    [SerializeField] Canvas progressBarCanvas;
+    [SerializeField] Transform planetsPosition;
     GameObject planetsProgressBar;
+    GameObject player;
+    float timePassed;
     public Planet()
     {
         resources.Add(new Resource("Azurite", rnd.Next(10, 50)));
@@ -50,26 +44,21 @@ public class Planet : MonoBehaviour
 
         if (isMined)
         {
-
-
-                timePassed += Time.deltaTime;
-                MinePlanet();
+            timePassed += Time.deltaTime;
+            MinePlanet();
             planetsProgressBar.GetComponent<ProgressBar>().progress = timePassed / timeToMine * 100;
-
-
-
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
+
         //Debug.Log("COLIDED WITH PLANET");
         //Debug.Log(isTargeted);
         //Debug.Log(tag) ;
-        
+
         bool isShipEnemy = other.gameObject.GetComponent<Spaceship>().isEnemy; // throws an error if an asteroid collides with the planet --> fix spawner
-        Debug.Log(isShipEnemy);
+        Debug.Log("Is ship enenmy: " + isShipEnemy);
 
         if (isShipEnemy == true && tag == "homeplanet")
         {
@@ -85,13 +74,13 @@ public class Planet : MonoBehaviour
         //    Destroy(other.gameObject);
         //    isTargeted = false;
         //}
-        
+
         if (isTargeted == true && tag != "homeplanet")
         {
             planetsProgressBar = Instantiate(progressBar);
-            planetsProgressBar.transform.position = new Vector2(planetsPosition.position.x, planetsPosition.position.y+2);
+            planetsProgressBar.transform.position = new Vector2(planetsPosition.position.x, planetsPosition.position.y + 2);
             planetsProgressBar.transform.SetParent(progressBarCanvas.transform);
-            
+
             int type = other.GetComponent<Spaceship>().type;
             Debug.Log(tag + "");
             Debug.Log("Destroyed");
@@ -113,9 +102,6 @@ public class Planet : MonoBehaviour
                 {
                     playerOre.amm += ore.amm;
                     ore.amm = 0;
-
-
-
                 }
 
                 Debug.Log($"Name:{playerOre.name} Amount: {playerOre.amm}");
@@ -147,8 +133,6 @@ public class Planet : MonoBehaviour
         Player playerScritp = GameObject.Find("Main Camera").GetComponent<Player>();
         playerScritp.EnemyAttack(spaceship, this, enemyShipObject);
     }
-
-
 }
 
 

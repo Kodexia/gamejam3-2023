@@ -15,35 +15,29 @@ public class Player : MonoBehaviour
     public int attack = 10;
     public int defence = 10;
     public int raidsSurvived = 0;
-
-
-    [SerializeField] private TextMeshPro attackDefenceText;
-
-    public List<GameObject> spaceshipSprites = new List<GameObject>();
-    [SerializeField]
-    public List<Resource> resources = new List<Resource>();
-    public Upgrades playerUpgrades = new Upgrades();
-    //List<Spaceship> spaceshipsOnPlanet = new List<Spaceship>();
-    //List<Spaceship> spaceshipsOffPlanet = new List<Spaceship>();
-    Spaceship mainSpaceship;
-    public bool isAttacking = false;
-
-    Vector2 pointOfTargetedPlanet;
-
-
     public int minedPlanet = 0;
+    public bool isAttacking = false;
 
     private int attackCount = 0;
     private float nextAttackTime = 0;
     private int enemyAttack = 0;
     public bool isUnderAttack = false;
+    public float attackIntervalMin = 1f;
+    public float attackIntervalMax = 2f;
+    public int maxAttackRepeats = 5;
+
+
+
+    [SerializeField] TextMeshPro attackDefenceText;
+
+    [SerializeField] List<GameObject> spaceshipSprites = new List<GameObject>();
+    public List<Resource> resources = new List<Resource>();
+    public Upgrades playerUpgrades = new Upgrades();
+    Spaceship mainSpaceship;
+
+    Vector2 pointOfTargetedPlanet;
 
     private GameObject enemyShip;
-
-    public float attackIntervalMin = 1f; // minimum time between attacks
-    public float attackIntervalMax = 2f; // maximum time between attacks
-    public int maxAttackRepeats = 5; // maximum number of times to attack
-
 
     public Player()
     {
@@ -155,7 +149,6 @@ public class Player : MonoBehaviour
             Debug.Log("Destroyed ship, correct!");
             Destroy(enemyShip);
             raidsSurvived++;
-
         }
     }
 }
