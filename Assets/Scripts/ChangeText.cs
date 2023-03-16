@@ -9,6 +9,8 @@ public class ChangeText : MonoBehaviour
     [SerializeField] TextMeshProUGUI Azurite;
     [SerializeField] TextMeshProUGUI Uranium;
     [SerializeField] TextMeshProUGUI Crimtain;
+    [SerializeField] TextMeshProUGUI Att;
+    [SerializeField] TextMeshProUGUI Def;
     [SerializeField] Player player;
     void Start()
     {
@@ -37,5 +39,7 @@ public class ChangeText : MonoBehaviour
                 Uranium.text = ore.amm.ToString();
             }
         }
+        Def.text = player.defence + "";
+        Att.text = player.attack + "";
     }
 }
