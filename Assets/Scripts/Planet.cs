@@ -116,7 +116,9 @@ public class Planet : MonoBehaviour
             //todo mining scaled by upgrades
             if (this.ore.amm <= 0)
             {
+
                 Destroy(this.GameObject());
+                player.GetComponent<Player>().minedPlanet += 1;
             }
         }
     }
