@@ -59,10 +59,12 @@ public class Player : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
 
             //If something was hit, the RaycastHit2D.collider will not be null.
+            //Debug.Log("is targeted: "+hit.collider.GetComponent<Planet>().isTargeted);
+
             if (hit.collider != null && hit.collider.tag == "planet" && attack >= 5 && defence >= 5 && hit.collider.GetComponent<Planet>().isTargeted == false)
             {
                 pointOfTargetedPlanet = new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y);
-                Debug.Log(pointOfTargetedPlanet);
+                //Debug.Log(pointOfTargetedPlanet);
                 mainSpaceship.whereToGo = pointOfTargetedPlanet;
                 Planet planet = hit.collider.GetComponent<Planet>();
                 planet.isTargeted = true;
@@ -106,7 +108,7 @@ public class Player : MonoBehaviour
     {
         attackCount = 0;
         isUnderAttack = true;
-        enemyAttack = spaceship.enemyAttack;
+        enemyAttack = spaceship.attackDemage;
         nextAttackTime = Time.time + 1;
 
         enemyShip = enemyShipObject;

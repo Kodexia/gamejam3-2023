@@ -25,6 +25,7 @@ public class Planet : MonoBehaviour
     GameObject planetsProgressBar;
     GameObject player;
     float timePassed;
+    private GameObject collSpaceship;
     public Planet()
     {
         resources.Add(new Resource("Azurite", rnd.Next(10, 50)));
@@ -41,7 +42,6 @@ public class Planet : MonoBehaviour
     }
     private void Update()
     {
-
         if (isMined)
         {
             timePassed += Time.deltaTime;
@@ -57,23 +57,38 @@ public class Planet : MonoBehaviour
         //Debug.Log(isTargeted);
         //Debug.Log(tag) ;
 
-        bool isShipEnemy = other.gameObject.GetComponent<Spaceship>().isEnemy; // throws an error if an asteroid collides with the planet --> fix spawner
+        Spaceship spaceshipScript = other.gameObject.GetComponent<Spaceship>();
+
+        bool isShipEnemy = spaceshipScript.isEnemy;
         Debug.Log("Is ship enenmy: " + isShipEnemy);
 
         if (isShipEnemy == true && tag == "homeplanet")
         {
-            Debug.Log("enemy ship collided!");
-            SetAttack(other.gameObject.GetComponent<Spaceship>(), other.gameObject);
+            //Debug.Log("enemy ship collided!");
+            SetAttack(spaceshipScript, other.gameObject);
             return;
         }
 
+        if (isShipEnemy == false && tag == "homeplanet" && spaceshipScript.ore != null)
+        {
+            //Debug.Log("ship with ore");
+            //Debug.Log(spaceshipScript.ore.amm);
+            //Debug.Log(spaceshipScript.ore.name);
 
-        //if (isTargeted == true && tag == "homeplanet")
-        //{
-        //    Debug.Log("Home planet");
-        //    Destroy(other.gameObject);
-        //    isTargeted = false;
-        //}
+            foreach (var playerOre in player.GetComponent<Player>().resources)
+            {
+                if (playerOre.name == spaceshipScript.ore.name && spaceshipScript.ore.amm > 0)
+                {
+                    playerOre.amm += spaceshipScript.ore.amm;
+                    spaceshipScript.ore.amm = 0;
+                }
+            }
+
+            //Debug.Log("shipt desroy, pleeeaseeeee" + other.gameObject);
+            Destroy(other.gameObject, 2f);
+
+        }
+
 
         if (isTargeted == true && tag != "homeplanet")
         {
@@ -81,14 +96,11 @@ public class Planet : MonoBehaviour
             planetsProgressBar.transform.position = new Vector2(planetsPosition.position.x, planetsPosition.position.y + 2);
             planetsProgressBar.transform.SetParent(progressBarCanvas.transform);
 
-            int type = other.GetComponent<Spaceship>().type;
-            Debug.Log(tag + "");
-            Debug.Log("Destroyed");
-            Destroy(other.gameObject);
+            spaceshipScript.ore = new Resource(ore.name, ore.amm);
+            collSpaceship = other.gameObject;
+
             isTargeted = false;
             isMined = true;
-
-
         }
     }
     void MinePlanet()
@@ -96,37 +108,14 @@ public class Planet : MonoBehaviour
 
         if (timePassed >= timeToMine - player.GetComponent<Player>().playerUpgrades.miningSpeedAndSpeedUpgrades)
         {
-            foreach (var playerOre in player.GetComponent<Player>().resources)
-            {
-                if (playerOre.name == ore.name && ore.amm > 0)
-                {
-                    playerOre.amm += ore.amm;
-                    ore.amm = 0;
-                }
-
-                Debug.Log($"Name:{playerOre.name} Amount: {playerOre.amm}");
-            }
             timePassed = 0;
             isMined = false;
             Destroy(planetsProgressBar);
-            player.GetComponent<Player>().attack += 5;
-            player.GetComponent<Player>().defence += 5;
+
+            collSpaceship.GetComponent<Spaceship>().moveOnTo(new Vector2(homePlanet.transform.position.x + 0.001f, homePlanet.transform.position.y + 0.001f)); // ofset beacuse tomasek neunmi programovat
+            ore.amm = 0;
         }
-
     }
-
-    public void AttackPlanet(Spaceship spaceship)
-    {
-        int damage = spaceship.enemyAttack;
-
-        Player playerScritp = GameObject.Find("Main Camera").GetComponent<Player>();
-
-        playerScritp.defence -= damage * 2;
-        playerScritp.attack -= damage;
-
-        playerScritp.CheckForEndGame();
-    }
-
 
     public void SetAttack(Spaceship spaceship, GameObject enemyShipObject)
     {

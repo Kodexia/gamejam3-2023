@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Spaceship : MonoBehaviour
 {
+    [SerializeField] public int attackDemage = 1;
     public bool isEnemy;
-    public int type;
     float attack;
     float speed;
-    public int enemyAttack = 1;
+    public Resource ore;
 
     public Vector2 whereToGo = new Vector2(0, 0);
     Upgrades upgrades = new Upgrades();
@@ -46,9 +46,8 @@ public class Spaceship : MonoBehaviour
         }
     }
 
-    public void moveOnTo(Vector2 toGo, int type)
+    public void moveOnTo(Vector2 toGo)
     {
         whereToGo = toGo;
-        this.type = type;
     }
 }
