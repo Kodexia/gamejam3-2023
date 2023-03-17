@@ -99,8 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba33d300baa8dab47a496a6941293671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whereToGo: {x: 0, y: 0}
+  isEnemy: 0
   type: 0
+  attack: 0
+  speed: 13.8
+  enemyAttack: 0
+  whereToGo: {x: 12.956249, y: 8.067928}
 --- !u!61 &8160157872850792107
 BoxCollider2D:
   m_ObjectHideFlags: 0

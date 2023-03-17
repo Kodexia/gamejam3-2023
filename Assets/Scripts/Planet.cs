@@ -27,9 +27,9 @@ public class Planet : MonoBehaviour
     float timePassed;
     public Planet()
     {
-        resources.Add(new Resource("Azurite", rnd.Next(10, 50)));
-        resources.Add(new Resource("Crimtain", rnd.Next(10, 50)));
-        resources.Add(new Resource("Uranium", rnd.Next(10, 50)));
+        resources.Add(new Resource("Azurite", rnd.Next(100, 500)));
+        resources.Add(new Resource("Crimtain", rnd.Next(100, 500)));
+        resources.Add(new Resource("Uranium", rnd.Next(100, 500)));
 
         ore = resources[rnd.Next(0, resources.Count)];
         name = $"E-{rnd.Next(100, 500)}";
@@ -92,8 +92,7 @@ public class Planet : MonoBehaviour
         }
     }
     void MinePlanet()
-    {
-
+    { 
         if (timePassed >= timeToMine - player.GetComponent<Player>().playerUpgrades.miningSpeedAndSpeedUpgrades)
         {
             foreach (var playerOre in player.GetComponent<Player>().resources)
@@ -109,6 +108,10 @@ public class Planet : MonoBehaviour
             timePassed = 0;
             isMined = false;
             Destroy(planetsProgressBar);
+            if (this.ore.amm <= 0)
+            {
+                Destroy(this.GameObject());
+            }
             player.GetComponent<Player>().attack += 5;
             player.GetComponent<Player>().defence += 5;
         }
