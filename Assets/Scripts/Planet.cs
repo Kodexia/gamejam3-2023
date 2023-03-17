@@ -28,9 +28,9 @@ public class Planet : MonoBehaviour
     private GameObject collSpaceship;
     public Planet()
     {
-        resources.Add(new Resource("Azurite", rnd.Next(10, 50)));
-        resources.Add(new Resource("Crimtain", rnd.Next(10, 50)));
-        resources.Add(new Resource("Uranium", rnd.Next(10, 50)));
+        resources.Add(new Resource("Azurite", rnd.Next(100, 500)));
+        resources.Add(new Resource("Crimtain", rnd.Next(100, 500)));
+        resources.Add(new Resource("Uranium", rnd.Next(100, 500)));
 
         ore = resources[rnd.Next(0, resources.Count)];
         name = $"E-{rnd.Next(100, 500)}";
@@ -104,8 +104,7 @@ public class Planet : MonoBehaviour
         }
     }
     void MinePlanet()
-    {
-
+    { 
         if (timePassed >= timeToMine - player.GetComponent<Player>().playerUpgrades.miningSpeedAndSpeedUpgrades)
         {
             timePassed = 0;
@@ -114,6 +113,11 @@ public class Planet : MonoBehaviour
 
             collSpaceship.GetComponent<Spaceship>().moveOnTo(new Vector2(homePlanet.transform.position.x + 0.001f, homePlanet.transform.position.y + 0.001f)); // ofset beacuse tomasek neunmi programovat
             ore.amm = 0;
+            //todo mining scaled by upgrades
+            if (this.ore.amm <= 0)
+            {
+                Destroy(this.GameObject());
+            }
         }
     }
 

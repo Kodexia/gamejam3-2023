@@ -6,8 +6,9 @@ public class Spaceship : MonoBehaviour
 {
     [SerializeField] public int attackDemage = 1;
     public bool isEnemy;
-    float attack;
-    float speed;
+    public int type;
+    [SerializeField] float attack;
+    [SerializeField] float speed;
     public Resource ore;
 
     public Vector2 whereToGo = new Vector2(0, 0);
@@ -36,7 +37,7 @@ public class Spaceship : MonoBehaviour
             Vector3 direction = (whereToGo - (Vector2)transform.position).normalized;
 
             // Move the object towards the target position
-            transform.Translate(direction * Time.deltaTime, Space.World);
+            transform.Translate(direction * Time.deltaTime * speed, Space.World);
 
             // Calculate the angle to the target position
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
