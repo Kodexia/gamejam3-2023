@@ -2308,6 +2308,12 @@ MonoBehaviour:
   attackIntervalMin: 1
   attackIntervalMax: 2
   maxAttackRepeats: 5
+  attackDefenceText: {fileID: 0}
+  spaceshipSprites:
+  - {fileID: 7279026761454459694, guid: b975e94583634a0449236baa41201fac, type: 3}
+  - {fileID: 920990135505060969, guid: f96dc9a1998fbcf43a9fa8d6de55adc0, type: 3}
+  - {fileID: 5917320524362503498, guid: 1ac693bd605786f4d86fbc72fc1a5e85, type: 3}
+  - {fileID: 8775785093664964626, guid: b8b78efdb3529384baa05e01715c075c, type: 3}
 --- !u!1001 &2038351647
 PrefabInstance:
   m_ObjectHideFlags: 0
