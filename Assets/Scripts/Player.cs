@@ -18,13 +18,13 @@ public class Player : MonoBehaviour
     public int minedPlanet = 0;
     public bool isAttacking = false;
 
-    private int attackCount = 0;
+    public int attackCount = 0;
     private float nextAttackTime = 0;
     private int enemyAttack = 0;
     public bool isUnderAttack = false;
-    public float attackIntervalMin = 1f;
-    public float attackIntervalMax = 2f;
     public int maxAttackRepeats = 5;
+    public float attackTime = 0;
+    private Planet homePlanet;
 
 
 
@@ -106,6 +106,7 @@ public class Player : MonoBehaviour
 
     public void EnemyAttack(Spaceship spaceship, Planet planet, GameObject enemyShipObject)
     {
+        homePlanet = planet;
         attackCount = 0;
         isUnderAttack = true;
         enemyAttack = spaceship.attackDemage;
@@ -117,6 +118,10 @@ public class Player : MonoBehaviour
 
     void UpdateAttack()
     {
+        if (isUnderAttack == true)
+        {
+            attackTime += Time.deltaTime;
+        }
         if (Time.time >= nextAttackTime && attackCount < maxAttackRepeats && isUnderAttack == true)
         {
             // Attack
@@ -148,8 +153,11 @@ public class Player : MonoBehaviour
         {
             this.isUnderAttack = false;
             attackCount = 0;
+            attackTime = 0;
             Debug.Log("Destroyed ship, correct!");
             Destroy(enemyShip);
+            homePlanet.DestroyProgressBar();
+            
             raidsSurvived++;
         }
     }

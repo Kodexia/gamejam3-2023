@@ -8,7 +8,9 @@ public class Spaceship : MonoBehaviour
     public bool isEnemy;
     public int type;
     [SerializeField] float attack;
-    [SerializeField] float speed;
+    [SerializeField] public float speed;
+    [SerializeField] GameObject progressBar;
+    [SerializeField] Canvas progressBarCanvas;
     public Resource ore;
 
     public Vector2 whereToGo = new Vector2(0, 0);
@@ -19,6 +21,17 @@ public class Spaceship : MonoBehaviour
         this.isEnemy = isEnemy;
         attack = 10 * upgrades.attackUpgrades;
         speed = 5 * upgrades.defenceUpgrades;
+    }
+
+    private void Start()
+    {
+        //if (isEnemy == true)
+        //{
+        //    var shipsProgressBar = Instantiate(progressBar);
+
+        //    shipsProgressBar.transform.position = new Vector2(this.transform.position.x, this.transform.position.y + 2);
+        //    shipsProgressBar.transform.SetParent(progressBarCanvas.transform);
+        //}
     }
 
 
@@ -44,6 +57,13 @@ public class Spaceship : MonoBehaviour
 
             // Rotate the object towards the target position only on the z-axis
             transform.rotation = Quaternion.Euler(0, 0, angle + 90);
+        }
+
+        //progressBar
+
+        if (isEnemy == true)
+        {
+
         }
     }
 

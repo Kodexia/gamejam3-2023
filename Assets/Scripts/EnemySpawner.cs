@@ -71,6 +71,7 @@ public class EnemySpawner : MonoBehaviour
         GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
         Spaceship script = enemy.GetComponent<Spaceship>();
         script.isEnemy = true;
+        script.speed = 10;
 
         enemySpaceship = enemy.GetComponent<Spaceship>();
 

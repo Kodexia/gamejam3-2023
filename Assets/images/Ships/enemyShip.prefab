@@ -98,10 +98,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba33d300baa8dab47a496a6941293671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackDemage: 0
   isEnemy: 0
   type: 0
+  attack: 0
+  speed: 0
+  progressBar: {fileID: 1313912518378544005, guid: f54ff751b4721a04298ea451836bf1a6, type: 3}
+  progressBarCanvas: {fileID: 0}
   whereToGo: {x: 0, y: 0}
-  enemyAttack: 1
 --- !u!61 &-7081436067447722997
 BoxCollider2D:
   m_ObjectHideFlags: 0

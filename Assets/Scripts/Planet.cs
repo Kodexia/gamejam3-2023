@@ -48,6 +48,11 @@ public class Planet : MonoBehaviour
             MinePlanet();
             planetsProgressBar.GetComponent<ProgressBar>().progress = timePassed / (timeToMine - player.GetComponent<Player>().playerUpgrades.miningSpeedAndSpeedUpgrades) * 100;
         }
+
+        if (player.GetComponent<Player>().isUnderAttack == true && tag == "homeplanet")
+        {
+            planetsProgressBar.GetComponent<ProgressBar>().progress = player.GetComponent<Player>().attackTime / 5 * 100;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -66,6 +71,11 @@ public class Planet : MonoBehaviour
         {
             //Debug.Log("enemy ship collided!");
             SetAttack(spaceshipScript, other.gameObject);
+
+            planetsProgressBar = Instantiate(progressBar);
+            planetsProgressBar.transform.position = new Vector2(planetsPosition.position.x, planetsPosition.position.y + 2);
+            planetsProgressBar.transform.SetParent(progressBarCanvas.transform);
+
             return;
         }
 
@@ -128,6 +138,11 @@ public class Planet : MonoBehaviour
     {
         Player playerScritp = GameObject.Find("Main Camera").GetComponent<Player>();
         playerScritp.EnemyAttack(spaceship, this, enemyShipObject);
+    }
+
+    public void DestroyProgressBar()
+    {
+        Destroy(planetsProgressBar);
     }
 }
 
