@@ -46,7 +46,7 @@ public class Planet : MonoBehaviour
         {
             timePassed += Time.deltaTime;
             MinePlanet();
-            planetsProgressBar.GetComponent<ProgressBar>().progress = timePassed / timeToMine * 100;
+            planetsProgressBar.GetComponent<ProgressBar>().progress = timePassed / (timeToMine - player.GetComponent<Player>().playerUpgrades.miningSpeedAndSpeedUpgrades) * 100;
         }
     }
 
