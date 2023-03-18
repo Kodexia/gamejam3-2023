@@ -85,7 +85,7 @@ public class Planet : MonoBehaviour
             }
 
             //Debug.Log("shipt desroy, pleeeaseeeee" + other.gameObject);
-            Destroy(other.gameObject, 2f);
+            Destroy(other.gameObject, 1f);
 
         }
 
@@ -96,7 +96,8 @@ public class Planet : MonoBehaviour
             planetsProgressBar.transform.position = new Vector2(planetsPosition.position.x, planetsPosition.position.y + 2);
             planetsProgressBar.transform.SetParent(progressBarCanvas.transform);
 
-            spaceshipScript.ore = new Resource(ore.name, ore.amm);
+
+            spaceshipScript.ore = new Resource(ore.name, Mathf.Clamp(100, 0, ore.amm));
             collSpaceship = other.gameObject;
 
             isTargeted = false;
@@ -112,7 +113,7 @@ public class Planet : MonoBehaviour
             Destroy(planetsProgressBar);
 
             collSpaceship.GetComponent<Spaceship>().moveOnTo(new Vector2(homePlanet.transform.position.x + 0.001f, homePlanet.transform.position.y + 0.001f)); // ofset beacuse tomasek neunmi programovat
-            ore.amm = 0;
+            ore.amm -= Mathf.Clamp(100, 0, ore.amm);
             //todo mining scaled by upgrades
             if (this.ore.amm <= 0)
             {
