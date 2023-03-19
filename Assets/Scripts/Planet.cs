@@ -26,6 +26,7 @@ public class Planet : MonoBehaviour
     GameObject player;
     float timePassed;
     private GameObject collSpaceship;
+
     public Planet()
     {
         resources.Add(new Resource("Azurite", rnd.Next(100, 500)));
@@ -54,7 +55,11 @@ public class Planet : MonoBehaviour
             planetsProgressBar.GetComponent<ProgressBar>().progress = player.GetComponent<Player>().attackTime / 5 * 100;
         }
     }
-
+    private void OnDestroy()
+    {
+        ShowPlanetUI planetUI = GameObject.Find("PlanetUICanvas").GetComponent<ShowPlanetUI>();
+        planetUI.HidePlanetInfo();
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
 
@@ -73,7 +78,7 @@ public class Planet : MonoBehaviour
             SetAttack(spaceshipScript, other.gameObject);
 
             planetsProgressBar = Instantiate(progressBar);
-            planetsProgressBar.transform.position = new Vector2(planetsPosition.position.x, planetsPosition.position.y + 2);
+            planetsProgressBar.transform.position = new Vector2(planetsPosition.position.x, planetsPosition.position.y + 1.5f);
             planetsProgressBar.transform.SetParent(progressBarCanvas.transform);
 
             return;
@@ -91,6 +96,7 @@ public class Planet : MonoBehaviour
                 {
                     playerOre.amm += spaceshipScript.ore.amm;
                     spaceshipScript.ore.amm = 0;
+
                 }
             }
 
@@ -107,7 +113,7 @@ public class Planet : MonoBehaviour
             planetsProgressBar.transform.SetParent(progressBarCanvas.transform);
 
 
-            spaceshipScript.ore = new Resource(ore.name, Mathf.Clamp(100, 0, ore.amm));
+            spaceshipScript.ore = new Resource(ore.name, Mathf.Clamp(spaceshipScript.storage, 0, ore.amm));
             collSpaceship = other.gameObject;
 
             isTargeted = false;
@@ -115,7 +121,7 @@ public class Planet : MonoBehaviour
         }
     }
     void MinePlanet()
-    { 
+    {
         if (timePassed >= timeToMine - player.GetComponent<Player>().playerUpgrades.miningSpeedAndSpeedUpgrades)
         {
             timePassed = 0;
@@ -123,7 +129,7 @@ public class Planet : MonoBehaviour
             Destroy(planetsProgressBar);
 
             collSpaceship.GetComponent<Spaceship>().moveOnTo(new Vector2(homePlanet.transform.position.x + 0.001f, homePlanet.transform.position.y + 0.001f)); // ofset beacuse tomasek neunmi programovat
-            ore.amm -= Mathf.Clamp(100, 0, ore.amm);
+            ore.amm -= Mathf.Clamp(collSpaceship.GetComponent<Spaceship>().storage, 0, ore.amm);
             //todo mining scaled by upgrades
             if (this.ore.amm <= 0)
             {

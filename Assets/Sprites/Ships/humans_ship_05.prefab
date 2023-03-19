@@ -99,8 +99,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba33d300baa8dab47a496a6941293671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whereToGo: {x: 0, y: 0}
+  attackDemage: 0
+  isEnemy: 0
   type: 0
+  attack: 0
+  speed: 1
+  storage: 50
+  progressBar: {fileID: 0}
+  progressBarCanvas: {fileID: 0}
+  whereToGo: {x: -11.87, y: 5.89}
 --- !u!61 &-1368592178183553133
 BoxCollider2D:
   m_ObjectHideFlags: 0

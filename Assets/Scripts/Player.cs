@@ -31,8 +31,8 @@ public class Player : MonoBehaviour
     [SerializeField] TextMeshPro attackDefenceText;
 
     [SerializeField] List<GameObject> spaceshipSprites = new List<GameObject>();
-    public List<Resource> resources = new List<Resource>();
-    public Upgrades playerUpgrades = new Upgrades();
+    [SerializeField] public List<Resource> resources = new List<Resource>();
+    public Upgrades playerUpgrades;
     Spaceship mainSpaceship;
 
     Vector2 pointOfTargetedPlanet;
@@ -41,10 +41,11 @@ public class Player : MonoBehaviour
 
     public Player()
     {
+        playerUpgrades = new Upgrades(this);
         PlayerStats.startTime = DateTime.Now;
-        resources.Add(new Resource("Azurite", 100));
-        resources.Add(new Resource("Crimtain", 100));
-        resources.Add(new Resource("Uranium", 100));
+        resources.Add(new Resource("Azurite", 1000));
+        resources.Add(new Resource("Crimtain", 10));
+        resources.Add(new Resource("Uranium", 10));
     }
     private void Start()
     {
@@ -52,6 +53,8 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+
+
         if (Input.GetMouseButtonDown(0))
         {
             //Get the mouse position on the screen and send a raycast into the game world from that position.
@@ -61,14 +64,22 @@ public class Player : MonoBehaviour
             //If something was hit, the RaycastHit2D.collider will not be null.
             //Debug.Log("is targeted: "+hit.collider.GetComponent<Planet>().isTargeted);
 
-            if (hit.collider != null && hit.collider.tag == "planet" && attack >= 5 && defence >= 5 && hit.collider.GetComponent<Planet>().isTargeted == false)
+            if (hit.collider != null && hit.collider.tag == "planet" && attack >= 5 && defence >= 5 && hit.collider.GetComponent<Planet>().isTargeted == false && hit.collider.GetComponent<Planet>().isMined == false)
             {
                 pointOfTargetedPlanet = new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y);
                 //Debug.Log(pointOfTargetedPlanet);
+                if ((int)(this.playerUpgrades.miningSpeedAndSpeedUpgrades / 3) < 3)
+                {
+                    mainSpaceship = spaceshipSprites[(int)this.playerUpgrades.miningSpeedAndSpeedUpgrades / 3].GetComponent<Spaceship>();
+                }
+                else
+                {
+                    mainSpaceship = spaceshipSprites[2].GetComponent<Spaceship>();
+                }
                 mainSpaceship.whereToGo = pointOfTargetedPlanet;
                 Planet planet = hit.collider.GetComponent<Planet>();
                 planet.isTargeted = true;
-                Instantiate(spaceshipSprites[(int)this.playerUpgrades.miningSpeedAndSpeedUpgrades / 3]);
+                Instantiate(mainSpaceship);
                 attack -= 5;
                 defence -= 5;
             }
@@ -87,10 +98,10 @@ public class Player : MonoBehaviour
     {
         if (this.isDead || this.isWon)
         {
-            if (isDead)
-                PlayerStats.isDead = true;
 
 
+            PlayerStats.isDead = this.isDead;
+            PlayerStats.isWon = this.isWon;
             PlayerStats.NumberOfAzurite = this.resources[0].amm;
             PlayerStats.NumberOfCrimtain = this.resources[1].amm;
             PlayerStats.NumberOfUranium = this.resources[2].amm;
@@ -128,10 +139,10 @@ public class Player : MonoBehaviour
             Debug.Log("Attacking!");
 
 
-            this.defence -= enemyAttack * 2;
+            this.defence -= (int)(enemyAttack * 1.5f);
             this.attack -= enemyAttack;
 
-            if (defence <= 0)
+            if (defence <= 0 || attack <= 0)
             {
                 this.isDead = true;
             }
@@ -157,7 +168,7 @@ public class Player : MonoBehaviour
             Debug.Log("Destroyed ship, correct!");
             Destroy(enemyShip);
             homePlanet.DestroyProgressBar();
-            
+
             raidsSurvived++;
         }
     }

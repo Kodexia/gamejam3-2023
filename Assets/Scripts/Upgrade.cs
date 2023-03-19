@@ -7,8 +7,10 @@ public class Upgrades
     public int miningSpeedAndSpeedUpgrades { get; private set; }
     public int defenceUpgrades { get; private set; }
     public int attackUpgrades { get; private set; }
-    public Upgrades()
+    Player player;
+    public Upgrades(Player Player)
     {
+        player = Player;
         miningSpeedAndSpeedUpgrades = 1;
         defenceUpgrades = 1;
         attackUpgrades = 1;
@@ -34,6 +36,7 @@ public class Upgrades
             {
                 ore.amm -= 10 * defenceUpgrades;
                 defenceUpgrades++;
+                player.defence += defenceUpgrades * 10;
                 Debug.Log("def");
             }
         }
@@ -46,6 +49,7 @@ public class Upgrades
             {
                 ore.amm -= 10 * attackUpgrades;
                 attackUpgrades++;
+                player.attack += attackUpgrades * 10;
                 Debug.Log("attack");
 
             }

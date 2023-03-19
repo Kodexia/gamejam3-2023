@@ -20,18 +20,22 @@ public class EndGameHandler : MonoBehaviour
         {
             timeResult = new TimeSpan(0, 0, 0);
         }
-        if (!PlayerStats.isDead)
+        if (PlayerStats.isDead)
         {
             Heading.text = "Game Over";
         }
+        if (PlayerStats.isWon)
+        {
+            Heading.text = "You Won";
+        }
 
         Stats.text = $"Attack : {PlayerStats.attack}\n"
-            + $"Deffense : {PlayerStats.defense}\n"
+            + $"Defense : {PlayerStats.defense}\n"
             + $"Raids Survived : {PlayerStats.raidSurvived}\n" +
             $"Quantity of Uranium : {PlayerStats.NumberOfUranium}\n" +
             $"Quantity of Azurite : {PlayerStats.NumberOfAzurite}\n" +
             $"Quantity of Crimtain : {PlayerStats.NumberOfCrimtain}\n" +
-            "Time Spended : " + timeResult.Hours + "h " + timeResult.Minutes + "min " + timeResult.Seconds + "s";
+            "Time Spent : " + timeResult.Hours + "h " + timeResult.Minutes + "min " + timeResult.Seconds + "s";
 
     }
 }

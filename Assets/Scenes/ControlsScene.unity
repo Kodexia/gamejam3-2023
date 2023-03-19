@@ -291,7 +291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: 88}
+  m_AnchoredPosition: {x: 0, y: 365}
   m_SizeDelta: {x: 488.0894, y: 63.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &213124955
@@ -426,7 +426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 317.56, y: -337}
+  m_AnchoredPosition: {x: 311.56, y: 0}
   m_SizeDelta: {x: 72, y: 72}
   m_Pivot: {x: 0.5000002, y: 0.5000002}
 --- !u!114 &238305406
@@ -717,8 +717,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000020981, y: -127.190186}
-  m_SizeDelta: {x: 1172.6664, y: 664.3505}
+  m_AnchoredPosition: {x: -0.000020981, y: -145.46}
+  m_SizeDelta: {x: 1172.6664, y: 700.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388395486
 MonoBehaviour:
@@ -799,6 +799,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5900f8133a5f7f242a26d56c4aa3c67b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &492751906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 492751907}
+  - component: {fileID: 492751909}
+  - component: {fileID: 492751908}
+  m_Layer: 5
+  m_Name: Tier1Ship (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &492751907
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492751906}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 512739920}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -173.18274, y: -459}
+  m_SizeDelta: {x: 157.6345, y: 157.6345}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &492751908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492751906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 79e6c7a5802734b0ab68d9d52f79d796, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &492751909
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492751906}
+  m_CullTransparentMesh: 1
 --- !u!1 &496446733
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,13 +950,16 @@ RectTransform:
   - {fileID: 238305405}
   - {fileID: 1150198726}
   - {fileID: 1312516324}
+  - {fileID: 1173647591}
+  - {fileID: 983848136}
+  - {fileID: 492751907}
   m_Father: {fileID: 1527969521}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10.387, y: 1678.4213}
+  m_SizeDelta: {x: 10.387, y: 2285.9}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &978614093
 GameObject:
@@ -917,7 +996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: 289}
+  m_AnchoredPosition: {x: 5, y: 624}
   m_SizeDelta: {x: 553.1248, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &978614095
@@ -1017,6 +1096,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978614093}
   m_CullTransparentMesh: 1
+--- !u!1 &983848135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 983848136}
+  - component: {fileID: 983848138}
+  - component: {fileID: 983848137}
+  m_Layer: 5
+  m_Name: Tier1Ship (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &983848136
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983848135}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 512739920}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -192, y: -278}
+  m_SizeDelta: {x: 120, y: 120}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &983848137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983848135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 9d2d1266f7ada4acfb3e84f678c9ab4b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &983848138
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983848135}
+  m_CullTransparentMesh: 1
 --- !u!1 &1040342345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,7 +1207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: 665}
+  m_AnchoredPosition: {x: 2, y: 1000}
   m_SizeDelta: {x: 1042.37, y: 225.7153}
   m_Pivot: {x: 0.49999994, y: 1}
 --- !u!114 &1040342347
@@ -1075,14 +1230,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '-You are on small asteroid where you have one small spaceship which can
-    mine materials from another planets in your galaxy.
+  m_text: '-You are on small asteroid where you have small spaceships which can mine
+    materials from another planets in your galaxy.
 
 
 
 
-    -Your goal is to
-    upgrade your stuff using materials and collect all avalible resources from plantes.
+    -Your goal is to upgrade
+    your stuff using materials and collect all avalible resources from all other
+    plantes.
 
 '
   m_isRightToLeft: 0
@@ -1323,7 +1479,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035156, y: -429}
+  m_AnchoredPosition: {x: 0, y: -631}
   m_SizeDelta: {x: 488.0894, y: 63.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1150198727
@@ -1423,6 +1579,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150198725}
   m_CullTransparentMesh: 1
+--- !u!1 &1173647590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1173647591}
+  - component: {fileID: 1173647593}
+  - component: {fileID: 1173647592}
+  m_Layer: 5
+  m_Name: Tier1Ship (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1173647591
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173647590}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 512739920}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -201.32248, y: -115.76758}
+  m_SizeDelta: {x: 103.535, y: 103.535}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1173647592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173647590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4e9884693f1d94bf0a2d42c9f0d758cc, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1173647593
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173647590}
+  m_CullTransparentMesh: 1
 --- !u!1 &1189451801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,7 +1690,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 190, y: -710}
+  m_AnchoredPosition: {x: 245, y: -895}
   m_SizeDelta: {x: 72, y: 72}
   m_Pivot: {x: 0.5000008, y: 0.49999976}
 --- !u!114 &1189451803
@@ -1602,7 +1834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.999939, y: 495}
+  m_AnchoredPosition: {x: -1.000061, y: 830}
   m_SizeDelta: {x: 553.1248, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1232309995
@@ -1813,7 +2045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 275, y: -782}
+  m_AnchoredPosition: {x: 285.48004, y: -985}
   m_SizeDelta: {x: 72, y: 72}
   m_Pivot: {x: 0.5, y: 0.49999976}
 --- !u!114 &1312516325
@@ -2148,7 +2380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: 728}
+  m_AnchoredPosition: {x: 2, y: 1063}
   m_SizeDelta: {x: 553.1248, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1553632086
@@ -2283,8 +2515,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.000061, y: -283.79987}
-  m_SizeDelta: {x: 1011.2, y: 1019.0797}
+  m_AnchoredPosition: {x: 5.000061, y: -206.5492}
+  m_SizeDelta: {x: 1011.2, y: 1534.5785}
   m_Pivot: {x: 0.49999988, y: 0.5}
 --- !u!114 &1555678996
 MonoBehaviour:
@@ -2306,45 +2538,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '-You can move around space using mouse
-
-    -you can open upgrade menu
-    using P
-
-
-
-    -When you left click on a planet, it will send mining ships to
-    the planet you have chosen. Once the ships arrive at the planet, they will immediately
-    disappear, and then begin mining materials.
-
-    -Be careful, sending ships will
-    slightly decrese your attack and deffence until the ship returns!
-
-
-    -You
-    can upgrade your mining ships using ore:
-
-
-    --Travel Speed and Mining speed
-    using Azurite
-
-
-
-
-    - You will have to be careful, in this game other inhabitants
-    of the galaxy may attack you, and they will take away your lives. If you don''t
-    defend yourself, they take away all your lives, you will die and the game will
-    end.
-
-
-    -You can raise your HP using  Crimtain
-
-
-    -You can raise your Defence
-    using Uranium
-
-
-'
+  m_text: "-You can move around space using the mouse\n-You can open the upgrade
+    menu using P\n-You can open planet description by right-click on the planet\n\n\n\n-When
+    you left click on a planet, it will send mining ships to the planet you have
+    chosen. \n-Once the ships arrive at the planet, they will immediately begin mining
+    materials, and then return back home.\n-Be careful, sending ships will slightly
+    decrease your attack and defence until the ship returns!\n\n-You can upgrade
+    your mining ships using ore:\n\n--TIER 1:\n -speed: 1\n -storage: 50\n\n--TIER
+    2:\n -speed: 1.5\n -storage: 100\n\n--TIER 3:\n -speed: 2\n -storage: 150\n\n\n\n\n-
+    You will have to be careful, in this game other inhabitants of the galaxy may
+    attack you, and they will take away your lives. If you don't defend yourself,
+    they take away all your lives, you will die and the game will end.\n\n-You can
+    raise your Attack using  Crimtaine\n\n-You can raise your Defence using Uranium\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2673,7 +2878,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 350771818}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.39702222
+  m_Size: 0.30749816
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class Spaceship : MonoBehaviour
 {
+    Player player;
     [SerializeField] public int attackDemage = 1;
     public bool isEnemy;
     public int type;
     [SerializeField] float attack;
     [SerializeField] public float speed;
+    [SerializeField] public int storage;
     [SerializeField] GameObject progressBar;
     [SerializeField] Canvas progressBarCanvas;
     public Resource ore;
 
     public Vector2 whereToGo = new Vector2(0, 0);
-    Upgrades upgrades = new Upgrades();
+    Upgrades upgrades;
 
     public Spaceship(bool isEnemy)
     {
+        player = GameObject.Find("Main Camera").GetComponent<Player>();
+        upgrades = new Upgrades(player);
         this.isEnemy = isEnemy;
         attack = 10 * upgrades.attackUpgrades;
         speed = 5 * upgrades.defenceUpgrades;
@@ -33,7 +37,15 @@ public class Spaceship : MonoBehaviour
         //    shipsProgressBar.transform.SetParent(progressBarCanvas.transform);
         //}
     }
-
+    private void OnDestroy()
+    {
+        if (!isEnemy)
+        {
+            player = GameObject.Find("Main Camera").GetComponent<Player>();
+            player.attack += 5;
+            player.defence += 5;
+        }
+    }
 
     private void Update()
     {

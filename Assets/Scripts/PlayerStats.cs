@@ -6,6 +6,7 @@ using System;
 public static class PlayerStats
 {
     public static bool isDead = false;
+    public static bool isWon = false;
     public static int attack = 0;
     public static int defense = 0;
     public static int raidSurvived = 0;
