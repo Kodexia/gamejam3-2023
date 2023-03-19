@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UITestingScene.unity
     guid: fbeb691452fc48448905d4ef65dd8ddc
+  - enabled: 1
+    path: "Assets/Scenes/\xF6ld newSampleScene 1.unity"
+    guid: 7350b4aa5b5e8464b943fd3ca26027c5
   m_configObjects: {}

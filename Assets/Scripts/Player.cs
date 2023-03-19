@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
     {
         playerUpgrades = new Upgrades(this);
         PlayerStats.startTime = DateTime.Now;
-        resources.Add(new Resource("Azurite", 1000));
+        resources.Add(new Resource("Azurite", 0));
         resources.Add(new Resource("Crimtain", 10));
         resources.Add(new Resource("Uranium", 10));
     }
